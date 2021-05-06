@@ -1,0 +1,86 @@
+page {
+    height: 100%;
+    background-color: rgb(248, 248, 248);
+}
+
+.title-big {
+    width: 420rpx;
+    height: 225rpx;
+    position: relative;
+    top: 127rpx;
+    left: 20%;
+}
+
+.button2,
+.button1 {
+    height: 117rpx;
+    width: 297rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/05/gKADII.png");
+    background-size: 90% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 20rpx;
+    font-size: 41rpx;
+    font-weight: 400;
+    background-repeat: no-repeat;
+    text-indent: 0.5em;
+}
+
+.button3 {
+    height: 117rpx;
+    width: 297rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/05/gKADII.png");
+    background-size: 90% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 20rpx;
+    font-size: 41rpx;
+    font-weight: 400;
+    background-repeat: no-repeat;
+    text-indent: 1.5em;
+}
+
+.button4 {
+    height: 117rpx;
+    width: 297rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/05/gKo3Jx.png");
+    background-size: 90% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 20rpx;
+    font-size: 41rpx;
+    font-weight: 400;
+    background-repeat: no-repeat;
+    text-indent: 0.5em;
+}
+
+.button5 {
+    height: 117rpx;
+    width: 297rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/05/gKo3Jx.png");
+    background-size: 90% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 20rpx;
+    font-size: 41rpx;
+    font-weight: 400;
+    background-repeat: no-repeat;
+    text-indent: 1.5em;
+}
+
+.button {
+    position: relative;
+    top: 500rpx;
+}
+
+.con {
+    height: 100%;
+    background-image: url("https://z3.ax1x.com/2021/05/05/gKyIWd.png"), url(https://z3.ax1x.com/2021/05/05/gKy4Fe.png), url("https://z3.ax1x.com/2021/05/05/gKy5JH.png"), url("https://z3.ax1x.com/2021/05/05/gKyTSA.png"), url("https://z3.ax1x.com/2021/05/05/gKyfoD.png"), url("https://z3.ax1x.com/2021/05/05/gKy7QI.png"), url("https://z3.ax1x.com/2021/05/05/gKyHyt.png"), url("https://z3.ax1x.com/2021/05/05/gKybOP.png");
+    background-position: 86% 62%, 6% 27%, 16% 56%, 80% 39%, 12% 1%, 86% 7%, 93% 90%, 8% 80%;
+    background-repeat: no-repeat;
+    background-size: 39rpx 44rpx, 106rpx 75rpx, 70rpx 62rpx, 123rpx 84rpx, 86rpx 99rpx, 52rpx 44rpx, 101rpx 142rpx, 106rpx 138rpx;
+}
