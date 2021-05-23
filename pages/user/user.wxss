@@ -1,0 +1,146 @@
+.navigator {
+    margin-top: 30rpx;
+}
+
+.user-card {
+    width: 681rpx;
+    height: 248rpx;
+    background: #fff;
+    border-radius: 10rpx;
+    position: relative;
+    top: 153rpx;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-oneself {
+    width: 160rpx;
+    height: 160rpx;
+    position: absolute;
+    top: 40rpx;
+    left: 20rpx;
+}
+
+.card-text {
+    position: absolute;
+    font-size: 50rpx;
+    top: 40rpx;
+    left: 200rpx;
+}
+
+.card-text1 {
+    position: absolute;
+    font-size: 25rpx;
+    top: 126rpx;
+    left: 200rpx;
+}
+
+.revise {
+    position: absolute;
+    font-size: 25rpx;
+    top: 126rpx;
+    left: 400rpx;
+    color: #ffa557;
+    text-decoration: underline;
+    z-index: 1;
+}
+
+.card-img {
+    position: absolute;
+    top: 127rpx;
+    z-index: 0;
+}
+
+.function {
+    width: 681rpx;
+    height: 381rpx;
+    position: relative;
+    border-radius: 10rpx;
+    top: 362rpx;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.function1 {
+    width: 681rpx;
+    height: 105rpx;
+    background: #fff;
+    margin-bottom: 24rpx;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+    line-height: 105rpx;
+}
+
+.function .function1 view {
+    display: inline-block;
+    color: #ffa557;
+    margin-left: 30rpx;
+}
+
+.function .function1 text {
+    display: inline-block;
+    margin-left: 20rpx;
+    height: 80rpx;
+}
+
+.function1::after {
+    content: ">";
+    margin-left: 442rpx;
+    font-family: "cuIcon";
+    font-size: 36rpx;
+    font-style: normal;
+    color: var(--gray);
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    outline: 0;
+    text-align: center;
+    -ms-transform: scale(1.185);
+    transform: scale(1.185);
+    backface-visibility: hidden;
+    perspective: 2000rpx;
+    background: rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.modal {
+    position: relative;
+    display: inline-block;
+    width: 680rpx;
+    max-width: 100%;
+    background-color: #f8f8f8;
+    border-radius: 10rpx;
+    overflow: hidden;
+    z-index: 100;
+    margin-top: -33%;
+    margin-left: 5%;
+    opacity: 1;
+    transition-duration: 5s;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.cu-item {
+    position: relative;
+    display: flex;
+    padding: 0 30rpx;
+    min-height: 100rpx;
+    background-color: var(--white);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.round {
+    position: absolute;
+    right: 0;
+}
+
+.flex-font {
+    display: inline;
+}

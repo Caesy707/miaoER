@@ -1,0 +1,71 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/user/user",
+          "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/read/read",
+          "pathName": "pages/read/read",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/level/level",
+          "pathName": "pages/level/level",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/aid/aid",
+          "pathName": "pages/aid/aid",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/read/read",
+          "pathName": "pages/read/read",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/answer/answer",
+          "pathName": "pages/answer/answer",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/collect/collect",
+          "pathName": "pages/collect/collect",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/other/other",
+          "pathName": "pages/other/other",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

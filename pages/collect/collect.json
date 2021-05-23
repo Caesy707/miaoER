@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "mycollect": "../../componment/mycollect/mycollect"
+    },
+    "navigationBarTitleText": "我的收藏"
+}

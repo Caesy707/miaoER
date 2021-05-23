@@ -1,48 +1,139 @@
+/*
+ * @Author: your name
+ * @Date: 2021-05-05 09:33:10
+ * @LastEditTime: 2021-05-23 17:11:29
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \猫E读\pages\index\index.js
+ */
 // index.js
 // 获取应用实例
 const app = getApp()
 
 Page({
-  data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
-  },
-  // 事件处理函数
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad() {
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true
-      })
-    }
-  },
-  getUserProfile(e) {
-    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-    wx.getUserProfile({
-      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-      success: (res) => {
-        console.log(res)
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+    data: {
+        userInfo: {},
+        hasUserInfo: false,
+        canIUseGetUserProfile: false,
+        isShow: true,
+        isShowtoo: false
+    },
+    // 事件处理函数
+    bindViewTap() {
+        wx.navigateTo({
+            url: '../logs/logs'
         })
-      }
-    })
-  },
-  getUserInfo(e) {
-    // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
-    console.log(e)
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
+    },
+    onLoad() {
+        if (wx.getUserProfile) {
+            this.setData({
+                canIUseGetUserProfile: true
+            })
+        }
+        wx.clearStorage({
+                complete: (res) => {
+                    console.log("clear")
+                },
+            })
+            // 检查是否过期
+        wx.checkSession({
+            success() {
+                console.log("未过期")
+            },
+            fail() {
+                wx.login({
+                    success(res) {
+                        if (res.code) {
+                            //发起网络请求
+                            wx.request({
+                                url: 'https://wx.bitaxes.com/api/wx/user/login/' + res.code,
+                                success(reqRes) {
+                                    console.log(reqRes.data)
+                                    wx.setStorage({
+                                        data: reqRes.data,
+                                        key: 'code',
+                                    })
+                                }
+                            })
+
+                        } else {
+                            console.log('登录失败！' + res.errMsg)
+                        }
+                    }
+                })
+            }
+        })
+        this.getgrade()
+    },
+    getUserProfile(e) {
+        wx.getUserProfile({
+            desc: '展示用户信息',
+            success: (res) => {
+
+                this.setData({
+                    userInfo: res.userInfo,
+                    hasUserInfo: true
+                })
+                wx.setStorage({
+                    data: res.userInfo,
+                    key: 'user',
+                })
+                wx.navigateTo({
+                    url: '../user/user',
+                })
+            },
+            fail: () => {
+                console.log(1)
+                wx.navigateTo({
+                    url: '../user/user',
+                })
+            }
+        })
+
+    },
+    navigateTo(e) {
+        var index = e.currentTarget.dataset.index
+        if (index == 1) {
+            wx.navigateTo({
+                url: '../level/level',
+            })
+        } else if (index == 2) {
+            wx.navigateTo({
+                url: '../user/user',
+            })
+        } else if (index == 3) {
+            wx.navigateTo({
+                url: '../aid/aid',
+            })
+        }
+    },
+    // 获取关卡列表
+    getgrade() {
+        wx.request({
+            url: 'https://wx.bitaxes.com/api/episode/all/{grade}',
+            data: {
+                grade: "3"
+            },
+            success: (reqRes) => {
+                console.log(reqRes.data)
+            },
+            fail: () => {
+                console.log("fail")
+            }
+
+        })
+    },
+    // 首次点击
+    firstmask() {
+        this.setData({
+            isShow: false,
+            isShowtoo: true
+        })
+    },
+    //第二次点击
+    secondmask() {
+        this.setData({
+            isShowtoo: false
+        })
+    }
 })

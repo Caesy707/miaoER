@@ -1,6 +1,6 @@
 page {
     height: 100%;
-    background-color: rgb(248, 248, 248);
+    background-color: white;
 }
 
 .title-big {
@@ -13,6 +13,7 @@ page {
 
 .button2,
 .button1 {
+    background-color: white;
     height: 117rpx;
     width: 297rpx;
     background-image: url("https://z3.ax1x.com/2021/05/05/gKADII.png");
@@ -28,6 +29,7 @@ page {
 }
 
 .button3 {
+    background-color: white;
     height: 117rpx;
     width: 297rpx;
     background-image: url("https://z3.ax1x.com/2021/05/05/gKADII.png");
@@ -45,7 +47,7 @@ page {
 .button4 {
     height: 117rpx;
     width: 297rpx;
-    background-image: url("https://z3.ax1x.com/2021/05/05/gKo3Jx.png");
+    background-image: url("https://z3.ax1x.com/2021/05/22/gqLEwQ.png");
     background-size: 90% 100%;
     display: flex;
     align-items: center;
@@ -60,7 +62,7 @@ page {
 .button5 {
     height: 117rpx;
     width: 297rpx;
-    background-image: url("https://z3.ax1x.com/2021/05/05/gKo3Jx.png");
+    background-image: url("https://z3.ax1x.com/2021/05/22/gqLEwQ.png");
     background-size: 90% 100%;
     display: flex;
     align-items: center;
@@ -83,4 +85,74 @@ page {
     background-position: 86% 62%, 6% 27%, 16% 56%, 80% 39%, 12% 1%, 86% 7%, 93% 90%, 8% 80%;
     background-repeat: no-repeat;
     background-size: 39rpx 44rpx, 106rpx 75rpx, 70rpx 62rpx, 123rpx 84rpx, 86rpx 99rpx, 52rpx 44rpx, 101rpx 142rpx, 106rpx 138rpx;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    outline: 0;
+    backface-visibility: hidden;
+    perspective: 2000rpx;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.inset {
+    width: 192rpx;
+    height: 182rpx;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://z3.ax1x.com/2021/05/23/gXn28A.png);
+    position: fixed;
+    z-index: 1;
+    top: 463rpx;
+    left: 147rpx;
+}
+
+.dialogue {
+    width: 413rpx;
+    height: 296rpx;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://z3.ax1x.com/2021/05/23/gXnWvt.png);
+    position: fixed;
+    z-index: 1;
+    top: 227rpx;
+    left: 293rpx;
+}
+
+.unmask {
+    width: 322rpx;
+    height: 114rpx;
+    position: fixed;
+    top: 600rpx;
+    left: 300rpx;
+}
+
+.dialogue_1 {
+    width: 347rpx;
+    height: 263rpx;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://z3.ax1x.com/2021/05/23/gXnRgI.png);
+    position: fixed;
+    z-index: 1;
+    top: 475rpx;
+    left: 46rpx;
+}
+
+.catpad {
+    width: 119rpx;
+    height: 149rpx;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://z3.ax1x.com/2021/05/23/gXKgXt.png);
+    position: fixed;
+    z-index: 1;
+    top: 714rpx;
+    left: 453rpx;
 }

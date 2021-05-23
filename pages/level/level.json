@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "catpad": "../../componment/catpad/catpad"
+    },
+    "navigationBarTitleText": "选择关卡",
+    "navigationBarBackgroundColor": "#f8f8f8"
+}

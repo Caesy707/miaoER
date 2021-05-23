@@ -1,0 +1,27 @@
+@import"../../iconfont.wxss";
+.navigator {
+    margin-top: 30rpx;
+}
+
+.icon-chongwutubiao18 {
+    font-size: 70rpx;
+    display: inline-block;
+}
+
+.inbox view {
+    display: inline;
+}
+
+.inbox text {
+    display: block;
+}
+
+.inbox-1 {
+    width: 98rpx;
+    height: 142rpx;
+    text-align: center;
+}
+
+.maozhao_1 {
+    transform: rotate(50deg);
+}

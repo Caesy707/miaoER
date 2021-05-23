@@ -1,0 +1,77 @@
+<view class="user-card">
+  <view class="card-contain" wx:if="{{registered}}">
+    <image
+      class="card-oneself"
+      src="{{AvatarUrl}}"
+      mode="widthFix"
+    />
+    <view class="card-text">
+      {{nickName}}
+    </view>
+
+    <view class="card-text1">
+      英语等级：{{level[index].name}}
+    </view>
+    <view class="revise" bindtap="showModal">
+      修改
+    </view>
+  </view>
+  <view class="card-contain" wx:if="{{unregistered}}">
+    <image
+      class="card-oneself"
+      src="https://z3.ax1x.com/2021/05/22/gLtn4f.png"
+      mode="widthFix"
+    />
+    <view class="card-text">
+      点击查看微信头像
+    </view>
+
+  </view>
+
+  <image
+    class="card-img"
+    src="https://z3.ax1x.com/2021/05/06/glzExe.png"
+    mode="widthFix"
+  />
+</view>
+<view class="function">
+  <navigator class="function1" url="../collect/collect">
+    <view class="iconfont icon-shoucang"></view>
+    <text>我的收藏</text>
+  </navigator>
+  <navigator class="function1">
+    <view class="iconfont icon-guanyu"></view>
+    <text>关于产品</text>
+  </navigator>
+  <navigator class="function1">
+    <view class="iconfont icon-yijianfankui"></view>
+    <text>意见反馈</text>
+  </navigator>
+
+</view>
+<view
+  class="mask"
+  wx:if="{{isModal}}"
+  bindtap="hiddenModal"
+></view>
+<view class="modal" wx:if="{{isModal}}" >
+  <radio-group bindchange="changeCheck">
+    <view
+      class="cu-item"
+      wx:for="{{level}}"
+      wx:key="id"
+    >
+      <label class="flex flex-sub">
+        <view class="flex-font flex-sub"> {{item.name}}</view>
+        <radio
+          class="round"
+          color="#ffa557"
+          data-index="{{item.id}}"
+          bindtap="change"
+        ></radio>
+      </label>
+    </view>
+  </radio-group>
+
+</view>
+

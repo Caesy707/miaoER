@@ -1,25 +1,63 @@
 <view class="con">
-	<view>
-		<image
-		 class="title-big"
-		 src="../../image/喵E读.png"
-		 mode="widthFix"
-		/>
-	</view>
-	<view class="button">
-		<button class="button1" hover-class="button4">开始挑战</button>
-		<button class="button2" hover-class="button4">个人中心</button>
-		<button class="button3" hover-class="button5"> 帮助</button>
-	</view>
+  <view>
+    <image
+      class="title-big"
+      src="https://z3.ax1x.com/2021/05/22/gLutqU.png"
+      mode="widthFix"
+    />
+  </view>
+  <view class="button">
+    <view>
+      <button
+        class="button1"
+        hover-class="button4"
+        bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"
+        open-type="getUserProfile"
+        data-index="1"
+      >开始挑战
+      </button>
+    </view>
+    <view>
+      <button
+        class="button2"
+        hover-class="button4"
+        bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"
+        open-type="getUserProfile"
+        data-index="2"
+      >个人中心
+      </button>
+    </view>
+    <view>
+      <button
+        class="button3"
+        hover-class="button5"
+        bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"
+        open-type="getUserProfile"
+        data-index="3"
+      > 帮助
+      </button>
+    </view>
+
+  </view>
 
 </view>
-<!-- 
-https://z3.ax1x.com/2021/05/05/gKyIWd.png
-https://z3.ax1x.com/2021/05/05/gKy4Fe.png
-https://z3.ax1x.com/2021/05/05/gKy5JH.png
-https://z3.ax1x.com/2021/05/05/gKyTSA.png
-https://z3.ax1x.com/2021/05/05/gKyfoD.png
-https://z3.ax1x.com/2021/05/05/gKy7QI.png
-https://z3.ax1x.com/2021/05/05/gKyHyt.png
-https://z3.ax1x.com/2021/05/05/gKybOP.png -->
+<view
+  class="mask"
+  bindtap="firstmask"
+  wx:if="{{isShow}}"
+>
+  <view class="inset"></view>
+  <view class="dialogue"></view>
+</view>
+<view
+  class="mask"
+  wx:if="{{isShowtoo}}"
+  bindtap="secondmask"
+>
+  <view class="unmask"></view>
+  <view class="dialogue_1"></view>
+  <view class="catpad"></view>
+</view>
+
+<!--https://z3.ax1x.com/2021/05/23/gXKgXt.png-->
 

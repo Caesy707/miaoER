@@ -1,0 +1,26 @@
+<view class="tip-box">
+  <image
+    class="tip"
+    src="https://z3.ax1x.com/2021/05/14/gsGHr8.png"
+    mode="widthFix"
+  />
+</view>
+<view class="contain">
+  <view class="all">
+    <image src="https://z3.ax1x.com/2021/05/14/gstmDK.png" mode="widthFix" />
+    <text>选择模式</text>
+  </view>
+  <view class="all">
+    <image src="https://z3.ax1x.com/2021/05/14/gstmDK.png" mode="widthFix" />
+    <text>计时阅读</text>
+  </view>
+  <view class="all">
+    <image src="https://z3.ax1x.com/2021/05/14/gstmDK.png" mode="widthFix" />
+    <text>开始答题</text>
+  </view>
+  <view class="all">
+    <image src="https://z3.ax1x.com/2021/05/14/gstmDK.png" mode="widthFix" />
+    <text>提交答案</text>
+  </view>
+</view>
+

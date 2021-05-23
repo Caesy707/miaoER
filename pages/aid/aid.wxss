@@ -1,0 +1,40 @@
+page {
+    width: 100%;
+}
+
+.navigator {
+    margin-top: 30rpx;
+}
+
+.tip-box {
+    width: 100%;
+}
+
+.tip {
+    width: 430rpx;
+    display: block;
+    margin: 0 auto;
+}
+
+.all {
+    width: 100%;
+}
+
+.all {
+    width: 100%;
+    position: relative;
+    margin-bottom: 40rpx;
+}
+
+.all image {
+    width: 335rpx;
+    margin-left: 30rpx;
+}
+
+.all text {
+    font-size: 50rpx;
+    color: #000;
+    position: absolute;
+    left: 427rpx;
+    top: 106rpx;
+}

@@ -1,0 +1,185 @@
+page {
+    height: 100%;
+}
+
+.cover {
+    height: 1919.5rpx;
+    background-size: 750rpx 4000rpx;
+    background-image: url(https://z3.ax1x.com/2021/05/14/grfC0e.png);
+    background-repeat: no-repeat;
+    background-position: 0 -21rpx;
+    position: relative;
+}
+
+.navigator {
+    margin-top: 30rpx;
+}
+
+.icon-chongwutubiao18 {
+    font-size: 70rpx;
+    display: inline-block;
+}
+
+.inbox view {
+    display: inline;
+}
+
+.inbox text {
+    display: block;
+}
+
+.inbox-1 {
+    width: 98rpx;
+    height: 142rpx;
+    top: 353rpx;
+    left: 255rpx;
+    position: absolute;
+    text-align: center;
+}
+
+.maozhao_1 {
+    transform: rotate(50deg);
+}
+
+.inbox-2 {
+    width: 98rpx;
+    height: 142rpx;
+    top: 538rpx;
+    left: 183rpx;
+    position: absolute;
+    text-align: center;
+}
+
+.maozhao_2 {
+    transform: rotate(50deg);
+}
+
+.inbox-3 {
+    width: 98rpx;
+    height: 142rpx;
+    top: 700rpx;
+    left: 153rpx;
+    position: absolute;
+    text-align: center;
+}
+
+.maozhao_3 {
+    transform: rotate(40deg);
+}
+
+.inbox-4 {
+    width: 98rpx;
+    height: 142rpx;
+    top: 802rpx;
+    left: 292rpx;
+    position: absolute;
+    text-align: center;
+}
+
+.inbox-5 {
+    width: 98rpx;
+    height: 142rpx;
+    top: 934rpx;
+    left: 460rpx;
+    position: absolute;
+    text-align: center;
+}
+
+.inbox-6 {
+    width: 98rpx;
+    height: 142rpx;
+    top: 1096rpx;
+    left: 297rpx;
+    position: absolute;
+    text-align: center;
+}
+
+.maozhao_6 {
+    transform: rotate(50deg);
+}
+
+.inbox-7 {
+    width: 98rpx;
+    height: 142rpx;
+    top: 1267rpx;
+    left: 379rpx;
+    position: absolute;
+    text-align: center;
+}
+
+.inbox-8 {
+    width: 98rpx;
+    height: 142rpx;
+    top: 1471rpx;
+    left: 498rpx;
+    position: absolute;
+    text-align: center;
+}
+
+.inbox-9 {
+    width: 98rpx;
+    height: 142rpx;
+    top: 1637rpx;
+    left: 382rpx;
+    position: absolute;
+    text-align: center;
+}
+
+.maozhao_9 {
+    transform: rotate(50deg);
+}
+
+.inbox-10 {
+    width: 98rpx;
+    height: 142rpx;
+    top: 1775rpx;
+    left: 237rpx;
+    position: absolute;
+    text-align: center;
+}
+
+.maozhao_10 {
+    transform: rotate(50deg);
+}
+
+.cover1 {
+    height: 1712rpx;
+    background-size: 750rpx 4000rpx;
+    background-image: url(https://z3.ax1x.com/2021/05/14/grhCvV.png);
+    background-repeat: no-repeat;
+    background-position: -1px -1944rpx;
+    position: relative;
+}
+
+.outside {
+    position: absolute;
+    top: -247rpx;
+}
+
+
+/* 
+.way {
+    position: relative;
+    min-height: 1844rpx;
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-position: 0rpx 0rpx;
+    background-image: url(https://z3.ax1x.com/2021/05/23/gXAsE9.png);
+}
+
+.sign {
+    height: 448rpx;
+    width: 607rpx;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(https://z3.ax1x.com/2021/05/23/gXADHJ.png);
+}
+
+.inbox-1 {
+    width: 98rpx;
+    height: 142rpx;
+    top: 353rpx;
+    left: 255rpx;
+    position: absolute;
+    text-align: center;
+} */
