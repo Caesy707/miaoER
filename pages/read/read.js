@@ -37,6 +37,8 @@ Page({
     onLoad: function(options) {
         const that = this;
         console.log(options.uid)
+        options.eid=1
+        options.uid=1
         // var eid = 1;
         // var uid = 1;
         wx.request({
