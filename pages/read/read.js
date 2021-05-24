@@ -26,7 +26,21 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-
+        console.log(options)
+        var eid = 1;
+        var uid = 1;
+        wx.request({
+          
+          url: 'https://wx.bitaxes.com/api/episode/'+ eid +'/'+uid, 
+          method: 'GET',
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success (res) {
+            console.log(res.data)
+          }
+        })
+    
     },
     // 选项选中与未选中的切换
     changeColor: function(e) {
