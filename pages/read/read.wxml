@@ -27,7 +27,7 @@
     />
     <view class="read_box">
       <view class="read_title">
-        For the past five years
+        {{ episode.title }}
         <image
           class="title-image"
           src="{{collect?'https://z3.ax1x.com/2021/05/22/gLUqgS.png':'https://z3.ax1x.com/2021/05/22/gLULjg.png '}}"
@@ -35,8 +35,9 @@
           bindtap="changeCollect"
         />
 
-      </view>
-      <view class="read_contain">
+      </view>  
+      <!-- <view class="read_contain">
+    
         For the past five years, Paula Smith, a historian of science, has devoted herself to re-creating long-forgotten techniques. While doing research for her new book, she came across a 16th-century French manuscriptconsisting of nearly 1,000 sets of instructions, covering subjects from tool making to finding the best sand.
         The author's intention remains as mysterious as his name; he may have been simply taking notes for his own records. But Smith was struck mainly by the fact that she didn't truly grasp any of the skills the author described. "You simply can't get an understanding of that handwork by reading about it," she says.
         Though Smith did get her hands on the best sand, doing things the old-fashioned way isn't just about playing around with French mud. Reconstructing the work of the craftsmen（工匠）who lived centuries ago can reveal how they viewed the world, what objects filled their homes, and what went on in the workshops that produced them. It can even help solve present-day problems: In 2015, scientists discovered that a 10th-century English medicine for eve problems could kill a drug-resistant virus.
@@ -44,7 +45,15 @@
         Smith has put the manuscript's ideas into practice. Her final goal is to link the worlds of art and science back together: She believes that bringing the old recipes to life can help develop a kind of learning that highlights experimentation, teamwork, and problem solving.
         Back when science—then called “the new philosophy”—took shape, academics looked to craftsmen for help in understanding the natural world. Microscopes and telescopes were invented by way of artistic tinkering（修补）, as craftsmen experimented with glass to better bend light.
         If we can rediscover the values of hands-on experience and craftwork, Smith says, we can marry the best of our modern insights with the handiness of our ancestors.
+      </view> -->
+
+      <!-- <rich-text class="read_contain">
+      {{ episode.content}}
+      </rich-text> -->
+      <view class="read_contain">
+        <wxparse data="{{ episode.content}}"></wxparse>
       </view>
+
     </view>
   </view>
   <view>
@@ -55,6 +64,7 @@
       bindtap="getinform"
       id="aim"
     />
+<!--     
     <view class="answer_box">
       <view class="answer_title">
         How did Smith, feel after reading the French manuscript?
@@ -110,9 +120,77 @@
         <view class="answer_A">
           Shocked for her own lack of hand skills.
         </view>
+      </view> -->
+      
+    <view class="answer_box">
+    <!-- <view wx:for="{{episode.questions}}" wx:for-index="que"> -->
+      <view wx:for="{{episode.questions}}">
+
+      <view class="answer_title">
+        {{index+1}}、 {{item.content}}
       </view>
+      <view class="choice">
+        <view class="A">
+          <image
+            src="{{AnsSeleted[index][0]?'https://z3.ax1x.com/2021/05/18/ghfZ40.png':'https://z3.ax1x.com/2021/05/18/ghfmCV.png'}}"
+            mode="widthFix"
+            bindtap="changeColor"
+            data-ans="0"
+            data-index= "{{index}}"
+          />
+        </view>
+        <view class="answer_A">
+          {{item.option_a}}
+        </view>
+      </view>
+      <view class="choice">
+        <view class="A">
+          <image
+            src="{{AnsSeleted[index][1]?'https://z3.ax1x.com/2021/05/18/ghfVNq.png':'https://z3.ax1x.com/2021/05/18/ghfEEn.png'}}"
+            mode="widthFix"
+            bindtap="changeColor"
+            data-ans="1"
+            data-index= "{{index}}"
+          />
+        </view>
+        <view class="answer_A">
+          {{item.option_b}}
+        </view>
+      </view>
+      <view class="choice">
+        <view class="A">
+          <image
+            src="{{AnsSeleted[index][2]?'https://z3.ax1x.com/2021/05/18/ghfkHs.png':'https://z3.ax1x.com/2021/05/18/ghfn3T.png'}}"
+            mode="widthFix"
+            bindtap="changeColor"
+            data-ans="2"
+            data-index= "{{index}}"
+          />
+        </view>
+        <view class="answer_A">
+          {{item.option_c}}
+        </view>
+      </view>
+      
+      <view class="choice">
+        <view class="A">
+          <image
+            src="{{AnsSeleted[index][3]?'https://z3.ax1x.com/2021/05/18/ghfugU.png':'https://z3.ax1x.com/2021/05/18/ghfKvF.png'}}"
+            mode="widthFix"
+            bindtap="changeColor"
+            data-ans="3"
+            data-index= "{{index}}"
+          />
+        </view>
+        <view class="answer_A">
+          {{item.option_a}}
+        </view>
+      </view>
+    </view>
+
+
       <view class="box_submit">
-        <button class="submit" hover-class="submit-1">
+        <button class="submit" hover-class="submit-1" bindtap="submitAns">
           提交答案
         </button>
       </view>

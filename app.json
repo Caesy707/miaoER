@@ -16,5 +16,11 @@
         "navigationBarTextStyle": "black"
     },
     "style": "v2",
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "plugins": {
+      "wxparse": {
+        "version": "1.0.10",
+        "provider": "wx5d60c080635009b1"
+      }
+    }
 }

@@ -1,5 +1,6 @@
 {
-    "usingComponents": {},
+    "usingComponents": {"wxparse": "plugin://wxparse/wxparse"},
     "navigationBarTitleText": "传统模式",
     "navigationBarBackgroundColor": "#f8f8f8"
+    
 }

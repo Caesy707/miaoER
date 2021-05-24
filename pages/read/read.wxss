@@ -23,6 +23,7 @@ scroll-view {
 
 .read_contain {
     font-size: 41.67rpx;
+    text-indent: 2em;
 }
 
 .answer_box {
