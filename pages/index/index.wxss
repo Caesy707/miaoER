@@ -129,8 +129,8 @@ page {
     width: 322rpx;
     height: 114rpx;
     position: fixed;
-    top: 600rpx;
-    left: 300rpx;
+    top: 767rpx;
+    left: 191rpx;
 }
 
 .dialogue_1 {
@@ -155,4 +155,8 @@ page {
     z-index: 1;
     top: 714rpx;
     left: 453rpx;
+}
+
+.firbid {
+    pointer-events: none;
 }

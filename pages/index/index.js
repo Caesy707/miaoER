@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-05 09:33:10
- * @LastEditTime: 2021-05-23 17:11:29
+ * @LastEditTime: 2021-05-24 18:30:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \猫E读\pages\index\index.js
@@ -72,7 +72,8 @@ Page({
 
                 this.setData({
                     userInfo: res.userInfo,
-                    hasUserInfo: true
+                    hasUserInfo: true,
+                    isShowtoo: false
                 })
                 wx.setStorage({
                     data: res.userInfo,

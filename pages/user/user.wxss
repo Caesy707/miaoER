@@ -45,6 +45,16 @@
     z-index: 1;
 }
 
+.fillin {
+    position: absolute;
+    font-size: 25rpx;
+    top: 126rpx;
+    left: 320rpx;
+    color: #ffa557;
+    text-decoration: underline;
+    z-index: 1;
+}
+
 .card-img {
     position: absolute;
     top: 127rpx;
@@ -143,4 +153,46 @@
 
 .flex-font {
     display: inline;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    outline: 0;
+}
+
+.firstcatpad {
+    position: absolute;
+    width: 84rpx;
+    top: 134rpx;
+    left: 400rpx;
+}
+
+.firsttalk {
+    position: absolute;
+    width: 366rpx;
+    top: 260rpx;
+    left: 100rpx;
+}
+
+.first {
+    position: absolute;
+    height: 1000rpx;
+    width: 1000rpx;
+    z-index: 100;
+}
+
+.card-text3 {
+    font-size: 25rpx;
+}
+
+.fillin1 {
+    font-size: 25rpx;
+    color: #ffa557;
+    text-decoration: underline;
+    z-index: 1;
 }

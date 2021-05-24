@@ -10,11 +10,24 @@
     </view>
 
     <view class="card-text1">
-      英语等级：{{level[index].name}}
+      英语等级：
+      {{level[index].name}}
     </view>
-    <view class="revise" bindtap="showModal">
+    <view
+      class="revise"
+      bindtap="showModal"
+      wx:if="{{reviseshow}}"
+    >
       修改
     </view>
+    <view
+      class="fillin"
+      bindtap="showModal"
+      wx:if="{{fillshow}}"
+    >
+      填写
+    </view>
+
   </view>
   <view class="card-contain" wx:if="{{unregistered}}">
     <image
@@ -54,7 +67,7 @@
   wx:if="{{isModal}}"
   bindtap="hiddenModal"
 ></view>
-<view class="modal" wx:if="{{isModal}}" >
+<view class="modal" wx:if="{{isModal}}">
   <radio-group bindchange="changeCheck">
     <view
       class="cu-item"
@@ -72,6 +85,34 @@
       </label>
     </view>
   </radio-group>
+
+</view>
+<view class="mask">
+  <image
+    class="firstcatpad"
+    src="https://z3.ax1x.com/2021/05/24/gxSzBd.png"
+    mode="widthFix"
+  />
+  <view class="first">
+    <view class="card-text3">
+      英语等级：
+      {{level[index].name}}
+    </view>
+    <view
+      class="fillin1"
+      bindtap="showModal"
+      wx:if="{{fillshow}}"
+    >
+      填写
+    </view>
+
+  </view>
+
+  <image
+    class="firsttalk"
+    src="https://z3.ax1x.com/2021/05/24/gxSxnH.png"
+    mode="widthFix"
+  />
 
 </view>
 

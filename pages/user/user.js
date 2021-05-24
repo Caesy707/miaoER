@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-06 17:45:48
- * @LastEditTime: 2021-05-23 15:05:51
+ * @LastEditTime: 2021-05-24 18:47:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \猫E读\pages\user\user.js
@@ -35,8 +35,9 @@ Page({
                 name: "专八"
             },
         ],
-        index: 0
-
+        index: 4,
+        fillshow: true, //填写是否显示
+        reviseshow: false
     },
     onLoad() {
         this.getinform()
@@ -86,7 +87,9 @@ Page({
         console.log(e.currentTarget.dataset.index)
         var sindex = e.currentTarget.dataset.index
         this.setData({
-            index: sindex
+            index: sindex,
+            fillshow: false,
+            reviseshow: true
         })
     }
 })

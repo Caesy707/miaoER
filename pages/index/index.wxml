@@ -49,14 +49,20 @@
   <view class="inset"></view>
   <view class="dialogue"></view>
 </view>
-<view
-  class="mask"
-  wx:if="{{isShowtoo}}"
-  bindtap="secondmask"
->
-  <view class="unmask"></view>
+<view class="mask forbid" wx:if="{{isShowtoo}}">
+  <view class="unmask">
+    <button
+      class="button2 "
+      hover-class="button4"
+      bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"
+      open-type="getUserProfile"
+      data-index="2"
+    >个人中心
+    </button>
+  </view>
   <view class="dialogue_1"></view>
   <view class="catpad"></view>
+
 </view>
 
 <!--https://z3.ax1x.com/2021/05/23/gXKgXt.png-->
