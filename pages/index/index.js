@@ -30,15 +30,39 @@ Page({
                 canIUseGetUserProfile: true
             })
         }
-        wx.clearStorage({
-                complete: (res) => {
-                    console.log("clear")
-                },
-            })
+        // wx.clearStorage({
+        //         complete: (res) => {
+        //             console.log("clear")
+        //         },
+        //     })
             // 检查是否过期
         wx.checkSession({
             success() {
                 console.log("未过期")
+                wx.login({
+                    success(res) {
+                        if (res.code) {
+                            //发起网络请求
+                            wx.request({
+                                url: 'https://wx.bitaxes.com/api/wx/user/login/' + res.code,
+                                success(reqRes) {
+                                    console.log(reqRes.data.data.id)
+                                    // wx.setStorage({
+                                    //     data: reqRes.data,
+                                    //     key: 'code',
+                                    // })
+                                    wx.setStorage({
+                                        data: reqRes.data.data.id,
+                                        key: 'uid',
+                                    })
+                                }
+                            })
+
+                        } else {
+                            console.log('登录失败！' + res.errMsg)
+                        }
+                    }
+                })
             },
             fail() {
                 wx.login({
@@ -49,9 +73,13 @@ Page({
                                 url: 'https://wx.bitaxes.com/api/wx/user/login/' + res.code,
                                 success(reqRes) {
                                     console.log(reqRes.data)
+                                    // wx.setStorage({
+                                    //     data: reqRes.data,
+                                    //     key: 'code',
+                                    // })
                                     wx.setStorage({
-                                        data: reqRes.data,
-                                        key: 'code',
+                                        data: reqRes.data.data.uid,
+                                        key: 'uid',
                                     })
                                 }
                             })
@@ -63,13 +91,13 @@ Page({
                 })
             }
         })
-        this.getgrade()
+        // this.getgrade()
     },
     getUserProfile(e) {
         wx.getUserProfile({
             desc: '展示用户信息',
             success: (res) => {
-
+                console.log(res)
                 this.setData({
                     userInfo: res.userInfo,
                     hasUserInfo: true,
@@ -79,6 +107,34 @@ Page({
                     data: res.userInfo,
                     key: 'user',
                 })
+                // wx.getStorage({
+                //     key: 'uid',
+                //     success (uidRes) {
+                //       console.log(uidRes.data)
+                      
+                //     //   wx.request({
+                //     //     url: 'https://wx.bitaxes.com/api/wx/user/userinfo', 
+                //     //     method: 'POST',
+                //     //     header: {
+                //     //     'content-type': 'application/json' // 默认值
+                //     //     },
+                //     //     data:{
+                //     //         "uid": uid.data,
+                //     //         "ans2": that.data.Answer[1],
+                //     //         "ans3": that.data.Answer[2],
+                //     //         "uid": that.data.episode.uid,
+                //     //         "eid": that.data.eid,
+                //     //         "spend_time":"3分21秒"
+        
+                //     //     },
+                //     //     success(res) {
+                //     //         console.log(res.data)
+                //     //     }
+                //     // })
+                //     }
+                // })
+
+
                 wx.navigateTo({
                     url: '../user/user',
                 })
@@ -110,19 +166,19 @@ Page({
     },
     // 获取关卡列表
     getgrade() {
-        wx.request({
-            url: 'https://wx.bitaxes.com/api/episode/all/{grade}',
-            data: {
-                grade: "3"
-            },
-            success: (reqRes) => {
-                console.log(reqRes.data)
-            },
-            fail: () => {
-                console.log("fail")
-            }
+        // wx.request({
+        //     url: 'https://wx.bitaxes.com/api/episode/all/{grade}',
+        //     data: {
+        //         grade: "3"
+        //     },
+        //     success: (reqRes) => {
+        //         console.log(reqRes.data)
+        //     },
+        //     fail: () => {
+        //         console.log("fail")
+        //     }
 
-        })
+        // })
     },
     // 首次点击
     firstmask() {

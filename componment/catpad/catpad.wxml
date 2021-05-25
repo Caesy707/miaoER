@@ -1,9 +1,9 @@
 <view class="inbox-1 inbox">
-  <text>1</text>
+  <text>第{{index}}关</text>
   <navigator
     class="icon-chongwutubiao18 iconfont maozhao_1"
     hover-class="none"
-    url="../read/read"
+    url="../read/read?eid={{index}}"
     open-type="navigate"
   ></navigator>
   <view class="iconfont icon-iconfontxingxing"></view>

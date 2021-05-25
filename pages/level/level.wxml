@@ -82,14 +82,15 @@
     wx:for="{{styleCss}}"
     wx:for-index="index"
     style="color:{{styleCss[index].color}};top:{{styleCss[index].top}};left:{{styleCss[index].left}}"
+    index = '{{index+1}}'
   ></catpad>
 </view>
-<view class="way">
+<!-- <view class="way">
 
   <catpad
     wx:for="{{styleCss}}"
     wx:for-index="index"
     style="color:{{styleCss[index].color}};top:{{styleCss[index].top}};left:{{styleCss[index].left}}"
   ></catpad>
-</view>
+</view> -->
 

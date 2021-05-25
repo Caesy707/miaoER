@@ -36,31 +36,42 @@ Page({
      */
     onLoad: function(options) {
         const that = this;
-        console.log(options.uid)
-        options.eid=1
-        options.uid=1
-        // var eid = 1;
-        // var uid = 1;
-        wx.request({
-         url: 'https://wx.bitaxes.com/api/episode/'+ options.eid +'/'+options.uid, 
-method: 'GET',
-          header: {
-            'content-type': 'application/json' // 默认值
-          },
-          success (res) {
+        // options.eid=1
+        wx.getStorage({
+            key: 'uid',
+            success: (res) => {
+                console.log(res.data)
+                options.uid=res.data
 
-              that.setData({
-                  episode: res.data.data,
-                  eid: options.eid
-              })
-              wx.setStorage({
-                key:"Episode",
-                data:res.data.data
-              })
-            console.log(res.data)
-            console.log(that.data)
-          }
+                console.log(options.uid)
+                // var eid = 1;
+                // var uid = 1;
+                wx.request({
+                 url: 'https://wx.bitaxes.com/api/episode/'+ options.eid +'/'+options.uid, 
+                    method: 'GET',
+                  header: {
+                    'content-type': 'application/json' // 默认值
+                  },
+                  success (res) {
+        
+                      that.setData({
+                          episode: res.data.data,
+                          eid: options.eid
+                      })
+                      wx.setStorage({
+                        key:"Episode",
+                        data:res.data.data
+                      })
+                    console.log(res.data)
+                    console.log(that.data)
+                  }
+                })
+            },
+            fail: () => {
+                console.log('not get uid')
+            }
         })
+
     
     },
     // 选项选中与未选中的切换

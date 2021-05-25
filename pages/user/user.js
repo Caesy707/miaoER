@@ -36,11 +36,12 @@ Page({
             },
         ],
         index: 4,
-        fillshow: true, //填写是否显示
-        reviseshow: false, //修改是否显示
-        isMask: true //引导
+        fillshow: false, //填写是否显示
+        reviseshow: true, //修改是否显示
+        isMask: false //引导
     },
     onLoad() {
+        var that = this
         this.getinform()
         if (wx.getStorage) {
             this.setData({
@@ -48,6 +49,42 @@ Page({
                 nickName: "usernickName"
             })
         }
+
+
+        // 获取英语等级
+        wx.getStorage({
+            key: 'uid',
+            success: (res) => {
+                console.log(res.data)
+
+                wx.request({ 
+                    url: 'https://wx.bitaxes.com/api/wx/user/grade/' + res.data, 
+                    method: 'GET',
+                    header: {
+                      'content-type': 'application/json' // 默认值
+                    },
+                    success (resGrade) {
+                      console.log(resGrade.data.data)
+                      if(resGrade.data.data != '0'){
+                          that.setData({
+                              index : parseInt(resGrade.data.data)-1,
+                            
+                          })
+                      }else{
+                          that.setData({
+                            fillshow: true, //填写是否显示
+                            reviseshow: false, //修改是否显示
+                            isMask: true //引导
+                          })
+                      }
+                    }
+                  })
+            },
+            fail: () => {
+                console.log('not get uid')
+            }
+
+        })
     },
     // 获取个人信息
     getinform: function() {
@@ -69,6 +106,10 @@ Page({
             }
 
         })
+        
+      
+
+        
     },
     showModal: function() {
         console.log(1)
@@ -93,6 +134,32 @@ Page({
             index: sindex,
             fillshow: false,
             reviseshow: true
+        })
+
+        wx.getStorage({
+            key: 'uid',
+            success: (res) => {
+                console.log(res.data)
+
+                       wx.request({
+                        url: 'https://wx.bitaxes.com/api/wx/user/grade', 
+                        method: 'POST',
+                        header: {
+                        'content-type': 'application/json' // 默认值
+                        },
+                        data:{
+                            "uid": res.data,
+                            "grade": sindex+1
+                        },
+                        success(res) {
+                            console.log(res.data)
+                        }
+                    })
+            },
+            fail: () => {
+                console.log('not get uid')
+            }
+
         })
     }
 })
