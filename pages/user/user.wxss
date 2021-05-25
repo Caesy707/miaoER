@@ -170,6 +170,7 @@
     width: 84rpx;
     top: 134rpx;
     left: 400rpx;
+    z-index: 1;
 }
 
 .firsttalk {
@@ -180,17 +181,31 @@
 }
 
 .first {
+    top: 221rpx;
+    line-height: 40rpx;
+    left: 243rpx;
+    border-radius: 10rpx;
     position: absolute;
-    height: 1000rpx;
-    width: 1000rpx;
-    z-index: 100;
+    height: 40rpx;
+    width: 271rpx;
+    background: #fff;
 }
 
 .card-text3 {
     font-size: 25rpx;
+    display: inline;
 }
 
 .fillin1 {
+    font-size: 25rpx;
+    color: #ffa557;
+    text-decoration: underline;
+    z-index: 1;
+    display: inline;
+}
+
+.revise1 {
+    display: inline;
     font-size: 25rpx;
     color: #ffa557;
     text-decoration: underline;

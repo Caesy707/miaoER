@@ -42,8 +42,8 @@ Page({
         // var eid = 1;
         // var uid = 1;
         wx.request({
-          url: 'https://wx.bitaxes.com/api/episode/'+ options.eid +'/'+options.uid, 
-          method: 'GET',
+         url: 'https://wx.bitaxes.com/api/episode/'+ options.eid +'/'+options.uid, 
+method: 'GET',
           header: {
             'content-type': 'application/json' // 默认值
           },

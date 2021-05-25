@@ -1,4 +1,4 @@
-page {
+/* page {
     height: 100%;
 }
 
@@ -154,15 +154,13 @@ page {
 .outside {
     position: absolute;
     top: -247rpx;
-}
+} */
 
-
-/* 
 .way {
     position: relative;
     min-height: 1844rpx;
-    background-repeat: repeat-y;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 750rpx 1840rpx;
     background-position: 0rpx 0rpx;
     background-image: url(https://z3.ax1x.com/2021/05/23/gXAsE9.png);
 }
@@ -182,4 +180,11 @@ page {
     left: 255rpx;
     position: absolute;
     text-align: center;
-} */
+}
+
+catpad {
+    width: 98rpx;
+    height: 142rpx;
+    display: block;
+    position: absolute;
+}

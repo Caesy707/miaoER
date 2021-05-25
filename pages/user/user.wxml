@@ -87,10 +87,15 @@
   </radio-group>
 
 </view>
-<view class="mask">
+<view class="mask" wx:if="{{isMask}}">
   <image
     class="firstcatpad"
     src="https://z3.ax1x.com/2021/05/24/gxSzBd.png"
+    mode="widthFix"
+  />
+  <image
+    class="firsttalk"
+    src="https://z3.ax1x.com/2021/05/24/gxSxnH.png"
     mode="widthFix"
   />
   <view class="first">
@@ -105,14 +110,13 @@
     >
       填写
     </view>
-
+    <view
+      class="revise1"
+      bindtap="showModal"
+      wx:if="{{reviseshow}}"
+    >
+      修改
+    </view>
   </view>
-
-  <image
-    class="firsttalk"
-    src="https://z3.ax1x.com/2021/05/24/gxSxnH.png"
-    mode="widthFix"
-  />
-
 </view>
 

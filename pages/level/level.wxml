@@ -1,4 +1,4 @@
-<view class="cover">
+<!-- <view class="cover">
   <view class="inbox-1 inbox">
     <text>1</text>
     <navigator
@@ -74,11 +74,22 @@
     <view class="iconfont icon-iconfontxingxing"></view>
     <view class="iconfont icon-iconfontxingxing"></view>
   </view>
-</view>
-<!-- 
+</view> -->
+
 <view class="way">
   <view class="sign"></view>
-  <catpad wx:for="{{10}}">
-  </catpad>
-</view> -->
+  <catpad
+    wx:for="{{styleCss}}"
+    wx:for-index="index"
+    style="color:{{styleCss[index].color}};top:{{styleCss[index].top}};left:{{styleCss[index].left}}"
+  ></catpad>
+</view>
+<view class="way">
+
+  <catpad
+    wx:for="{{styleCss}}"
+    wx:for-index="index"
+    style="color:{{styleCss[index].color}};top:{{styleCss[index].top}};left:{{styleCss[index].left}}"
+  ></catpad>
+</view>
 

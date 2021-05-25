@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-06 17:45:48
- * @LastEditTime: 2021-05-24 18:47:22
+ * @LastEditTime: 2021-05-24 20:38:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \猫E读\pages\user\user.js
@@ -37,7 +37,8 @@ Page({
         ],
         index: 4,
         fillshow: true, //填写是否显示
-        reviseshow: false
+        reviseshow: false, //修改是否显示
+        isMask: true //引导
     },
     onLoad() {
         this.getinform()
@@ -72,7 +73,9 @@ Page({
     showModal: function() {
         console.log(1)
         this.setData({
-            isModal: true
+            isModal: true,
+            isMask: false
+
         })
     },
     hiddenModal: function() {
