@@ -48,7 +48,7 @@
   />
 </view>
 <view class="function">
-  <navigator class="function1" url="../collect/collect">
+  <navigator class="function1" url="../collect/collect?uid={{uid}}">
     <view class="iconfont icon-shoucang"></view>
     <text>我的收藏</text>
   </navigator>

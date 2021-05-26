@@ -36,6 +36,7 @@ Page({
             },
         ],
         index: 4,
+        uid:0,
         fillshow: false, //填写是否显示
         reviseshow: true, //修改是否显示
         isMask: false //引导
@@ -56,7 +57,9 @@ Page({
             key: 'uid',
             success: (res) => {
                 console.log(res.data)
-
+                that.setData({
+                    uid: res.data
+                })
                 wx.request({ 
                     url: 'https://wx.bitaxes.com/api/wx/user/grade/' + res.data, 
                     method: 'GET',
@@ -130,6 +133,7 @@ Page({
     change: function(e) {
         console.log(e.currentTarget.dataset.index)
         var sindex = e.currentTarget.dataset.index
+        var that = this;
         this.setData({
             index: sindex,
             fillshow: false,
@@ -140,6 +144,7 @@ Page({
             key: 'uid',
             success: (res) => {
                 console.log(res.data)
+                
 
                        wx.request({
                         url: 'https://wx.bitaxes.com/api/wx/user/grade', 

@@ -5,13 +5,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    star: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
+    console.log(parseInt(options.uid))
+    wx.request({
+      
+      url: 'https://wx.bitaxes.com/api/star/' + options.uid, 
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success (res) {
+        that.setData({
+          star:res.data
+        })
+        console.log(that.data.star)
+      }
+    })
 
   },
 

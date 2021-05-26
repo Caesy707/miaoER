@@ -1,6 +1,7 @@
-<view class="outline">
+<view class="outline" bindtap="nav">
   <view class="font">
-    四级-第一关
+    <!-- 四级-第一关 -->
+    {{name}}
   </view>
 </view>
 

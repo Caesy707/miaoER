@@ -1,3 +1,5 @@
-<mycollect></mycollect>
-<mycollect></mycollect>
+<view wx:for="{{star}}">
+  <mycollect name='{{item[0].a_title}}'  eid='111'></mycollect>
+</view>
+<!-- <mycollect></mycollect> -->
 
