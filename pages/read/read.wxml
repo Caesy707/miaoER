@@ -35,7 +35,7 @@
           bindtap="changeCollect"
         />
 
-      </view>  
+      </view>
       <!-- <view class="read_contain">
     
         For the past five years, Paula Smith, a historian of science, has devoted herself to re-creating long-forgotten techniques. While doing research for her new book, she came across a 16th-century French manuscriptconsisting of nearly 1,000 sets of instructions, covering subjects from tool making to finding the best sand.
@@ -64,7 +64,7 @@
       bindtap="getinform"
       id="aim"
     />
-<!--     
+    <!--     
     <view class="answer_box">
       <view class="answer_title">
         How did Smith, feel after reading the French manuscript?
@@ -121,83 +121,111 @@
           Shocked for her own lack of hand skills.
         </view>
       </view> -->
-      
+
     <view class="answer_box">
-    <!-- <view wx:for="{{episode.questions}}" wx:for-index="que"> -->
+      <!-- <view wx:for="{{episode.questions}}" wx:for-index="que"> -->
       <view wx:for="{{episode.questions}}">
 
-      <view class="answer_title">
-        {{index+1}}、 {{item.content}}
-      </view>
-      <view class="choice">
-        <view class="A">
-          <image
-            src="{{AnsSeleted[index][0]?'https://z3.ax1x.com/2021/05/18/ghfZ40.png':'https://z3.ax1x.com/2021/05/18/ghfmCV.png'}}"
-            mode="widthFix"
-            bindtap="changeColor"
-            data-ans="0"
-            data-index= "{{index}}"
-          />
+        <view class="answer_title">
+          {{index+1}}、 {{item.content}}
         </view>
-        <view class="answer_A">
-          {{item.option_a}}
+        <view class="choice">
+          <view class="A">
+            <image
+              src="{{AnsSeleted[index][0]?'https://z3.ax1x.com/2021/05/18/ghfZ40.png':'https://z3.ax1x.com/2021/05/18/ghfmCV.png'}}"
+              mode="widthFix"
+              bindtap="changeColor"
+              data-ans="0"
+              data-index="{{index}}"
+            />
+          </view>
+          <view class="answer_A">
+            {{item.option_a}}
+          </view>
         </view>
-      </view>
-      <view class="choice">
-        <view class="A">
-          <image
-            src="{{AnsSeleted[index][1]?'https://z3.ax1x.com/2021/05/18/ghfVNq.png':'https://z3.ax1x.com/2021/05/18/ghfEEn.png'}}"
-            mode="widthFix"
-            bindtap="changeColor"
-            data-ans="1"
-            data-index= "{{index}}"
-          />
+        <view class="choice">
+          <view class="A">
+            <image
+              src="{{AnsSeleted[index][1]?'https://z3.ax1x.com/2021/05/18/ghfVNq.png':'https://z3.ax1x.com/2021/05/18/ghfEEn.png'}}"
+              mode="widthFix"
+              bindtap="changeColor"
+              data-ans="1"
+              data-index="{{index}}"
+            />
+          </view>
+          <view class="answer_A">
+            {{item.option_b}}
+          </view>
         </view>
-        <view class="answer_A">
-          {{item.option_b}}
+        <view class="choice">
+          <view class="A">
+            <image
+              src="{{AnsSeleted[index][2]?'https://z3.ax1x.com/2021/05/18/ghfkHs.png':'https://z3.ax1x.com/2021/05/18/ghfn3T.png'}}"
+              mode="widthFix"
+              bindtap="changeColor"
+              data-ans="2"
+              data-index="{{index}}"
+            />
+          </view>
+          <view class="answer_A">
+            {{item.option_c}}
+          </view>
         </view>
-      </view>
-      <view class="choice">
-        <view class="A">
-          <image
-            src="{{AnsSeleted[index][2]?'https://z3.ax1x.com/2021/05/18/ghfkHs.png':'https://z3.ax1x.com/2021/05/18/ghfn3T.png'}}"
-            mode="widthFix"
-            bindtap="changeColor"
-            data-ans="2"
-            data-index= "{{index}}"
-          />
-        </view>
-        <view class="answer_A">
-          {{item.option_c}}
-        </view>
-      </view>
-      
-      <view class="choice">
-        <view class="A">
-          <image
-            src="{{AnsSeleted[index][3]?'https://z3.ax1x.com/2021/05/18/ghfugU.png':'https://z3.ax1x.com/2021/05/18/ghfKvF.png'}}"
-            mode="widthFix"
-            bindtap="changeColor"
-            data-ans="3"
-            data-index= "{{index}}"
-          />
-        </view>
-        <view class="answer_A">
-          {{item.option_a}}
-        </view>
-      </view>
-    </view>
 
+        <view class="choice">
+          <view class="A">
+            <image
+              src="{{AnsSeleted[index][3]?'https://z3.ax1x.com/2021/05/18/ghfugU.png':'https://z3.ax1x.com/2021/05/18/ghfKvF.png'}}"
+              mode="widthFix"
+              bindtap="changeColor"
+              data-ans="3"
+              data-index="{{index}}"
+            />
+          </view>
+          <view class="answer_A">
+            {{item.option_a}}
+          </view>
+        </view>
+      </view>
 
       <view class="box_submit">
-        <button class="submit" hover-class="submit-1" bindtap="submitAns">
+        <button
+          class="submit"
+          hover-class="submit-1"
+          bindtap="submitAns"
+        >
           提交答案
         </button>
       </view>
 
     </view>
   </view>
+  <view class="mask" wx:if="{{isMask}}">
+    <view class="popup">
+      <view>
+        <navigator
+          class="next"
+          hover-class="next1"
+          bindtap="changeNext"
+        >
+        </navigator>
+      </view>
+      <view>
+        <navigator
+          class="searchAns"
+          hover-class="searchAns1"
+          bindtap="searchAns"
+        >
+        </navigator>
+      </view>
+    </view>
+
+  </view>
+
 </scroll-view>
-<!-- https://z3.ax1x.com/2021/05/22/gLvGOP.png
-https://z3.ax1x.com/2021/05/22/gLv8yt.png -->
+<!-- https://z3.ax1x.com/2021/05/25/2SfJCn.png一星
+https://z3.ax1x.com/2021/05/25/2SfNvV.png二星
+https://z3.ax1x.com/2021/05/25/2Sftg0.png三星
+
+ -->
 

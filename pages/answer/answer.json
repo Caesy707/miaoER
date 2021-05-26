@@ -1,5 +1,7 @@
 {
-    "usingComponents": {"wxparse": "plugin://wxparse/wxparse"},
-    "navigationBarTitleText": "答题模式",
+    "usingComponents": {
+        "wxparse": "plugin://wxparse/wxparse"
+    },
+    "navigationBarTitleText": "简易模式",
     "navigationBarBackgroundColor": "#f8f8f8"
 }

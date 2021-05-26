@@ -1,96 +1,10 @@
-<!-- <view class="cover">
-  <view class="inbox-1 inbox">
-    <text>1</text>
-    <navigator
-      class="icon-chongwutubiao18 iconfont maozhao_1"
-      hover-class="none"
-      url="../read/read"
-      open-type="navigate"
-    ></navigator>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-  </view>
-  <view class="inbox-2 inbox">
-    <text>2</text>
-    <navigator class="icon-chongwutubiao18 iconfont maozhao_2" hover-class="none"></navigator>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-  </view>
-  <view class="inbox-3 inbox">
-    <text>2</text>
-    <navigator class="icon-chongwutubiao18 iconfont maozhao_3" hover-class="none"></navigator>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-  </view>
-  <view class="inbox-4 inbox">
-    <text>2</text>
-    <navigator class="icon-chongwutubiao18 iconfont maozhao_4" hover-class="none"></navigator>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-  </view>
-  <view class="inbox-5 inbox">
-    <text>2</text>
-    <navigator class="icon-chongwutubiao18 iconfont maozhao_5" hover-class="none"></navigator>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-  </view>
-  <view class="inbox-6 inbox">
-    <text>2</text>
-    <navigator class="icon-chongwutubiao18 iconfont maozhao_6" hover-class="none"></navigator>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-  </view>
-  <view class="inbox-7 inbox">
-    <text>2</text>
-    <navigator class="icon-chongwutubiao18 iconfont maozhao_7" hover-class="none"></navigator>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-  </view>
-  <view class="inbox-8 inbox">
-    <text>2</text>
-    <navigator class="icon-chongwutubiao18 iconfont maozhao_8" hover-class="none"></navigator>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-  </view>
-  <view class="inbox-9 inbox">
-    <text>2</text>
-    <navigator class="icon-chongwutubiao18 iconfont maozhao_9" hover-class="none"></navigator>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-  </view>
-  <view class="inbox-10 inbox">
-    <text>2</text>
-    <navigator class="icon-chongwutubiao18 iconfont maozhao_10" hover-class="none"></navigator>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-    <view class="iconfont icon-iconfontxingxing"></view>
-  </view>
-</view> -->
-
 <view class="way">
   <view class="sign"></view>
   <catpad
     wx:for="{{styleCss}}"
     wx:for-index="index"
     style="color:{{styleCss[index].color}};top:{{styleCss[index].top}};left:{{styleCss[index].left}}"
-    index = '{{index+1}}'
+    index='{{index+1}}'
   ></catpad>
 </view>
-<!-- <view class="way">
-
-  <catpad
-    wx:for="{{styleCss}}"
-    wx:for-index="index"
-    style="color:{{styleCss[index].color}};top:{{styleCss[index].top}};left:{{styleCss[index].left}}"
-  ></catpad>
-</view> -->
 
