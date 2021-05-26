@@ -39,10 +39,9 @@
     <view class="read_box">
       <view class="read_title">
         {{ episode.title }}
-        <view class="read_contain">
-
-        </view>
-
+      </view>
+      <view class="read_contain">
+        <wxparse data="{{ episode.content }}"></wxparse>
       </view>
     </view>
     <view>
@@ -55,29 +54,33 @@
       />
 
       <view class="answer_box">
-        在过去的五年里，科学史学家保拉-史密斯致力于重新创造早已被遗忘的技术。在为她的新书做研究时，她发现了一份16世纪的法国手稿，其中包括近1000套说明，涵盖了从工具制造到寻找最好的沙子的主题。
+        <!-- 在过去的五年里，科学史学家保拉-史密斯致力于重新创造早已被遗忘的技术。在为她的新书做研究时，她发现了一份16世纪的法国手稿，其中包括近1000套说明，涵盖了从工具制造到寻找最好的沙子的主题。
 
-        作者的意图和他的名字一样神秘；他可能只是在为自己的记录做笔记。但令史密斯印象深刻的是，她并没有真正掌握作者描述的任何技能。"她说："你根本不可能通过阅读来了解这种手工作业。
+        作者的意图和他的名字一样神秘；他可能只是在为自己的记录做笔记。但令史密斯印象深刻的是，她并没有真正掌握作者描述的任何技能。"她说："你根本不可能通过阅读来了解这种手工作业。 -->
+        <wxparse data="{{ episode.translate}}"></wxparse>
       </view>
     </view>
     <view class="comment">
       <view class="comment_title">
         精选笔记
       </view>
-      <view class="onecomment" wx:for="{{3}}">
+      <view class="onecomment" wx:for="{{episode.notes}}">
         <image
           class="oneself_img"
-          src="https://z3.ax1x.com/2021/05/26/2pbj7q.png"
+          src="{{item.user[0].avatar_url}}"
           mode="widthFix"
-        />
+        />          <!-- src="https://z3.ax1x.com/2021/05/26/2pbj7q.png" -->
+
         <view class="oneself">
-          救命根本睡不够
+          <!-- 救命根本睡不够 -->
+          {{item.user[0].nickname}}
         </view>
         <view class="oneself_text">
-          路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！
+          <!-- 路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！ -->
+          {{item.content}}
         </view>
-        <view class="iconfont icon-dianzan">
-          999
+        <view class="iconfont icon-dianzan" bindtap="clickStar">
+          {{item.like_count}}
         </view>
 
       </view>
