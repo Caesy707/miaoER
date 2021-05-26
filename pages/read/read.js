@@ -171,9 +171,7 @@ Page({
     submitAns: function() {
         var that = this;
         var ansLen = 4;
-        this.setData({
-            isMask: true
-        })
+        
         that.data.Answer.forEach(function(value, index, array) {
                 if (index < 3) {
                     if (value == '') {
@@ -210,6 +208,9 @@ Page({
                 },
                 success(res) {
                     console.log(res.data)
+                    that.setData({
+                        isMask: true
+                    })
                 }
             })
         }
@@ -228,7 +229,7 @@ Page({
     },
     searchAns: function() {
         this.setData({
-            isMask: true
+            isMask: false
         })
     }
 })
