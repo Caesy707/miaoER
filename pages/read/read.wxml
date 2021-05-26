@@ -50,8 +50,9 @@
       <!-- <rich-text class="read_contain">
       {{ episode.content}}
       </rich-text> -->
+      
       <view class="read_contain">
-        <wxparse data="{{ episode.content}}"></wxparse>
+        <wxparse data="{{ episode.content }}"></wxparse>
       </view>
 
     </view>

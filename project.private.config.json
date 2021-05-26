@@ -75,6 +75,7 @@
         {
           "name": "pages/translate/translate",
           "pathName": "pages/translate/translate",
+<<<<<<< HEAD
           "query": "",
           "scene": null
         },
@@ -87,6 +88,9 @@
         {
           "name": "pages/feedback/feedback",
           "pathName": "pages/feedback/feedback",
+=======
+          "query": "eid=1&uid=1",
+>>>>>>> miao
           "scene": null
         }
       ]

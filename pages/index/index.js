@@ -15,8 +15,10 @@ Page({
         userInfo: {},
         hasUserInfo: false,
         canIUseGetUserProfile: false,
-        isShow: true,
-        isShowtoo: false
+        isShow: false,
+        isShowtoo: false,
+        uid: 0,
+        // hasUserInfo: false      //数据库是否有用户信息
     },
     // 事件处理函数
     bindViewTap() {
@@ -25,16 +27,17 @@ Page({
         })
     },
     onLoad() {
-        if (wx.getUserProfile) {
-            this.setData({
-                canIUseGetUserProfile: true
-            })
-        }
-        // wx.clearStorage({
-        //         complete: (res) => {
-        //             console.log("clear")
-        //         },
+        var that = this;
+        // if (wx.getUserProfile) {
+        //     this.setData({
+        //         canIUseGetUserProfile: true
         //     })
+        // }
+        wx.clearStorage({
+                complete: (res) => {
+                    console.log("clear")
+                },
+            })
             // 检查是否过期
         wx.checkSession({
             success() {
@@ -46,15 +49,25 @@ Page({
                             wx.request({
                                 url: 'https://wx.bitaxes.com/api/wx/user/login/' + res.code,
                                 success(reqRes) {
-                                    console.log(reqRes.data.data.id)
+                                    console.log(reqRes.data)
                                     // wx.setStorage({
                                     //     data: reqRes.data,
                                     //     key: 'code',
                                     // })
+                                    if(reqRes.data.data.IsNewUser){
+                                        that.setData({
+                                            isShow : true,
+                                            uid:reqRes.data.data.id
+                                        })
+                                    }
+                                    that.setData({
+                                        uid:reqRes.data.data.id
+                                    })
                                     wx.setStorage({
                                         data: reqRes.data.data.id,
                                         key: 'uid',
                                     })
+                                    
                                 }
                             })
 
@@ -78,8 +91,16 @@ Page({
                                     //     key: 'code',
                                     // })
                                     wx.setStorage({
-                                        data: reqRes.data.data.uid,
+                                        data: reqRes.data.data.id,
                                         key: 'uid',
+                                    })
+                                    if(reqRes.data.data.IsNewUser){
+                                        that.setData({
+                                            isShow : true,
+                                        })
+                                    }
+                                    that.setData({
+                                        uid:reqRes.data.data.id
                                     })
                                 }
                             })
@@ -91,13 +112,16 @@ Page({
                 })
             }
         })
-        // this.getgrade()
+        this.getgrade()
+
     },
     getUserProfile(e) {
+        var that = this
+        console.log(that.data.uid)
         wx.getUserProfile({
             desc: '展示用户信息',
             success: (res) => {
-                console.log(res)
+                console.log(res.userInfo)
                 this.setData({
                     userInfo: res.userInfo,
                     hasUserInfo: true,
@@ -112,38 +136,73 @@ Page({
                 //     success (uidRes) {
                 //       console.log(uidRes.data)
                       
-                //     //   wx.request({
-                //     //     url: 'https://wx.bitaxes.com/api/wx/user/userinfo', 
-                //     //     method: 'POST',
-                //     //     header: {
-                //     //     'content-type': 'application/json' // 默认值
-                //     //     },
-                //     //     data:{
-                //     //         "uid": uid.data,
-                //     //         "ans2": that.data.Answer[1],
-                //     //         "ans3": that.data.Answer[2],
-                //     //         "uid": that.data.episode.uid,
-                //     //         "eid": that.data.eid,
-                //     //         "spend_time":"3分21秒"
+                //       wx.request({
+                //         url: 'https://wx.bitaxes.com/api/wx/user/userinfo', 
+                //         method: 'POST',
+                //         header: {
+                //         'content-type': 'application/json' // 默认值
+                //         },
+                //         data:{
+                //             "uid": uid.data,
+                //             "ans2": that.data.Answer[1],
+                //             "ans3": that.data.Answer[2],
+                //             "uid": that.data.episode.uid,
+                //             "eid": that.data.eid,
+                //             "spend_time":"3分21秒"
         
-                //     //     },
-                //     //     success(res) {
-                //     //         console.log(res.data)
-                //     //     }
-                //     // })
+                //         },
+                //         success(res) {
+                //             console.log(res.data)
+                //         }
+                //     })
                 //     }
                 // })
 
-
-                wx.navigateTo({
-                    url: '../user/user',
+                wx.request({
+                    url: 'https://wx.bitaxes.com/api/wx/user/userinfo', 
+                    method: 'POST',
+                    header: {
+                    'content-type': 'application/json' // 默认值
+                    },
+                    data:{
+                        "uid": that.data.uid,
+                        "nickName": res.userInfo.nickName,
+                        "avatarUrl": res.userInfo.avatarUrl,
+                        "gender": res.userInfo.gender,
+                        "country": res.userInfo.country,
+                        "province": res.userInfo.province,
+                        "city": res.userInfo.city,
+                        "language": res.userInfo.language
+            
+    
+                    },
+                    success(res) {
+                        console.log(res.data)
+                    }
                 })
+
+
+                // wx.navigateTo({
+                //     url: '../user/user',
+                // })
+                this.navigateTo(e)
             },
             fail: () => {
-                console.log(1)
-                wx.navigateTo({
-                    url: '../user/user',
-                })
+                // console.log(1)
+                // wx.navigateTo({
+                //     url: '../user/user',
+                // })
+                // wx.showModal({
+                //     title: '提示',
+                //     content: '我们需要你的用户信息',
+                //     success (res) {
+                //       if (res.confirm) {
+                //         console.log('用户点击确定')
+                //       } else if (res.cancel) {
+                //         console.log('用户点击取消')
+                //       }
+                //     }
+                //   })
             }
         })
 
