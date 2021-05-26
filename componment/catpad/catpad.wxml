@@ -1,14 +1,25 @@
 <view class="inbox-1 inbox">
-  <text>第{{info.order}}关</text>
+  <text>第{{info.order}}关</text>    
+    <!-- url="{{info.Record==0?'../read/read?eid={{info.id}}':'../translate/translate?eid={{info.id}}'}}"     url="../read/read?eid={{info.id}}"
+-->
+
   <navigator
     class="icon-chongwutubiao18 iconfont maozhao_1"
     hover-class="none"
-    url="../read/read?eid={{info.id}}"
+    bindtap="navTo"
+    data-infoId = '{{info.id}}'
+    data-hasRecord = "{{info.Record==0?'1':'0'}}"
     open-type="navigate"
   ></navigator>
+<!-- <<<<<<< Updated upstream
   <view class="iconfont icon-iconfontxingxing" style="colo:{{}}"></view>
   <view class="iconfont icon-iconfontxingxing" style="colo:{{}}"></view>
   <view class="iconfont icon-iconfontxingxing" style="colo:{{}}"></view>
+
+======= -->
+  <view class="iconfont icon-iconfontxingxing" style="{{info.Record>0?'color:#fffc35':''}}"></view>
+  <view class="iconfont icon-iconfontxingxing"style="{{info.Record>1?'color:#fffc35':''}}"></view>
+  <view class="iconfont icon-iconfontxingxing"style="{{info.Record>2?'color:#fffc35':''}}"></view>
 
 </view>
 
