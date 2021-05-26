@@ -6,8 +6,9 @@
     url="../read/read?eid={{info.id}}"
     open-type="navigate"
   ></navigator>
-  <view class="iconfont icon-iconfontxingxing"></view>
-  <view class="iconfont icon-iconfontxingxing"></view>
-  <view class="iconfont icon-iconfontxingxing"></view>
+  <view class="iconfont icon-iconfontxingxing" style="colo:{{}}"></view>
+  <view class="iconfont icon-iconfontxingxing" style="colo:{{}}"></view>
+  <view class="iconfont icon-iconfontxingxing" style="colo:{{}}"></view>
+
 </view>
 

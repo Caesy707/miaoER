@@ -1,4 +1,8 @@
-<scroll-view scroll-y="true">
+<scroll-view
+  scroll-y="true"
+  scroll-into-view="{{ToView}}"
+  scroll-with-animation="true"
+>
   <cover-view scroll-top="0">
     <cover-image
       class=""
@@ -6,7 +10,11 @@
       bindtap="changePattern"
     >
     </cover-image>
-    <cover-image class="" src="https://z3.ax1x.com/2021/05/26/29pOR1.png">
+    <cover-image
+      class=""
+      src="{{collect?'https://z3.ax1x.com/2021/05/26/295ECQ.png':'https://z3.ax1x.com/2021/05/26/29pOR1.png '}}"
+      bindtap="changeCollect"
+    >
 
     </cover-image>
     <cover-image class="" src="https://z3.ax1x.com/2021/05/26/29pXxx.png">
@@ -78,7 +86,7 @@
   </view>
 
 </scroll-view>
-<!--https://z3.ax1x.com/2021/05/26/29pvM6.png
-https://z3.ax1x.com/2021/05/26/29pXxx.png
-https://z3.ax1x.com/2021/05/26/29pOR1.png-->
+
+<!--https://z3.ax1x.com/2021/05/26/29pOR1.png 
+  https://z3.ax1x.com/2021/05/26/295ECQ.png -->
 

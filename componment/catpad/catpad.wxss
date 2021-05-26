@@ -25,3 +25,7 @@
 .maozhao_1 {
     transform: rotate(50deg);
 }
+
+.icon-iconfontxingxing {
+    color: #da9651
+}
