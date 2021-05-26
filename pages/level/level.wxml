@@ -1,12 +1,13 @@
-<view class="way">
+<view class="way" style="height:{{mapHeight + 100}}rpx">
   <view class="sign"></view>
   <catpad
-    wx:for="{{styleCss}}"
+    wx:key="index"
+    wx:for="{{episode}}"
     wx:for-index="index"
-    style="color:{{styleCss[index].color}};top:{{styleCss[index].top}};left:{{styleCss[index].left}}"
+    style="color:{{styleCss[index].color}};top:{{styleCss[index%10].top}}rpx;left:{{styleCss[index%10].left}}rpx"
     index='{{index+1}}'
     info='{{episode[index]}}'
-    wx:if='{{episode[index].order}}'
+    wx:if='episode[index].order'
   ></catpad>
 </view>
 

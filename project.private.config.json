@@ -75,6 +75,18 @@
         {
           "name": "pages/translate/translate",
           "pathName": "pages/translate/translate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Ans/Ans",
+          "pathName": "pages/Ans/Ans",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/feedback/feedback",
+          "pathName": "pages/feedback/feedback",
           "scene": null
         }
       ]
