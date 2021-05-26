@@ -22,6 +22,7 @@ scroll-view {
 }
 
 .read_contain {
+    min-height: 200rpx;
     font-size: 41.67rpx;
     text-indent: 2em;
 }

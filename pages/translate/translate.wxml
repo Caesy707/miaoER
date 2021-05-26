@@ -31,12 +31,6 @@
     <view class="read_box">
       <view class="read_title">
         {{ episode.title }}
-        <image
-          class="title-image"
-          src="{{collect?'https://z3.ax1x.com/2021/05/22/gLUqgS.png':'https://z3.ax1x.com/2021/05/22/gLULjg.png '}}"
-          mode="widthFix"
-          bindtap="changeCollect"
-        />
         <view class="read_contain">
 
         </view>
