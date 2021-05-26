@@ -7,7 +7,8 @@
         "pages/read/read",
         "pages/answer/answer",
         "pages/collect/collect",
-        "pages/translate/translate"
+        "pages/translate/translate",
+        "pages/feedback/feedback"
 
     ],
     "window": {

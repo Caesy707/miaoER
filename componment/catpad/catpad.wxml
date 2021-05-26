@@ -8,7 +8,7 @@
     hover-class="none"
     bindtap="navTo"
     data-infoId = '{{info.id}}'
-    data-hasRecord = "{{info.Record==0?'1':'0'}}"
+    data-hasRecord = "{{info.Record==0?'0':'1'}}"
     open-type="navigate"
   ></navigator>
 <!-- <<<<<<< Updated upstream
