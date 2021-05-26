@@ -1,0 +1,108 @@
+.read {
+    width: 430rpx;
+    display: block;
+    margin: 0 auto;
+}
+
+scroll-view {
+    height: 100vh;
+}
+
+.read_box {
+    width: 651rpx;
+    background-color: #ffffff;
+    margin: auto;
+    margin-top: 28rpx;
+    font-family: Garamond;
+}
+
+.read_title {
+    width: 100%;
+    font-size: 66.67rpx;
+}
+
+.read_contain {
+    font-size: 41.67rpx;
+    text-indent: 2em;
+}
+
+.answer_box {
+    width: 651rpx;
+    background-color: #ffffff;
+    margin: auto;
+    margin-top: 28rpx;
+    font-family: Garamond;
+    font-size: 41.67rpx;
+}
+
+cover-view {
+    position: fixed;
+    top: 500rpx;
+    right: 0;
+}
+
+cover-image {
+    width: 85rpx;
+    height: 85rpx;
+    margin-bottom: 29rpx;
+}
+
+.title-image {
+    width: 50rpx;
+    height: 50rpx;
+    display: inline-block;
+}
+
+.comment {
+    width: 651rpx;
+    background-color: #ffffff;
+    margin: auto;
+    margin-top: 185rpx;
+    font-family: Garamond;
+    font-size: 41.67rpx;
+}
+
+.comment_title {
+    width: 100%;
+    height: 112rpx;
+    font-size: 41.67rpx;
+    padding: 28rpx 0 0 88rpx;
+    background-image: url(https://z3.ax1x.com/2021/05/26/2pbXBn.png);
+    background-size: 51rpx 51rpx;
+    background-repeat: no-repeat;
+    background-position: 30rpx 30rpx
+}
+
+.onecomment {
+    width: 100%;
+    height: 179rpx;
+    position: relative;
+}
+
+.oneself_img {
+    width: 93rpx;
+    position: absolute;
+    left: 35rpx;
+}
+
+.oneself {
+    font-size: 25rpx;
+    color: #5c5c5c;
+    position: absolute;
+    top: 0;
+    left: 147rpx;
+}
+
+.oneself_text {
+    width: 475rpx;
+    font-size: 25rpx;
+    position: absolute;
+    top: 61rpx;
+    left: 147rpx;
+}
+
+.icon-dianzan {
+    position: absolute;
+    font-size: 25rpx;
+    right: 43rpx;
+}

@@ -10,7 +10,7 @@
 }
 
 page {
-    background: #f8f8f8;
+    background: #e8e8e8;
     height: 100%;
 }
 

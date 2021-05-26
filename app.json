@@ -6,7 +6,8 @@
         "pages/aid/aid",
         "pages/read/read",
         "pages/answer/answer",
-        "pages/collect/collect"
+        "pages/collect/collect",
+        "pages/translate/translate"
 
     ],
     "window": {
@@ -18,9 +19,9 @@
     "style": "v2",
     "sitemapLocation": "sitemap.json",
     "plugins": {
-      "wxparse": {
-        "version": "1.0.10",
-        "provider": "wx5d60c080635009b1"
-      }
+        "wxparse": {
+            "version": "1.0.10",
+            "provider": "wx5d60c080635009b1"
+        }
     }
 }

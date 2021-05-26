@@ -1,0 +1,90 @@
+<scroll-view scroll-y="true">
+  <cover-view scroll-top="0">
+    <cover-image
+      class=""
+      src="https://z3.ax1x.com/2021/05/26/29pvM6.png"
+      bindtap="changePattern"
+    >
+    </cover-image>
+    <cover-image class="" src="https://z3.ax1x.com/2021/05/26/29pOR1.png">
+
+    </cover-image>
+    <cover-image class="" src="https://z3.ax1x.com/2021/05/26/29pXxx.png">
+
+    </cover-image>
+
+    <cover-image
+      class=""
+      src="https://z3.ax1x.com/2021/05/20/gTp6AJ.png"
+      bindtap="changeposition"
+    >
+    </cover-image>
+  </cover-view>
+
+  <view>
+    <image
+      class="read"
+      src="https://z3.ax1x.com/2021/05/18/gh6Rvd.png"
+      mode="widthFix"
+      id="header"
+    />
+    <view class="read_box">
+      <view class="read_title">
+        {{ episode.title }}
+        <image
+          class="title-image"
+          src="{{collect?'https://z3.ax1x.com/2021/05/22/gLUqgS.png':'https://z3.ax1x.com/2021/05/22/gLULjg.png '}}"
+          mode="widthFix"
+          bindtap="changeCollect"
+        />
+        <view class="read_contain">
+
+        </view>
+
+      </view>
+    </view>
+    <view>
+      <image
+        class="read"
+        src="https://z3.ax1x.com/2021/05/26/29SUXT.png"
+        mode="widthFix"
+        bindtap="getinform"
+        id="aim"
+      />
+
+      <view class="answer_box">
+        在过去的五年里，科学史学家保拉-史密斯致力于重新创造早已被遗忘的技术。在为她的新书做研究时，她发现了一份16世纪的法国手稿，其中包括近1000套说明，涵盖了从工具制造到寻找最好的沙子的主题。
+
+        作者的意图和他的名字一样神秘；他可能只是在为自己的记录做笔记。但令史密斯印象深刻的是，她并没有真正掌握作者描述的任何技能。"她说："你根本不可能通过阅读来了解这种手工作业。
+      </view>
+    </view>
+    <view class="comment">
+      <view class="comment_title">
+        精选笔记
+      </view>
+      <view class="onecomment" wx:for="{{3}}">
+        <image
+          class="oneself_img"
+          src="https://z3.ax1x.com/2021/05/26/2pbj7q.png"
+          mode="widthFix"
+        />
+        <view class="oneself">
+          救命根本睡不够
+        </view>
+        <view class="oneself_text">
+          路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！
+        </view>
+        <view class="iconfont icon-dianzan">
+          999
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+
+</scroll-view>
+<!--https://z3.ax1x.com/2021/05/26/29pvM6.png
+https://z3.ax1x.com/2021/05/26/29pXxx.png
+https://z3.ax1x.com/2021/05/26/29pOR1.png-->
+
