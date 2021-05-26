@@ -3,7 +3,7 @@
   <navigator
     class="icon-chongwutubiao18 iconfont maozhao_1"
     hover-class="none"
-    url="../read/read?eid={{index}}"
+    url="../read/read?eid={{info.id}}"
     open-type="navigate"
   ></navigator>
   <view class="iconfont icon-iconfontxingxing"></view>

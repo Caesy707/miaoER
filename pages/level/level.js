@@ -76,7 +76,7 @@ Page({
                     success (resGrade) {
                       console.log(resGrade)
                               wx.request({
-                                url: 'https://wx.bitaxes.com/api/episode/all/' + resGrade.data.data,
+                                url: 'https://wx.bitaxes.com/api/episode/all/' + resGrade.data.data + '/' + res.data,
                             
                                 success: (reqRes) => {
                                     console.log(reqRes.data)
