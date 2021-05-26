@@ -4,16 +4,12 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    name:String,
-    eid:Number
+    info: Object
   },
   observers:{ //监听数据的更改
-    "name"(data){
+    "info"(data){
       data ===this.data.a //这里不要写this.setData({})
     },
-    "eid"(data){
-      data ===this.data.a //这里不要写this.setData({})
-    }
   },
   /**
    * 组件的初始数据

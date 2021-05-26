@@ -1,5 +1,5 @@
 <view class="inbox-1 inbox">
-  <text>第{{index}}关</text>
+  <text>第{{info.order}}关</text>
   <navigator
     class="icon-chongwutubiao18 iconfont maozhao_1"
     hover-class="none"

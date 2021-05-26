@@ -53,7 +53,8 @@ Page({
                 top: "1647rpx",
                 left: "300rpx"
             },
-        ]
+        ],
+        episode:[]
     },
 
     /**
@@ -66,7 +67,6 @@ Page({
             key: 'uid',
             success: (res) => {
                 console.log(res.data)
-
                 wx.request({ 
                     url: 'https://wx.bitaxes.com/api/wx/user/grade/' + res.data, 
                     method: 'GET',
@@ -74,12 +74,15 @@ Page({
                       'content-type': 'application/json' // 默认值
                     },
                     success (resGrade) {
-                      console.log(resGrade.data)
+                      console.log(resGrade)
                               wx.request({
-                                url: 'https://wx.bitaxes.com/api/episode/all/' + parseInt(resGrade.data.data),
+                                url: 'https://wx.bitaxes.com/api/episode/all/' + resGrade.data.data,
                             
                                 success: (reqRes) => {
                                     console.log(reqRes.data)
+                                    that.setData({
+                                        episode: reqRes.data.data
+                                    })
                                 },
                                 fail: () => {
                                     console.log("fail")

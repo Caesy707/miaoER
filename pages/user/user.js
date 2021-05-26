@@ -18,23 +18,24 @@ Page({
         unregistered: true,
         registered: false,
         isModal: false,
-        level: [{
-                id: 0,
-                name: "四级"
-            },
-            {
-                id: 1,
-                name: "六级"
-            },
-            {
-                id: 2,
-                name: "专四"
-            },
-            {
-                id: 3,
-                name: "专八"
-            },
-        ],
+        // level: [{
+        //         id: 0,
+        //         name: "四级"
+        //     },
+        //     {
+        //         id: 1,
+        //         name: "六级"
+        //     },
+        //     {
+        //         id: 2,
+        //         name: "专四"
+        //     },
+        //     {
+        //         id: 3,
+        //         name: "专八"
+        //     },
+        // ],
+        level: [],
         index: 4,
         uid:0,
         fillshow: false, //填写是否显示
@@ -48,8 +49,24 @@ Page({
             this.setData({
                 AvatarUrl: "userAvatarUrl",
                 nickName: "usernickName"
+               
             })
         }
+
+        //
+        wx.request({ 
+            url: 'https://wx.bitaxes.com/api/episode/grades',
+            method: 'GET',
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success (res) {
+                console.log(res.data.data)
+                that.setData({
+                     level:res.data.data 
+                })
+            }
+          })
 
 
         // 获取英语等级
@@ -70,7 +87,7 @@ Page({
                       console.log(resGrade.data.data)
                       if(resGrade.data.data != '0'){
                           that.setData({
-                              index : parseInt(resGrade.data.data)-1,
+                              index : parseInt(resGrade.data.data) - 3,
                             
                           })
                       }else{
@@ -135,7 +152,7 @@ Page({
         var sindex = e.currentTarget.dataset.index
         var that = this;
         this.setData({
-            index: sindex,
+            index: sindex-3,
             fillshow: false,
             reviseshow: true
         })
@@ -154,7 +171,7 @@ Page({
                         },
                         data:{
                             "uid": res.data,
-                            "grade": sindex+1
+                            "grade": sindex
                         },
                         success(res) {
                             console.log(res.data)

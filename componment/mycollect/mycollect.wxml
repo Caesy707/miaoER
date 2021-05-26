@@ -1,7 +1,7 @@
 <view class="outline" bindtap="nav">
   <view class="font">
     <!-- 四级-第一关 -->
-    {{name}}
+    {{info.episodes[0].grades[0].name}}-第{{info.episodes[0].order}}关
   </view>
 </view>
 

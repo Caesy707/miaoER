@@ -1,5 +1,5 @@
 <view wx:for="{{star}}">
-  <mycollect name='{{item[0].a_title}}'  eid='111'></mycollect>
+  <mycollect info='{{item}}' ></mycollect>
 </view>
 <!-- <mycollect></mycollect> -->
 
