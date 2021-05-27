@@ -66,6 +66,22 @@ Page({
         })
     },
 
+    syncEpisode: function(e) {
+        console.log(e)
+        
+        if (e.has_star) {
+            this.setData({
+                episode: e,
+                collect: true
+            })
+        }else{
+            this.setData({
+                episode: e,
+                collect: false
+            })
+        }
+    },
+
     changeCollect: function() {
         var that = this
         // if (this.data.collect) {
@@ -91,8 +107,11 @@ Page({
                   "eid": that.data.eid,
                 },
                 success(res) {
+                    var epi = that.data.episode
+                    epi.has_star = 0
                     that.setData({
-                        collect: false
+                        collect: false,
+                        episode: epi
                     })
                   console.log(res.data)
                 }
@@ -111,8 +130,11 @@ Page({
                   "eid": that.data.eid,
                 },
                 success(res) {
+                    var epi = that.data.episode
+                    epi.has_star = 1
                     that.setData({
-                        collect: true
+                        collect: true,
+                        episode: epi
                     })
                   console.log(res.data)
                 }
@@ -128,5 +150,22 @@ Page({
     },
     clickStar:function(e){
         console.log(e)
-    }
+    },
+    changePattern:function(e){
+        console.log(e)
+        wx.setStorage({
+            key: "AnsEpisode",
+            data: this.data.episode
+        })
+        // wx.setStorage({
+        //     key: "Answer",
+        //     data: this.data.Answer
+        // })
+        wx.navigateTo({
+            url: '../Ans/Ans?eid=' + this.data.eid + '&uid=' + this.data.uid,
+        })
+    },
+    onunload: function() {
+        wx.removeStorageSync('AnsEpisode');
+    },
 })
