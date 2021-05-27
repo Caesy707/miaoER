@@ -23,7 +23,14 @@ Component({
    */
   methods: {
     nav: function(){
+      var that = this
       console.log(this.data)
+      wx.navigateTo({
+        url: '../translate/translate?eid=' + this.data.info.eid,
+        success: function(res) {
+
+        }
+      })
     }
   }
 })
