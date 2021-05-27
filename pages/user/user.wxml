@@ -56,7 +56,7 @@
     <view class="iconfont icon-guanyu"></view>
     <text>关于产品</text>
   </navigator>
-  <navigator class="function1">
+  <navigator class="function1"url="../feedback/feedback?uid={{uid}}">
     <view class="iconfont icon-yijianfankui"></view>
     <text>意见反馈</text>
   </navigator>

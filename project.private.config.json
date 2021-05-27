@@ -13,9 +13,10 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/user/user",
-          "pathName": "pages/user/user",
-          "query": "",
+          "id": 0,
+          "name": "pages/read/read",
+          "pathName": "pages/read/read",
+          "query": "uid=1&eid=1",
           "scene": null
         },
         {
@@ -25,56 +26,9 @@
           "scene": null
         },
         {
-          "name": "pages/read/read",
-          "pathName": "pages/read/read",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/level/level",
-          "pathName": "pages/level/level",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/aid/aid",
-          "pathName": "pages/aid/aid",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/read/read",
-          "pathName": "pages/read/read",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/answer/answer",
-          "pathName": "pages/answer/answer",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/collect/collect",
-          "pathName": "pages/collect/collect",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/other/other",
-          "pathName": "pages/other/other",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/read/read",
-          "pathName": "pages/read/read",
-          "query": "uid=1&eid=1",
-          "scene": null
-        },
-        {
           "name": "pages/translate/translate",
           "pathName": "pages/translate/translate",
+<<<<<<< HEAD
           "query": " ",
           "scene": null
         },
@@ -87,6 +41,9 @@
         {
           "name": "pages/feedback/feedback",
           "pathName": "pages/feedback/feedback",
+=======
+          "query": "",
+>>>>>>> master
           "scene": null
         }
       ]
