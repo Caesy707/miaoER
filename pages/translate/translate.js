@@ -149,7 +149,31 @@ Page({
         })
     },
     clickStar:function(e){
-        console.log(e)
+        var that = this 
+        console.log(e) 
+ 
+ 
+        wx.request({ 
+ 
+            url: 'https://wx.bitaxes.com/api/episode/note/like',  
+            method: 'POST', 
+            header: { 
+              'content-type': 'application/json'  
+            }, 
+            data:{ 
+              "uid": that.data.uid, 
+              "cid": e.currentTarget.dataset.cid, 
+            }, 
+            success(res) { 
+                var epi = that.data.episode 
+                epi.notes[e.currentTarget.dataset.index].like_count = res.data.data.like_count; 
+                epi.notes[e.currentTarget.dataset.index].has_like = res.data.data.has_like; 
+                that.setData({ 
+                    episode:epi 
+                }) 
+              console.log(res.data) 
+            } 
+          }) 
     },
     changePattern:function(e){
         console.log(e)
