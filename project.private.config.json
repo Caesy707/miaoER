@@ -17,6 +17,7 @@
           "name": "pages/read/read",
           "pathName": "pages/read/read",
           "query": "uid=1&eid=1",
+<<<<<<< HEAD
           "scene": null
         },
         {
@@ -44,6 +45,20 @@
 =======
           "query": "",
 >>>>>>> master
+=======
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/translate/translate",
+          "pathName": "pages/translate/translate",
+          "query": "",
+>>>>>>> new-brand
           "scene": null
         }
       ]

@@ -66,59 +66,19 @@ Page({
         })
     },
 
-    changeCollect: function() {
-        var that = this
-        // if (this.data.collect) {
-        //     this.setData({
-        //         collect: false
-        //     })
-        // } else {
-        //     this.setData({
-        //         collect: true
-        //     })
-        // }
-        console.log(that.data)
-        if(this.data.collect){
-            wx.request({
-
-                url: 'https://wx.bitaxes.com/api/episode/star', 
-                method: 'POST',
-                header: {
-                  'content-type': 'application/json' 
-                },
-                data:{
-                  "uid": that.data.uid,
-                  "eid": that.data.eid,
-                },
-                success(res) {
-                    that.setData({
-                        collect: false
-                    })
-                  console.log(res.data)
-                }
-              })
+    syncEpisode: function(e) {
+        console.log(e)
+        
+        if (e.has_star) {
+            this.setData({
+                episode: e,
+                collect: true
+            })
         }else{
-
-            wx.request({
-
-                url: 'https://wx.bitaxes.com/api/episode/star', 
-                method: 'POST',
-                header: {
-                  'content-type': 'application/json' 
-                },
-                data:{
-                  "uid": that.data.uid,
-                  "eid": that.data.eid,
-                },
-                success(res) {
-                    that.setData({
-                        collect: true
-                    })
-                  console.log(res.data)
-                }
-              })
-          
-
+            this.setData({
+                episode: e,
+                collect: false
+            })
         }
     },
 
