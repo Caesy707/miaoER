@@ -41,8 +41,9 @@
         {{ episode.title }}
       </view>
       <view class="read_contain">
+      <rich-text nodes="{{episode.content}}"></rich-text>
         <!-- <wxparse data="{{episode.content}}"></wxparse> -->
-        The Best Free Tourist Places in America
+        <!-- The Best Free Tourist Places in America
 Alaska: Anchorage Market and Festival
 Although Anchorage isn't the capital of Alaska, it is the state's largest city with the largest population. The Anchorage Market and Festival is open and free of charge on weekends. Anchorage is at the beginning of the Tony Knowles Coastal Trail, where walks can last between two hours and a half day. It's free, of course.
 Arkansas : Walmart Museum
@@ -53,7 +54,7 @@ Kansas: Santa Fe Trail
 Western Kansas has very little light pollution. So as you travel along, stop once in a while and stare at the night sky. The Santa Fe Trail went through Kansas and you can still walk the longest remaining distance of the road just outside Dodge City.
 21. What may especially attract visitors to Bentonville?
 A. The chance to find many interesting goods.
-B. The chance to get trained in a large company.
+B. The chance to get trained in a large company. -->
       </view>
     </view>
     <view>
