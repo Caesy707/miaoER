@@ -24,6 +24,12 @@ scroll-view {
 .read_contain {
     min-height: 200rpx;
     font-size: 41.67rpx;
+	    padding: 36rpx;
+    word-break: break-word;
+    line-height:50rpx;
+
+}
+p{
     text-indent: 2em;
 }
 

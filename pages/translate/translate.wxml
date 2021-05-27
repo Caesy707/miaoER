@@ -41,7 +41,19 @@
         {{ episode.title }}
       </view>
       <view class="read_contain">
-        <wxparse data="{{ episode.content }}"></wxparse>
+        <!-- <wxparse data="{{episode.content}}"></wxparse> -->
+        The Best Free Tourist Places in America
+Alaska: Anchorage Market and Festival
+Although Anchorage isn't the capital of Alaska, it is the state's largest city with the largest population. The Anchorage Market and Festival is open and free of charge on weekends. Anchorage is at the beginning of the Tony Knowles Coastal Trail, where walks can last between two hours and a half day. It's free, of course.
+Arkansas : Walmart Museum
+Lying in the northwest corner of Arkansas is Bentonville, which gave birth to a little mall you may have heard of. It's Walmart, one of the biggest companies in the world at present. It is free to visit the Walmart Museum, which attracts thousands of visitors every year. And just outside the town is the well - known Crystal Bridges Museum of American Art, which is also free.
+Connecticut: Yale University
+New Haven, Connecticut was the first place in the U. S. to offer pizza to the hungry and the homeless, including students of Yale University. While in New Haven you can go on a tour of the campus (校园), where many beautiful buildings have existed for a long time. It's the university where President Bushes, Bill and Hillary Clinton, journalist Bob Woodward, and Samuel F. B. Morse studied.
+Kansas: Santa Fe Trail
+Western Kansas has very little light pollution. So as you travel along, stop once in a while and stare at the night sky. The Santa Fe Trail went through Kansas and you can still walk the longest remaining distance of the road just outside Dodge City.
+21. What may especially attract visitors to Bentonville?
+A. The chance to find many interesting goods.
+B. The chance to get trained in a large company.
       </view>
     </view>
     <view>
@@ -60,7 +72,7 @@
         <wxparse data="{{ episode.translate}}"></wxparse>
       </view>
     </view>
-    <view class="comment">
+    <view class="comment" wx:if="{{episode.notes.length}}">
       <view class="comment_title">
         精选笔记
       </view>
