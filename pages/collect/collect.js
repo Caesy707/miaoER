@@ -5,30 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    star: []
+    star: [],
+    uid:0,
+    show:true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
     console.log(parseInt(options.uid))
-    wx.request({
-      
-      url: 'https://wx.bitaxes.com/api/star/' + options.uid, 
-      method: 'GET',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success (res) {
-        that.setData({
-          star:res.data
-        })
-        console.log(that.data.star)
-      }
+    this.setData({
+      uid: parseInt(options.uid)
     })
-
   },
 
   /**
@@ -41,8 +30,32 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
+  onShow: function (e) {
+    var that = this
+    
+    wx.request({
+      
+      url: 'https://wx.bitaxes.com/api/star/'+ that.data.uid, 
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success (res) {
+        // that.setData({
+        //   star:res.data
+        // })
+        if(res.data.code == 20002){
+          that.setData({
+            show:false
+          })
+        }else{
+          that.setData({
+            star:res.data
+          })
+        }
+        console.log(that.data.star)
+      }
+    })
   },
 
   /**

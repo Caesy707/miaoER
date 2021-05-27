@@ -1,4 +1,4 @@
-<view wx:for="{{star}}">
+<view wx:if="{{show}}" wx:for="{{star}}">
   <mycollect info='{{item}}' ></mycollect>
 </view>
 <!-- <mycollect></mycollect> -->

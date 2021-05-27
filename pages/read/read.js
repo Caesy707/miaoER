@@ -29,11 +29,11 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         const that = this;
         // options.eid=1
         var reqUrl = ''
-        
+
         wx.getStorage({
             key: 'uid',
             success: (res) => {
@@ -41,13 +41,13 @@ Page({
                 options.uid = res.data
 
                 console.log(options.uid)
-                    // var eid = 1;
-                    // var uid = 1;
-                    if(options.grade){
-                        reqUrl = 'https://wx.bitaxes.com/api/episode/' + options.grade + '/' + options.uid + '/' + options.order
-                    }else{
-                        reqUrl = 'https://wx.bitaxes.com/api/episode/' + options.eid + '/' + options.uid
-                    }
+                // var eid = 1;
+                // var uid = 1;
+                if (options.grade) {
+                    reqUrl = 'https://wx.bitaxes.com/api/episode/' + options.grade + '/' + options.uid + '/' + options.order
+                } else {
+                    reqUrl = 'https://wx.bitaxes.com/api/episode/' + options.eid + '/' + options.uid
+                }
                 wx.request({
                     url: reqUrl,
                     method: 'GET',
@@ -77,7 +77,7 @@ Page({
 
     },
     // 选项选中与未选中的切换
-    changeColor: function(e) {
+    changeColor: function (e) {
         console.log(e.currentTarget.dataset.ans);
         console.log(e.currentTarget.dataset.index)
         var dontSelete = [true, true, true, true];
@@ -110,7 +110,7 @@ Page({
             })
         } else {
             var temp = this.data.AnsSeleted
-                //dontSelete[e.currentTarget.dataset.que] = true
+            //dontSelete[e.currentTarget.dataset.que] = true
             temp[e.currentTarget.dataset.index] = dontSelete;
             this.setData({
                 AnsSeleted: temp
@@ -118,7 +118,7 @@ Page({
         }
     },
     //读和写的切换
-    changePattern: function(e) {
+    changePattern: function (e) {
         wx.setStorage({
             key: "AnsSeleted",
             data: this.data.AnsSeleted
@@ -131,7 +131,7 @@ Page({
             url: '../answer/answer',
         })
     },
-    SyncAnswerByStorage: function() {
+    SyncAnswerByStorage: function () {
         var that = this
         wx.getStorage({
             key: 'AnsSeleted',
@@ -155,7 +155,7 @@ Page({
     },
 
     //收藏与未收藏的切换
-    changeCollect: function() {
+    changeCollect: function () {
         if (this.data.collect) {
             this.setData({
                 collect: false
@@ -166,35 +166,35 @@ Page({
             })
         }
     },
-    getinform: function(e) {
+    getinform: function (e) {
         console.log(e)
     },
-    changeposition: function() {
+    changeposition: function () {
         this.setData({
             ToView: "header"
         })
     },
 
-    submitAns: function() {
+    submitAns: function () {
         var that = this;
         var ansLen = 4;
-        
-        that.data.Answer.forEach(function(value, index, array) {
-                if (index < 3) {
-                    if (value == '') {
-                        wx.showToast({
-                            title: '请答完题再提交',
-                            icon: 'error',
-                            duration: 2000
-                        })
-                    }
-                } else {
-                    if (value == '') {
-                        ansLen = 3;
-                    }
+
+        that.data.Answer.forEach(function (value, index, array) {
+            if (index < 3) {
+                if (value == '') {
+                    wx.showToast({
+                        title: '请答完题再提交',
+                        icon: 'error',
+                        duration: 2000
+                    })
                 }
-            })
-       // 答案保存入库请求 
+            } else {
+                if (value == '') {
+                    ansLen = 3;
+                }
+            }
+        })
+        // 答案保存入库请求 
         if (ansLen == 4) {
             wx.request({
                 url: 'https://wx.bitaxes.com/api/episode/question',
@@ -214,13 +214,15 @@ Page({
                 },
                 success(res) {
                     console.log(res.data)
-                    that.setData({
-                        isMask: true
-                    })
+                    if (res.data.record) {
+                        that.setData({
+                            isMask: true
+                        })
+                    }
                 }
             })
-        
-        console.log(this.data.Answer)
+
+            console.log(this.data.Answer)
         } else {
             wx.request({
                 url: 'https://wx.bitaxes.com/api/episode/question',
@@ -239,40 +241,51 @@ Page({
                 },
                 success(res) {
                     console.log(res.data)
-                    that.setData({
-                        isMask: true
-                    })
+                    if (res.data.record) {
+                        that.setData({
+                            isMask: true
+                        })
+                    }
+
                 }
             })
         }
         console.log(this.data.Answer)
     },
 
-    onunload: function() {
+    onunload: function () {
         wx.removeStorageSync('AnsSeleted');
-        wx.removeStorageSync('Episode')
+        wx.removeStorageSync('Episode');
+        // var pages = getCurrentPages(); //获取页面栈
+        // if (pages.length > 1) {
+        //     //上一个页面实例对象
+        //     var prePage = pages[pages.length - 2];
+        //     //调用上一个页面的onShow方法
+        //     prePage.onLoad()
+        // }
     },
     //下一关按钮
-    changeNext: function() {
+    changeNext: function () {
         var that = this
         this.setData({
             isMask: false
         })
+        var order = that.data.episode.order + 1
         wx.redirectTo({
-            url: '../read/read?grade=' + that.data.episode.grade + '&order=' + that.data.episode.order,
-            success(res){
-  
+            url: '../read/read?grade=' + that.data.episode.grade + '&order=' + order,
+            success(res) {
+
             }
         })
     },
-    searchAns: function() {
+    searchAns: function () {
         var that = this;
-       
+
         wx.navigateTo({
             url: '../translate/translate?eid=' + that.data.episode.eid,
-            success(res){
-                
+            success(res) {
+
             }
-          })
+        })
     }
 })
