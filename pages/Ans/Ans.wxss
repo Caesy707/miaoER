@@ -1,0 +1,95 @@
+.top {
+  width: 688rpx;
+  height: 620rpx;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 2rpx;
+}
+
+.view-1 {
+  width: 651rpx;
+  background-color: #ffffff;
+  margin: auto;
+  margin-top: 28rpx;
+  font-family: Garamond;
+}
+
+.read_title {
+  width: 100%;
+  font-size: 58.33rpx;
+  text-align: center;
+}
+
+.read_contain {
+  font-size: 41.67rpx;
+  line-height: 60rpx;
+}
+
+.answer_box {
+  width: 688rpx;
+  height: 500rpx;
+  background-color: #ffffff;
+  font-family: Garamond;
+  font-size: 41.67rpx;
+}
+
+.answer_title {
+  width: 100%;
+}
+
+.answer_A {
+  text-indent: 2em;
+  line-height: 57rpx;
+  font-size: 33.33rpx;
+}
+
+.A {
+  background-color: #fff;
+  position: absolute;
+  width: 53rpx;
+  margin-bottom: 10rpx;
+}
+
+.A image {
+  width: 53rpx;
+}
+
+.choice {
+  margin-bottom: 30rpx;
+}
+
+.outline {
+  width: 688rpx;
+  position: relative;
+  margin: auto;
+  margin-top: 24rpx;
+  height: 550rpx;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(https://z3.ax1x.com/2021/05/19/g4yvi8.png);
+}
+
+swiper {
+  width: 595rpx;
+  height: 500rpx;
+  background-color: #fff;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+cover-view {
+  position: fixed;
+  top: 500rpx;
+  right: 0;
+  z-index: 1;
+}
+
+cover-image {
+  width: 85rpx;
+  height: 85rpx;
+  margin-bottom: 29rpx;
+}

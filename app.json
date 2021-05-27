@@ -8,8 +8,8 @@
         "pages/answer/answer",
         "pages/collect/collect",
         "pages/translate/translate",
-        "pages/feedback/feedback"
-
+        "pages/feedback/feedback",
+        "pages/Ans/Ans"
     ],
     "window": {
         "backgroundTextStyle": "light",
