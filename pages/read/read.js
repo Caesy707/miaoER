@@ -32,6 +32,8 @@ Page({
     onLoad: function(options) {
         const that = this;
         // options.eid=1
+        var reqUrl = ''
+        
         wx.getStorage({
             key: 'uid',
             success: (res) => {
@@ -41,8 +43,13 @@ Page({
                 console.log(options.uid)
                     // var eid = 1;
                     // var uid = 1;
+                    if(options.grade){
+                        reqUrl = 'https://wx.bitaxes.com/api/episode/' + options.grade + '/' + options.uid + '/' + options.order
+                    }else{
+                        reqUrl = 'https://wx.bitaxes.com/api/episode/' + options.eid + '/' + options.uid
+                    }
                 wx.request({
-                    url: 'https://wx.bitaxes.com/api/episode/' + options.eid + '/' + options.uid,
+                    url: reqUrl,
                     method: 'GET',
                     header: {
                         'content-type': 'application/json' // 默认值
@@ -51,7 +58,7 @@ Page({
 
                         that.setData({
                             episode: res.data.data,
-                            eid: options.eid
+                            eid: res.data.data.eid
                         })
                         wx.setStorage({
                             key: "Episode",
@@ -187,9 +194,33 @@ Page({
                     }
                 }
             })
-            // 答案保存入库请求 
+       // 答案保存入库请求 
         if (ansLen == 4) {
+            wx.request({
+                url: 'https://wx.bitaxes.com/api/episode/question',
+                method: 'POST',
+                header: {
+                    'content-type': 'application/json' // 默认值
+                },
+                data: {
+                    "ans1": that.data.Answer[0],
+                    "ans2": that.data.Answer[1],
+                    "ans3": that.data.Answer[2],
+                    "ans4": that.data.Answer[3],
+                    "uid": that.data.episode.uid,
+                    "eid": that.data.eid,
+                    "spend_time": "3分28秒"
 
+                },
+                success(res) {
+                    console.log(res.data)
+                    that.setData({
+                        isMask: true
+                    })
+                }
+            })
+        
+        console.log(this.data.Answer)
         } else {
             wx.request({
                 url: 'https://wx.bitaxes.com/api/episode/question',
@@ -223,13 +254,25 @@ Page({
     },
     //下一关按钮
     changeNext: function() {
+        var that = this
         this.setData({
             isMask: false
+        })
+        wx.redirectTo({
+            url: '../read/read?grade=' + that.data.episode.grade + '&order=' + that.data.episode.order,
+            success(res){
+  
+            }
         })
     },
     searchAns: function() {
-        this.setData({
-            isMask: false
-        })
+        var that = this;
+       
+        wx.navigateTo({
+            url: '../translate/translate?eid=' + that.data.episode.eid,
+            success(res){
+                
+            }
+          })
     }
 })
