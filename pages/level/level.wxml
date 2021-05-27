@@ -4,10 +4,11 @@
     wx:key="index"
     wx:for="{{episode}}"
     wx:for-index="index"
-    style="color:{{styleCss[index].color}};top:{{styleCss[index%10].top}}rpx;left:{{styleCss[index%10].left}}rpx"
+    style="color:{{styleCss[index].color}};top:{{styleCss[index%10].top}}rpx;left:{{styleCss[index%10].left}}rpx;transform:rotate({{styleCss[index].transform}}deg)"
     index='{{index+1}}'
     info='{{episode[index]}}'
     wx:if='episode[index].order'
   ></catpad>
+
 </view>
 

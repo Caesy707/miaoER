@@ -14,31 +14,32 @@ Page({
      */
     data: {
         styleCss: [{
-                top: 170,
-                left: 240
+                top: 217,
+                left: 260,
+                transform: 0
             },
             {
-                top: 332,
+                top: 398,
                 left: 161
             },
             {
-                top: 487,
+                top: 566,
                 left: 128
             },
             {
-                top: 614,
+                top: 779,
                 left: 322
             },
             {
-                top: 783,
+                top: 969,
                 left: 481
             },
             {
-                top: 900,
+                top: 1159,
                 left: 337
             },
             {
-                top: 1062,
+                top: 1349,
                 left: 387
             },
             {
