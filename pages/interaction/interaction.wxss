@@ -1,0 +1,63 @@
+.outline{
+width: 653rpx;
+min-height: 239rpx;
+margin: 69rpx auto;
+}
+.message{
+  width: 100%;
+  min-height:241rpx;
+  background:#ffffff ;
+  padding: 0 0 26rpx 0;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+.self{
+  width: 628rpx;
+  height: 109rpx;
+  margin: 0 auto;
+  position: relative;
+}
+.self_img{
+  position: absolute;
+width: 68rpx;
+left: 35rpx;
+top: 21rpx;
+}
+.self_name{
+  position: absolute;
+  top: 27rpx;
+  left: 128rpx;
+  font-size: 25rpx;
+}
+.praise{
+  position: absolute;
+  top: 66rpx;
+  left: 128rpx;
+  font-size: 20.83rpx;
+  color:#686868;
+}
+.icon-dianzan{
+  font-size: 20.83rpx;
+  display: inline;
+}
+.time{
+  position: absolute;
+  top: 32rpx;
+  right: 43rpx;
+  font-size: 20.83rpx;
+  color:#a8a8a8;
+}
+.outcontain{
+  width: 628rpx;
+  min-height: 109rpx;
+  background:#e8e8e8;
+  margin: 0 auto;
+  font-size: 25rpx;
+  padding: 15rpx 38rpx 31rpx 38rpx;
+  box-sizing:border-box;
+  border-radius: 20rpx;
+}
+.contain{
+  margin-top: 16rpx;
+  color:#626262;
+}

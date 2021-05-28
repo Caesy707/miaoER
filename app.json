@@ -9,7 +9,10 @@
         "pages/collect/collect",
         "pages/translate/translate",
         "pages/feedback/feedback",
-        "pages/Ans/Ans"
+        "pages/Ans/Ans",
+        "pages/interaction/interaction",
+        "pages/notes/notes",
+        "pages/mailbox/mailbox"
     ],
     "window": {
         "backgroundTextStyle": "light",

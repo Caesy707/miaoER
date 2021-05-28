@@ -1,0 +1,30 @@
+<view class="outline">
+<view class="message">
+<view class="self">
+<image class="self_img" mode="widthFix" src="https://z3.ax1x.com/2021/05/26/2pbj7q.png"></image>
+<view class="self_name">救命根本睡不够</view>
+<view class="praise">赞了这条读书笔记
+  <view class="iconfont icon-dianzan" bindtap="clickStar" style="color:{{color}}"></view>
+</view>
+<view class="time">5-28 13:18</view>
+</view>
+<view class="outcontain">
+  <view class="contain_title">四级-第一关</view>
+  <view class="contain">路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！</view>
+</view>
+</view>
+<view class="message">
+<view class="self">
+<image class="self_img" mode="widthFix" src="https://z3.ax1x.com/2021/05/26/2pbj7q.png"></image>
+<view class="self_name">救命根本睡不够</view>
+<view class="praise">赞了这条读书笔记
+  <view class="iconfont icon-dianzan" bindtap="clickStar" style="color:{{color}}"></view>
+</view>
+<view class="time">5-28 13:18</view>
+</view>
+<view class="outcontain">
+  <view class="contain_title">四级-第一关</view>
+  <view class="contain">路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！</view>
+</view>
+</view>
+</view>

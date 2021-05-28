@@ -1,0 +1,47 @@
+.outline{
+  width: 658rpx;
+  min-height: 147rpx;
+  background: #ffffff;
+  border-radius: 20rpx;
+  margin: 65rpx auto;
+  padding: 26rpx 0 26rpx 38rpx;
+  box-sizing:border-box;
+  position: relative;
+}
+.inform_img{
+  position: absolute;
+  width: 90rpx;
+}
+.inform_title{
+  position: absolute;
+  font-size: 33.33rpx;
+  left: 147rpx;
+
+}
+.inform{
+ position: absolute;
+ left: 147rpx;
+ top: 80rpx;
+font-size: 25rpx;
+color:#949494;
+}
+.time{
+  position: absolute;
+  left: 526rpx;
+  top: 40rpx;
+  font-size: 25rpx;
+  color:#949494;
+}
+
+.circle{
+  position: absolute;
+  background: #e4614f;
+  border-radius: 50%;
+  width: 28rpx;
+  height: 28rpx;
+  left: 550rpx;
+  top: 80rpx;
+  font-size: 20rpx;
+  text-align: center;
+  color: #ffffff;
+}

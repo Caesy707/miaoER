@@ -1,0 +1,4 @@
+<view class="outline">
+  <textarea class="contain" value="{{content}}" bindinput="input" placeholder="记录你的读书笔记吧～笔记被精选后，将对所有人可见。"></textarea>
+</view>
+<navigator class="submit" hover-class="hover_submit" bindtap="submit" url="../index/index"></navigator>

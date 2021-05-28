@@ -1,0 +1,38 @@
+.outline{
+  width: 685rpx;
+  min-height: 748rpx;
+  margin: auto;
+  margin-top: 70rpx;
+  padding: 21rpx;
+  box-sizing: border-box;
+  background-image: url(https://z3.ax1x.com/2021/05/27/2C1ExP.png);
+  background-size: 100% 100%;
+  background-position-y: -9rpx;
+  background-repeat: no-repeat;
+}
+.contain{
+  width: 648rpx;
+  min-height: 683rpx;
+  font-size: 25rpx;
+  background: #ffffff;
+  border-radius: 15rpx;
+  padding: 40rpx;
+
+  box-sizing:border-box;
+}
+.submit{
+  width: 250rpx;
+  height: 76rpx;
+  margin: auto;
+  margin-top: 40rpx;
+  background-size: cover;
+  background-image: url(https://z3.ax1x.com/2021/05/28/2FzvMn.png);
+}
+.hover_submit{
+  width: 250rpx;
+  height: 76rpx;
+  margin: auto;
+  margin-top: 40rpx;
+  background-size: cover;
+  background-image: url(https://z3.ax1x.com/2021/05/28/2kSkRJ.png);
+}
