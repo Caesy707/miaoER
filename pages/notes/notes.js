@@ -5,16 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    uid:0,
+    aid:0,
+    content: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    this.setData({
+      uid: options.uid,
+      aid: options.aid
+    })
   },
-
+  input: function(e){
+    // console.log(e)
+    this.setData({
+      content: e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -62,5 +73,26 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  submit:function(){
+    var that = this;
+    console.log(that.data.content)
+    wx.request({
+
+      url: 'https://wx.bitaxes.com/api/episode/note', 
+      method: 'POST',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      data:{
+        "aid": that.data.aid,
+        "pid": 0,
+        "uid": that.data.uid,
+        "content": that.data.content,
+      },
+      success(res) {
+        console.log(res.data)
+      }
+    })
   }
 })

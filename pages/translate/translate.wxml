@@ -17,7 +17,7 @@
     >
 
     </cover-image>
-    <cover-image class="" src="https://z3.ax1x.com/2021/05/26/29pXxx.png">
+    <cover-image class="" bindtap="writeNote" src="https://z3.ax1x.com/2021/05/26/29pXxx.png">
 
     </cover-image>
 

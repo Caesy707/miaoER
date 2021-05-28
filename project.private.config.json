@@ -17,7 +17,6 @@
           "name": "pages/read/read",
           "pathName": "pages/read/read",
           "query": "uid=1&eid=1",
-<<<<<<< HEAD
           "scene": null
         },
         {
@@ -27,38 +26,27 @@
           "scene": null
         },
         {
-          "name": "pages/translate/translate",
-          "pathName": "pages/translate/translate",
-<<<<<<< HEAD
-          "query": " ",
-          "scene": null
-        },
-        {
-          "name": "pages/Ans/Ans",
-          "pathName": "pages/Ans/Ans",
+          "name": "pages/level/level",
+          "pathName": "pages/level/level",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/feedback/feedback",
-          "pathName": "pages/feedback/feedback",
-=======
-          "query": "",
->>>>>>> master
-=======
-          "scene": null
-        },
-        {
-          "name": "pages/index/index",
-          "pathName": "pages/index/index",
+          "name": "pages/mailbox/mailbox",
+          "pathName": "pages/mailbox/mailbox",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/translate/translate",
-          "pathName": "pages/translate/translate",
+          "name": "pages/interaction/interaction",
+          "pathName": "pages/interaction/interaction",
           "query": "",
->>>>>>> new-brand
+          "scene": null
+        },
+        {
+          "name": "pages/notes/notes",
+          "pathName": "pages/notes/notes",
+          "query": "",
           "scene": null
         }
       ]

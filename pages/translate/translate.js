@@ -16,7 +16,8 @@ Page({
         ToView: "",
         episode: {},
         uid:0,
-        eid:0
+        eid:0,
+        aid:0
     },
 
     /**
@@ -55,7 +56,8 @@ Page({
                         that.setData({
                             episode: epi,
                             uid: parseInt(options.uid),
-                            eid: options.eid
+                            eid: options.eid,
+                            aid: res.data.data.id
                         })
                         // wx.setStorage({
                         //     key: "Episode",
@@ -198,4 +200,9 @@ Page({
     onunload: function() {
         wx.removeStorageSync('AnsEpisode');
     },
+    writeNote: function(e){
+        wx.navigateTo({
+          url:'../notes/notes?aid=' + this.data.aid + '&uid=' + this.data.uid,
+        })
+    }
 })
