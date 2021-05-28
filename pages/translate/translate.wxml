@@ -40,9 +40,10 @@
       <view class="read_title">
         {{ episode.title }}
       </view>
+      <wxparse data="{{episode.content}}"></wxparse>
+
       <view class="read_contain">
-      <rich-text nodes="{{episode.content}}"></rich-text>
-        <!-- <wxparse data="{{episode.content}}"></wxparse> -->
+      <!-- <rich-text nodes="{{episode.content}}"></rich-text> -->
         <!-- The Best Free Tourist Places in America
 Alaska: Anchorage Market and Festival
 Although Anchorage isn't the capital of Alaska, it is the state's largest city with the largest population. The Anchorage Market and Festival is open and free of charge on weekends. Anchorage is at the beginning of the Tony Knowles Coastal Trail, where walks can last between two hours and a half day. It's free, of course.

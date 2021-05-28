@@ -46,8 +46,14 @@ Page({
                                 collect: true
                             })
                         }
+                        var epi = res.data.data
+                        var translate = '<div style="min-height:200rpx;font-size:41.67rpx;padding:36rpx;word-break: break-word;line-height:50rpx;">' +epi.translate + '</div>';
+                        var content = '<div style="min-height:200rpx;font-size:41.67rpx;padding:36rpx;word-break: break-word;line-height:50rpx;">' +epi.content + '</div>';
+                        epi.translate = translate
+                        epi.content = content
+                        
                         that.setData({
-                            episode: res.data.data,
+                            episode: epi,
                             uid: parseInt(options.uid),
                             eid: options.eid
                         })

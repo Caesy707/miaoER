@@ -56,8 +56,11 @@ Page({
                     },
                     success(res) {
 
+                        var epi = res.data.data
+                        var content = '<div style="min-height:200rpx;font-size:41.67rpx;padding:36rpx;word-break: break-word;line-height:50rpx;">' +epi.content + '</div>';
+                        epi.content = content
                         that.setData({
-                            episode: res.data.data,
+                            episode: epi,
                             eid: res.data.data.eid
                         })
                         wx.setStorage({

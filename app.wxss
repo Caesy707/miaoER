@@ -23,3 +23,9 @@ page {
     background: rgba(0, 0, 0, 0.3);
     outline: 0;
 }
+
+.wxparse--wxParse-p{
+    /* display: block;
+    padding: 10rpx; */
+    padding: 5px !important; 
+}

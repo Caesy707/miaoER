@@ -28,8 +28,9 @@
       Smith has put the manuscript's ideas into practice. Her final goal is to link the worlds of art and science back together: She believes that bringing the old recipes to life can help develop a kind of learning that highlights experimentation, teamwork, and problem solving.
       Back when science—then called “the new philosophy”—took shape, academics looked to craftsmen for help in understanding the natural world. Microscopes and telescopes were invented by way of artistic tinkering（修补）, as craftsmen experimented with glass to better bend light.
       If we can rediscover the values of hands-on experience and craftwork, Smith says, we can marry the best of our modern insights with the handiness of our ancestors. -->
-      <wxparse data="{{ episode.content }}"></wxparse>
+     
     </view>
+     <wxparse data="{{ episode.content }}"></wxparse>
   </view>
 
 </scroll-view>
