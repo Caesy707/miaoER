@@ -11,69 +11,6 @@ page {
     left: 20%;
 }
 
-.button2,
-.button1 {
-    background-color: white;
-    height: 117rpx;
-    width: 297rpx;
-    background-image: url("https://z3.ax1x.com/2021/05/05/gKADII.png");
-    background-size: 90% 100%;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-top: 20rpx;
-    font-size: 41rpx;
-    font-weight: 400;
-    background-repeat: no-repeat;
-    text-indent: 0.5em;
-}
-
-.button3 {
-    background-color: white;
-    height: 117rpx;
-    width: 297rpx;
-    background-image: url("https://z3.ax1x.com/2021/05/05/gKADII.png");
-    background-size: 90% 100%;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-top: 20rpx;
-    font-size: 41rpx;
-    font-weight: 400;
-    background-repeat: no-repeat;
-    text-indent: 1.5em;
-}
-
-.button4 {
-    height: 117rpx;
-    width: 297rpx;
-    background-image: url("https://z3.ax1x.com/2021/05/22/gqLEwQ.png");
-    background-size: 90% 100%;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-top: 20rpx;
-    font-size: 41rpx;
-    font-weight: 400;
-    background-repeat: no-repeat;
-    text-indent: 0.5em;
-}
-
-.button5 {
-    height: 117rpx;
-    width: 297rpx;
-    background-image: url("https://z3.ax1x.com/2021/05/22/gqLEwQ.png");
-    background-size: 90% 100%;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-top: 20rpx;
-    font-size: 41rpx;
-    font-weight: 400;
-    background-repeat: no-repeat;
-    text-indent: 1.5em;
-}
-
 .button {
     position: relative;
     top: 500rpx;
@@ -159,4 +96,52 @@ page {
 
 .firbid {
     pointer-events: none;
+}
+.challenge{
+    height: 94rpx;
+    width: 292rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/28/2kiRG8.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    margin: 36rpx auto;   
+}
+.hoverchallenge{
+    height: 94rpx;
+    width: 292rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/28/2ki2Pf.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    margin: 36rpx auto;   
+}
+.personal{
+    height: 94rpx;
+    width: 292rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/28/2kkp6g.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    margin: 36rpx auto;
+}
+.hoverpersonal{
+    height: 94rpx;
+    width: 292rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/28/2kkS1S.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    margin: 36rpx auto;
+}
+.help{
+    height: 94rpx;
+    width: 292rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/28/2kFzp8.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    margin: 36rpx auto;
+}
+.hoverhelp{
+    height: 94rpx;
+    width: 292rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/28/2kFvff.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    margin: 36rpx auto;
 }

@@ -7,37 +7,9 @@
     />
   </view>
   <view class="button">
-    <view>
-      <button
-        class="button1"
-        hover-class="button4"
-        bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"
-        open-type="getUserProfile"
-        data-index="1"
-      >开始挑战
-      </button>
-    </view>
-    <view>
-      <button
-        class="button2"
-        hover-class="button4"
-        bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"
-        open-type="getUserProfile"
-        data-index="2"
-      >个人中心
-      </button>
-    </view>
-    <view>
-      <button
-        class="button3"
-        hover-class="button5"
-        bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"
-        open-type="getUserProfile"
-        data-index="3"
-      > 帮助
-      </button>
-    </view>
-
+<navigator class="challenge" hover-class="hoverchallenge" bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"  data-index="1"></navigator>
+<navigator class="personal" hover-class="hoverpersonal"  bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"  data-index="2"></navigator>
+<navigator class="help" hover-class="hoverhelp"  bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"  data-index="3"></navigator>
   </view>
 
 </view>
@@ -62,8 +34,5 @@
   </view>
   <view class="dialogue_1"></view>
   <view class="catpad"></view>
-
 </view>
-
-<!--https://z3.ax1x.com/2021/05/23/gXKgXt.png-->
 
