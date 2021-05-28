@@ -17,7 +17,8 @@ Page({
         episode: {},
         uid:0,
         eid:0,
-        aid:0
+        aid:0,
+        isForward:false
     },
 
     /**
@@ -73,7 +74,18 @@ Page({
             }
         })
     },
-
+upforward:function(e){
+if(e.detail.scrollTop>600){
+    this.setData({
+        isForward:true
+    })
+}
+else{
+    this.setData({
+        isForward:false
+    })
+}
+},
     syncEpisode: function(e) {
         console.log(e)
         

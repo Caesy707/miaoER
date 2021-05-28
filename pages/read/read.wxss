@@ -29,10 +29,11 @@ scroll-view {
 .answer_box {
     width: 651rpx;
     background-color: #ffffff;
-    margin: auto;
-    margin-top: 28rpx;
+    margin: 28rpx auto;
     font-family: Garamond;
     font-size: 41.67rpx;
+    padding: 0 36rpx;
+    box-sizing: border-box;
 }
 
 .answer_title {
@@ -57,10 +58,6 @@ scroll-view {
 
 .choice {
     margin-bottom: 30rpx;
-}
-
-.box_submit {
-    height: 300rpx;
 }
 
 .submit {
@@ -112,7 +109,7 @@ cover-image {
     display: inline-block;
 }
 
-.popup {
+.succeed {
     max-width: 550rpx;
     position: relative;
     top: 283rpx;
@@ -165,4 +162,34 @@ cover-image {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(https://z3.ax1x.com/2021/05/25/2S5BVS.png);
+}
+.fail{
+    max-width: 550rpx;
+    position: relative;
+    top: 283rpx;
+    left: 94rpx;
+    height: 627rpx;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://z3.ax1x.com/2021/05/28/2kBLbF.png);
+}
+.challenge{
+    width: 220rpx;
+    height: 64rpx;
+    position: absolute;
+    bottom: 92rpx;
+    left: 49rpx;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://z3.ax1x.com/2021/05/28/2kBqDU.png);
+}
+.translation{
+    width: 220rpx;
+    height: 64rpx;
+    position: absolute;
+    bottom: 92rpx;
+    right: 58rpx;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://z3.ax1x.com/2021/05/28/2kBbuT.png);
 }

@@ -77,9 +77,9 @@ cover-image {
     font-size: 41.67rpx;
     padding: 28rpx 0 0 88rpx;
     background-image: url(https://z3.ax1x.com/2021/05/26/2pbXBn.png);
-    background-size: 51rpx 51rpx;
+    background-size: 41.67rpx 41.67rpx;
     background-repeat: no-repeat;
-    background-position: 30rpx 30rpx
+    background-position: 43rpx 37rpx;
 }
 
 .onecomment {

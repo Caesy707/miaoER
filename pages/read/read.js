@@ -23,6 +23,7 @@ Page({
         ],
         Answer: ['', '', '', ''],
         collect: true,
+        isForward:false,
         episode: [] // 文章和题目数据
     },
 
@@ -30,6 +31,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        console.log(options)
         const that = this;
         // options.eid=1
         var reqUrl = ''
@@ -77,8 +79,20 @@ Page({
             }
         })
 
-
     },
+    // 滚轮监听事件
+upforward:function(e){
+if(e.detail.scrollTop>600){
+    this.setData({
+        isForward:true
+    })
+}
+else{
+    this.setData({
+        isForward:false
+    })
+}
+},
     // 选项选中与未选中的切换
     changeColor: function (e) {
         console.log(e.currentTarget.dataset.ans);
@@ -156,7 +170,6 @@ Page({
             }
         })
     },
-
     //收藏与未收藏的切换
     changeCollect: function () {
         if (this.data.collect) {

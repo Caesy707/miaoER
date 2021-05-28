@@ -104,6 +104,8 @@
 
     </swiper-item>
   </swiper>
+  <navigator class="submit" hover-class="none">
+  </navigator>
   <!-- <swiper indicator-dots="true">
     <swiper-item>
       <scroll-view

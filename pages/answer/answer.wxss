@@ -26,7 +26,7 @@
 }
 
 .answer_box {
-    width: 688rpx;
+    width: 100%;
     height: 500rpx;
     background-color: #ffffff;
     font-family: Garamond;
@@ -83,7 +83,7 @@ swiper {
 
 cover-view {
     position: fixed;
-    top: 500rpx;
+    top: 715rpx;
     right: 0;
     z-index: 1;
 }
@@ -92,4 +92,15 @@ cover-image {
     width: 85rpx;
     height: 85rpx;
     margin-bottom: 29rpx;
+}
+.submit {
+    width: 284rpx;
+    height: 91rpx;
+    position: absolute;
+    bottom: 7rpx;
+    left:50%;
+    transform: translate(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://z3.ax1x.com/2021/05/28/2kDHJA.png);
 }

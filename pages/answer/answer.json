@@ -2,6 +2,6 @@
     "usingComponents": {
         "wxparse": "plugin://wxparse/wxparse"
     },
-    "navigationBarTitleText": "简易模式",
-    "navigationBarBackgroundColor": "#f8f8f8"
+    "navigationBarTitleText": "极简模式",
+    "navigationBarBackgroundColor": "#e8e8e8"
 }

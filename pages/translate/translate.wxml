@@ -2,6 +2,7 @@
   scroll-y="true"
   scroll-into-view="{{ToView}}"
   scroll-with-animation="true"
+  bindscroll="upforward"
 >
   <cover-view scroll-top="0">
     <cover-image
@@ -22,7 +23,7 @@
     </cover-image>
 
     <cover-image
-      class=""
+ wx:if="{{isForward}}"
       src="https://z3.ax1x.com/2021/05/20/gTp6AJ.png"
       bindtap="changeposition"
     >
@@ -85,7 +86,8 @@ B. The chance to get trained in a large company. -->
           mode="widthFix"
         />          <!-- src="https://z3.ax1x.com/2021/05/26/2pbj7q.png" -->
 
-        <view class="oneself">
+
+      <view class="oneself">
           <!-- 救命根本睡不够 -->
           {{item.user[0].nickname}}
         </view>
@@ -96,6 +98,7 @@ B. The chance to get trained in a large company. -->
         <view class="iconfont icon-dianzan" bindtap="clickStar" data-index="{{index}}"data-cid = "{{item.id}}">
           {{item.like_count}}
         </view>
+
 
       </view>
     </view>

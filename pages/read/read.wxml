@@ -2,6 +2,7 @@
   scroll-y="true"
   scroll-into-view="{{ToView}}"
   scroll-with-animation="true"
+  bindscroll="upforward"
 >
   <cover-view scroll-top="0">
     <cover-image
@@ -11,7 +12,7 @@
     >
     </cover-image>
     <cover-image
-      class=""
+   wx:if="{{isForward}}"
       src="https://z3.ax1x.com/2021/05/20/gTp6AJ.png"
       bindtap="changeposition"
     >
@@ -126,8 +127,7 @@
     <view class="answer_box">
       <!-- <view wx:for="{{episode.questions}}" wx:for-index="que"> -->
       <view wx:for="{{episode.questions}}">
-
-        <view class="answer_title">
+           <view class="answer_title">
           {{index+1}}、 {{item.content}}
         </view>
         <view class="choice">
@@ -201,8 +201,9 @@
 
     </view>
   </view>
+  <!-- 挑战成功 -->
   <view class="mask" wx:if="{{isMask}}">
-    <view class="popup">
+    <view class="succeed">
       <view>
         <navigator
           class="next"
@@ -220,9 +221,28 @@
         </navigator>
       </view>
     </view>
-
   </view>
-
+  <!-- 挑战失败 -->
+<!-- <view class="mask">
+  <view class="fail">
+      <view>
+        <navigator
+          class="challenge"
+          hover-class="none"
+          bindtap="changeNext"
+        >
+        </navigator>
+      </view>
+      <view>
+        <navigator
+          class="translation"
+          hover-class="none"
+          bindtap="searchAns"
+        >
+        </navigator>
+      </view>
+    </view>
+</view> -->
 </scroll-view>
 <!-- https://z3.ax1x.com/2021/05/25/2SfJCn.png一星
 https://z3.ax1x.com/2021/05/25/2SfNvV.png二星
