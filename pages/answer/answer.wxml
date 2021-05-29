@@ -104,7 +104,7 @@
 
     </swiper-item>
   </swiper>
-  <navigator class="submit" hover-class="none">
+  <navigator url='' class="submit" hover-class="none" bindtap="submitAns">
   </navigator>
   <!-- <swiper indicator-dots="true">
     <swiper-item>
@@ -395,14 +395,14 @@
       </view>
     </view>
   </view>
- <!-- 挑战失败 -->
-<!-- <view class="mask">
+  <!-- 挑战失败 -->
+<view class="mask" wx:if="{{failMask}}">
   <view class="fail">
       <view>
         <navigator
           class="challenge"
           hover-class="none"
-          bindtap="changeNext"
+          bindtap="changeAgain"
         >
         </navigator>
       </view>
@@ -415,4 +415,4 @@
         </navigator>
       </view>
     </view>
-</view> -->
+</view>

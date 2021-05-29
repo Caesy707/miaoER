@@ -13,7 +13,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        eid: 0,
+        isMask: false,
+        failMask:false,
         AisChecked: true,
         BisChecked: true,
         CisChecked: true,
@@ -30,11 +32,13 @@ Page({
      */
     onLoad: function(options) {
         var that = this
+        console.log(options)
         wx.getStorage({
             key: 'AnsSeleted',
             success (res) {
               console.log(res.data)
               that.setData({
+                eid: options.eid,
                 AnsSeleted: res.data
               })
             }
@@ -168,5 +172,132 @@ Page({
 
           }
         });
-    }
+    },
+
+
+
+
+
+
+
+    submitAns: function () {
+        var that = this;
+        var ansLen = 4;
+
+        that.data.Answer.forEach(function (value, index, array) {
+            if (index < 3) {
+                if (value == '') {
+                    wx.showToast({
+                        title: '请答完题再提交',
+                        icon: 'error',
+                        duration: 2000
+                    })
+                      
+                }
+            } else {
+                if (value == '') {
+                    ansLen = 3;
+                }
+            }
+        })
+        // 答案保存入库请求 
+        if (ansLen == 4) {
+            wx.request({
+                url: 'https://wx.bitaxes.com/api/episode/question',
+                method: 'POST',
+                header: {
+                    'content-type': 'application/json' // 默认值
+                },
+                data: {
+                    "ans1": that.data.Answer[0],
+                    "ans2": that.data.Answer[1],
+                    "ans3": that.data.Answer[2],
+                    "ans4": that.data.Answer[3],
+                    "uid": that.data.episode.uid,
+                    "eid": that.data.eid,
+                    "spend_time": "3分28秒"
+
+                },
+                success(res) {
+                    console.log(res.data)
+                    if (res.data.record) {
+                        that.setData({
+                            isMask: true
+                        })
+                    }else{
+                        that.setData({
+                            failMask: true
+                        })
+                    }
+                }
+            })
+
+            console.log(this.data.Answer)
+        } else {
+            wx.request({
+                url: 'https://wx.bitaxes.com/api/episode/question',
+                method: 'POST',
+                header: {
+                    'content-type': 'application/json' // 默认值
+                },
+                data: {
+                    "ans1": that.data.Answer[0],
+                    "ans2": that.data.Answer[1],
+                    "ans3": that.data.Answer[2],
+                    "uid": that.data.episode.uid,
+                    "eid": that.data.eid,
+                    "spend_time": "3分21秒"
+
+                },
+                success(res) {
+                    console.log(res.data)
+                    if (res.data.record) {
+                        that.setData({
+                            isMask: true
+                        })
+                    }
+
+                }
+            })
+        }
+        console.log(this.data.Answer)
+    },
+    //下一关按钮
+    changeNext: function () {
+        var that = this
+        this.setData({
+            isMask: false
+        })
+        var order = that.data.episode.order + 1
+        wx.redirectTo({
+            url: '../read/read?grade=' + that.data.episode.grade + '&order=' + order,
+            success(res) {
+
+            }
+        })
+    },
+    searchAns: function () {
+        var that = this;
+
+        wx.navigateTo({
+            url: '../translate/translate?eid=' + that.data.episode.eid,
+            success(res) {
+
+            }
+        })
+    },
+    //再次挑战按钮
+    changeAgain: function () {
+        var that = this
+        this.setData({
+            failMask: false
+        })
+        var order = that.data.episode.order
+        wx.redirectTo({
+            url: '../read/read?grade=' + that.data.episode.grade + '&order=' + order,
+            success(res) {
+
+            }
+        })
+    },
 })

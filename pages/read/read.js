@@ -15,6 +15,7 @@ Page({
     data: {
         eid: 0,
         isMask: false,
+        failMask:false,
         AnsSeleted: [
             [true, true, true, true],
             [true, true, true, true],
@@ -145,7 +146,7 @@ else{
             data: this.data.Answer
         })
         wx.navigateTo({
-            url: '../answer/answer',
+            url: '../answer/answer?eid='+ this.data.eid,
         })
     },
     SyncAnswerByStorage: function () {
@@ -234,6 +235,10 @@ else{
                         that.setData({
                             isMask: true
                         })
+                    }else{
+                        that.setData({
+                            failMask: true
+                        })
                     }
                 }
             })
@@ -303,5 +308,19 @@ else{
 
             }
         })
-    }
+    },
+    //再次挑战按钮
+    changeAgain: function () {
+        var that = this
+        this.setData({
+            failMask: false
+        })
+        var order = that.data.episode.order
+        wx.redirectTo({
+            url: '../read/read?grade=' + that.data.episode.grade + '&order=' + order,
+            success(res) {
+
+            }
+        })
+    },
 })

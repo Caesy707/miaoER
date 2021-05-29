@@ -223,13 +223,13 @@
     </view>
   </view>
   <!-- 挑战失败 -->
-<!-- <view class="mask">
+<view class="mask" wx:if="{{failMask}}">
   <view class="fail">
       <view>
         <navigator
           class="challenge"
           hover-class="none"
-          bindtap="changeNext"
+          bindtap="changeAgain"
         >
         </navigator>
       </view>
@@ -242,7 +242,7 @@
         </navigator>
       </view>
     </view>
-</view> -->
+</view>
 </scroll-view>
 <!-- https://z3.ax1x.com/2021/05/25/2SfJCn.png一星
 https://z3.ax1x.com/2021/05/25/2SfNvV.png二星

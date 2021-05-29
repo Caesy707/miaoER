@@ -37,7 +37,7 @@
 <view class="outline">
 
   <swiper indicator-dots="true">
-    <swiper-item>
+    <swiper-item wx:for="{{episode.questions}}">
       <scroll-view
         class="answer_box"
         scroll-y="true"
@@ -45,12 +45,12 @@
         show-scrollbar="true"
       >
         <view class="answer_title">
-          How did Smith, feel after reading the French manuscript?
+          {{item.content}}
         </view>
         <view class="choice">
           <view class="A">
             <image
-              src="{{AisChecked?'https://z3.ax1x.com/2021/05/18/ghfZ40.png':'https://z3.ax1x.com/2021/05/18/ghfmCV.png'}}"
+              src="{{AnsIcon[Ans[index][0]][0]}}"
               mode="widthFix"
               bindtap="changeColor"
               data-index="0"
@@ -63,7 +63,7 @@
         <view class="choice">
           <view class="A">
             <image
-              src="{{BisChecked?'https://z3.ax1x.com/2021/05/18/ghfVNq.png':'https://z3.ax1x.com/2021/05/18/ghfEEn.png'}}"
+              src="{{AnsIcon[Ans[index][1]][1]}}"
               mode="widthFix"
               bindtap="changeColor"
               data-index="1"
@@ -76,7 +76,7 @@
         <view class="choice">
           <view class="A">
             <image
-              src="{{CisChecked?'https://z3.ax1x.com/2021/05/18/ghfkHs.png':'https://z3.ax1x.com/2021/05/18/ghfn3T.png'}}"
+              src="{{AnsIcon[Ans[index][2]][2]}}"
               mode="widthFix"
               bindtap="changeColor"
               data-index="2"
@@ -89,7 +89,7 @@
         <view class="choice">
           <view class="A">
             <image
-              src="{{DisChecked?'https://z3.ax1x.com/2021/05/18/ghfugU.png':'https://z3.ax1x.com/2021/05/18/ghfKvF.png'}}"
+              src="{{AnsIcon[Ans[index][3]][3]}}"
               mode="widthFix"
               bindtap="changeColor"
               data-index="3"
@@ -104,73 +104,7 @@
 
     </swiper-item>
 
-    <swiper-item class="" item-id="">
-      <scroll-view
-        class="answer_box"
-        scroll-y="true"
-        enhanced="true"
-        show-scrollbar="true"
-      >
-        <view class="answer_title">
-          How did Smith, feel after reading the French manuscript?
-        </view>
-        <view class="choice">
-          <view class="A">
-            <image
-              src="{{AisChecked?'https://z3.ax1x.com/2021/05/18/ghfZ40.png':'https://z3.ax1x.com/2021/05/18/ghfmCV.png'}}"
-              mode="widthFix"
-              bindtap="changeColor"
-              data-index="0"
-            />
-          </view>
-          <view class="answer_A">
-            Confused about the technical terms.
-          </view>
-        </view>
-        <view class="choice">
-          <view class="A">
-            <image
-              src="{{BisChecked?'https://z3.ax1x.com/2021/05/18/ghfVNq.png':'https://z3.ax1x.com/2021/05/18/ghfEEn.png'}}"
-              mode="widthFix"
-              bindtap="changeColor"
-              data-index="1"
-            />
-          </view>
-          <view class="answer_A">
-            Impressed with its detailed instructions.
-          </view>
-        </view>
-        <view class="choice">
-          <view class="A">
-            <image
-              src="{{CisChecked?'https://z3.ax1x.com/2021/05/18/ghfkHs.png':'https://z3.ax1x.com/2021/05/18/ghfn3T.png'}}"
-              mode="widthFix"
-              bindtap="changeColor"
-              data-index="2"
-            />
-          </view>
-          <view class="answer_A">
-            Discouraged by its complex structure.
-          </view>
-        </view>
-        <view class="choice">
-          <view class="A">
-            <image
-              src="{{DisChecked?'https://z3.ax1x.com/2021/05/18/ghfugU.png':'https://z3.ax1x.com/2021/05/18/ghfKvF.png'}}"
-              mode="widthFix"
-              bindtap="changeColor"
-              data-index="3"
-            />
-          </view>
-          <view class="answer_A">
-            Shocked for her own lack of hand skills.
-          </view>
-        </view>
-
-      </scroll-view>
-
-    </swiper-item>
-    <swiper-item class="" item-id="">
+    <!-- <swiper-item class="" item-id="">
       <scroll-view
         class="answer_box"
         scroll-y="true"
@@ -302,5 +236,71 @@
       </scroll-view>
 
     </swiper-item>
+    <swiper-item class="" item-id="">
+      <scroll-view
+        class="answer_box"
+        scroll-y="true"
+        enhanced="true"
+        show-scrollbar="true"
+      >
+        <view class="answer_title">
+          How did Smith, feel after reading the French manuscript?
+        </view>
+        <view class="choice">
+          <view class="A">
+            <image
+              src="{{AisChecked?'https://z3.ax1x.com/2021/05/18/ghfZ40.png':'https://z3.ax1x.com/2021/05/18/ghfmCV.png'}}"
+              mode="widthFix"
+              bindtap="changeColor"
+              data-index="0"
+            />
+          </view>
+          <view class="answer_A">
+            Confused about the technical terms.
+          </view>
+        </view>
+        <view class="choice">
+          <view class="A">
+            <image
+              src="{{BisChecked?'https://z3.ax1x.com/2021/05/18/ghfVNq.png':'https://z3.ax1x.com/2021/05/18/ghfEEn.png'}}"
+              mode="widthFix"
+              bindtap="changeColor"
+              data-index="1"
+            />
+          </view>
+          <view class="answer_A">
+            Impressed with its detailed instructions.
+          </view>
+        </view>
+        <view class="choice">
+          <view class="A">
+            <image
+              src="{{CisChecked?'https://z3.ax1x.com/2021/05/18/ghfkHs.png':'https://z3.ax1x.com/2021/05/18/ghfn3T.png'}}"
+              mode="widthFix"
+              bindtap="changeColor"
+              data-index="2"
+            />
+          </view>
+          <view class="answer_A">
+            Discouraged by its complex structure.
+          </view>
+        </view>
+        <view class="choice">
+          <view class="A">
+            <image
+              src="{{DisChecked?'https://z3.ax1x.com/2021/05/18/ghfugU.png':'https://z3.ax1x.com/2021/05/18/ghfKvF.png'}}"
+              mode="widthFix"
+              bindtap="changeColor"
+              data-index="3"
+            />
+          </view>
+          <view class="answer_A">
+            Shocked for her own lack of hand skills.
+          </view>
+        </view>
+
+      </scroll-view>
+
+    </swiper-item> -->
   </swiper>
 </view>

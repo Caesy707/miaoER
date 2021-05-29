@@ -19,8 +19,8 @@ Page({
         eid:0,
         aid:0,
         isForward:false,
-        isColor:"",
-        isPrise:false
+        // isColor:"",
+        // isPrise:false
     },
 
     /**
@@ -194,18 +194,18 @@ else{
               console.log(res.data) 
             } 
           }) 
-          if(this.data.isPrise){
-            this.setData({
-              isColor:"#343b4e",//点赞效果
-              isPrise:false
-             })
-          }
-          else{
-            this.setData({
-              isColor:"#eaa30a",//点赞效果
-              isPrise:true
-             })
-          }
+        //   if(this.data.isPrise){
+        //     this.setData({
+        //       isColor:"#343b4e",//点赞效果
+        //       isPrise:false
+        //      })
+        //   }
+        //   else{
+        //     this.setData({
+        //       isColor:"#eaa30a",//点赞效果
+        //       isPrise:true
+        //      })
+        //   }
     },
     changePattern:function(e){
         console.log(e)
