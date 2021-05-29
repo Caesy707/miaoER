@@ -58,7 +58,8 @@ Page({
                         'content-type': 'application/json' // 默认值
                     },
                     success(res) {
-
+                        console.log(reqUrl)
+                        console.log(res.data)
                         var epi = res.data.data
                         var content = '<div style="min-height:200rpx;font-size:41.67rpx;padding:36rpx;word-break: break-word;line-height:50rpx;">' +epi.content + '</div>';
                         epi.content = content
