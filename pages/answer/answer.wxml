@@ -374,4 +374,45 @@
     </swiper-item>
   </swiper> -->
 </view>
-
+  <!-- 挑战成功 -->
+  <view class="mask" wx:if="{{isMask}}">
+    <view class="succeed">
+      <view>
+        <navigator
+          class="next"
+          hover-class="next1"
+          bindtap="changeNext"
+        >
+        </navigator>
+      </view>
+      <view>
+        <navigator
+          class="searchAns"
+          hover-class="searchAns1"
+          bindtap="searchAns"
+        >
+        </navigator>
+      </view>
+    </view>
+  </view>
+ <!-- 挑战失败 -->
+<!-- <view class="mask">
+  <view class="fail">
+      <view>
+        <navigator
+          class="challenge"
+          hover-class="none"
+          bindtap="changeNext"
+        >
+        </navigator>
+      </view>
+      <view>
+        <navigator
+          class="translation"
+          hover-class="none"
+          bindtap="searchAns"
+        >
+        </navigator>
+      </view>
+    </view>
+</view> -->
