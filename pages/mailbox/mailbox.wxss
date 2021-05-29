@@ -6,8 +6,10 @@
   margin: 65rpx auto;
   padding: 26rpx 0 26rpx 38rpx;
   box-sizing:border-box;
+  overflow: hidden;
   position: relative;
 }
+
 .inform_img{
   position: absolute;
   width: 90rpx;
@@ -31,6 +33,7 @@ color:#949494;
   top: 40rpx;
   font-size: 25rpx;
   color:#949494;
+  width: 91rpx;
 }
 
 .circle{
@@ -44,4 +47,21 @@ color:#949494;
   font-size: 20rpx;
   text-align: center;
   color: #ffffff;
+}
+.markread{
+  width: 267rpx;
+  height: 88rpx;
+  background-image: url(https://z3.ax1x.com/2021/05/29/2AJDRU.png) ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 30rpx auto;
+}
+.icon-guanbi{
+  position: absolute;
+  top: 5rpx;
+  right: 5rpx;
+}
+.contain{
+  width: 578rpx;
+  height: 97rpx;
 }
