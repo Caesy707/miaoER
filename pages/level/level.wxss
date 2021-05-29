@@ -1,7 +1,7 @@
 .way {
     position: relative;
     min-height: 1844rpx;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: 750rpx 1840rpx;
     background-position: 0rpx 0rpx;
     background-image: url(https://z3.ax1x.com/2021/05/23/gXAsE9.png);

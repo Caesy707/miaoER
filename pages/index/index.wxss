@@ -132,7 +132,7 @@ page {
 .help{
     height: 94rpx;
     width: 292rpx;
-    background-image: url("https://z3.ax1x.com/2021/05/28/2kFzp8.png");
+    background-image: url("https://z3.ax1x.com/2021/05/29/2ECgT1.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     margin: 36rpx auto;
@@ -140,7 +140,7 @@ page {
 .hoverhelp{
     height: 94rpx;
     width: 292rpx;
-    background-image: url("https://z3.ax1x.com/2021/05/28/2kFvff.png");
+    background-image: url("https://z3.ax1x.com/2021/05/29/2ECRFx.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     margin: 36rpx auto;

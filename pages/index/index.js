@@ -219,7 +219,7 @@ Page({
             })
         } else if (index == 3) {
             wx.navigateTo({
-                url: '../aid/aid',
+                url: '../mailbox/mailbox',
             })
         }
     },

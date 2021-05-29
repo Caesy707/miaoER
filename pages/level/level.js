@@ -14,41 +14,45 @@ Page({
      */
     data: {
         styleCss: [{
-                top: 217,
-                left: 260,
+                top: 176,
+                left: 230,
                 transform: 0
             },
             {
-                top: 398,
-                left: 161
+                top: 334,
+                left: 156
             },
             {
-                top: 566,
-                left: 128
+                top: 510,
+                left: 106
             },
             {
-                top: 779,
-                left: 322
+                top: 602,
+                left: 310,
+                transform:-49
             },
             {
-                top: 969,
-                left: 481
+                top: 742,
+                left: 480,
+                transform:-43
             },
             {
-                top: 1159,
-                left: 337
+                top: 880,
+                left: 344
             },
             {
-                top: 1349,
-                left: 387
+                top: 1092,
+                left: 386,
+                transform:-29
             },
             {
-                top: 1219,
-                left: 481
+                top: 1282,
+                left: 524,
+                transform:-35
             },
             {
-                top: 1428,
-                left: 450
+                top: 1480,
+                left: 384
             },
             {
                 top: 1647,
@@ -56,7 +60,54 @@ Page({
             }
         ],
         episode: [],
-        mapHeight: 0
+        listLength:30,
+        mapHeight: 0,
+        newlist: [{
+            top: 176,
+            left: 230,
+            transform: 0
+        },
+        {
+            top: 334,
+            left: 156
+        },
+        {
+            top: 510,
+            left: 106
+        },
+        {
+            top: 602,
+            left: 310,
+            transform:-49
+        },
+        {
+            top: 742,
+            left: 480,
+            transform:-43
+        },
+        {
+            top: 880,
+            left: 344
+        },
+        {
+            top: 1092,
+            left: 386,
+            transform:-29
+        },
+        {
+            top: 1282,
+            left: 524,
+            transform:-35
+        },
+        {
+            top: 1480,
+            left: 384
+        },
+        {
+            top: 1647,
+            left: 300
+        }
+    ],
     },
 
 
@@ -82,9 +133,9 @@ Page({
                             url: 'https://wx.bitaxes.com/api/episode/all/' + resGrade.data.data + '/' + res.data,
 
                             success: (reqRes) => {
-                                console.log(reqRes.data)
                                 that.setData({
-                                    episode: reqRes.data.data
+                                    episode: reqRes.data.data,
+                                    listLength:reqRes.data.data.length
                                 })
                             },
                             fail: () => {
@@ -97,14 +148,70 @@ Page({
             fail: () => {
                 console.log('not get uid')
             }
-
         })
-
-        const levelInfoList = this.data.styleCss;
-        var lastLevelTop = levelInfoList[levelInfoList.length - 1].top
-        console.log(lastLevelTop)
-        this.setData({
-            mapHeight: lastLevelTop
-        })
+    //    var  newlist= [{
+    //     top: 176,
+    //     left: 230,
+    //     transform: 0
+    // },
+    // {
+    //     top: 334,
+    //     left: 156
+    // },
+    // {
+    //     top: 510,
+    //     left: 106
+    // },
+    // {
+    //     top: 602,
+    //     left: 310,
+    //     transform:-49
+    // },
+    // {
+    //     top: 742,
+    //     left: 480,
+    //     transform:-43
+    // },
+    // {
+    //     top: 880,
+    //     left: 344
+    // },
+    // {
+    //     top: 1092,
+    //     left: 386,
+    //     transform:-29
+    // },
+    // {
+    //     top: 1282,
+    //     left: 524,
+    //     transform:-35
+    // },
+    // {
+    //     top: 1480,
+    //     left: 384
+    // },
+    // {
+    //     top: 1647,
+    //     left: 300
+    // }],
+       var listLength=this.data.listLength/10
+       console.log(listLength)
+       const levelInfoList = this.data.styleCss;
+       const newInfoList=this.data.newlist;
+       var lastLevelTop = levelInfoList[levelInfoList.length - 1].top
+        for(var i=0;i<listLength-1;i++){
+            for(var j=0;j<10;j++){
+                newInfoList[j].top=levelInfoList[j].top+lastLevelTop+190
+            } 
+            this.setData({
+                styleCss:levelInfoList.concat(newInfoList),//数组追加
+                mapHeight: lastLevelTop*listLength
+           })
+           console.log(lastLevelTop)
+        }
+     
     }
 })
+//首先获取后端所要循环关卡的循环数，再从循环数中得知循环几次
+//在每个旧数组的top，加上上一个数组最后一个的top，然后把新数组赋值给旧数组
+//最后把最初的数组赋值
