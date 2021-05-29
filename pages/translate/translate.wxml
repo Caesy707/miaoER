@@ -95,7 +95,7 @@ B. The chance to get trained in a large company. -->
           <!-- 路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！ -->
           {{item.content}}
         </view>
-        <view class="iconfont icon-dianzan" bindtap="clickStar" data-index="{{index}}"data-cid = "{{item.id}}">
+        <view style="color:{{isColor}}" class="iconfont icon-dianzan" bindtap="clickStar" data-index="{{index}}"data-cid = "{{item.id}}">
           {{item.like_count}}
         </view>
 

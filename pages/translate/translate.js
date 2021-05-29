@@ -18,7 +18,9 @@ Page({
         uid:0,
         eid:0,
         aid:0,
-        isForward:false
+        isForward:false,
+        isColor:"",
+        isPrise:false
     },
 
     /**
@@ -171,8 +173,6 @@ else{
     clickStar:function(e){
         var that = this 
         console.log(e) 
- 
- 
         wx.request({ 
  
             url: 'https://wx.bitaxes.com/api/episode/note/like',  
@@ -194,6 +194,18 @@ else{
               console.log(res.data) 
             } 
           }) 
+          if(this.data.isPrise){
+            this.setData({
+              isColor:"#343b4e",//点赞效果
+              isPrise:false
+             })
+          }
+          else{
+            this.setData({
+              isColor:"#eaa30a",//点赞效果
+              isPrise:true
+             })
+          }
     },
     changePattern:function(e){
         console.log(e)
