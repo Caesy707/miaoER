@@ -17,7 +17,8 @@ Page({
     console.log(options)
     this.setData({
       uid: options.uid,
-      aid: options.aid
+      aid: options.aid,
+      eid: options.eid
     })
   },
   input: function(e){
@@ -92,6 +93,9 @@ Page({
       },
       success(res) {
         console.log(res.data)
+        wx.redirectTo({
+          url: '../translate/translate?eid=' + that.data.eid
+        })
       }
     })
   }

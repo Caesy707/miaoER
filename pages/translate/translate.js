@@ -226,7 +226,7 @@ else{
     },
     writeNote: function(e){
         wx.navigateTo({
-          url:'../notes/notes?aid=' + this.data.aid + '&uid=' + this.data.uid,
+          url:'../notes/notes?aid=' + this.data.aid + '&uid=' + this.data.uid + '&eid=' + this.data.eid,
         })
     }
 })

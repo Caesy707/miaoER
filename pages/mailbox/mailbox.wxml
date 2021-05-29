@@ -1,7 +1,7 @@
-<view class="outline" wx:for="{{notices}}">
+<view class="outline" wx:for="{{notices}}" data-index="{{index}}" bindtap="navTo">
   <image class="inform_img" mode="widthFix" src="https://z3.ax1x.com/2021/05/28/2kpuXn.png"></image>
   <view class="inform_title">{{item.data.title}}</view>
   <view class="inform" >{{item.data.content}}</view>
-<view class="time">5-28</view>
-<view class="circle">1</view>
+<view class="time">{{item.updated_at}}</view>
+<view class="circle" wx:if="{{!item.read_at}}"></view>
 </view>

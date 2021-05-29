@@ -13,34 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    wx.getStorage({
-      key: 'uid',
-      success: (res) => {
-          console.log(res.data)
-          wx.request({
-              url: 'https://wx.bitaxes.com/api/wx/user/notice/' + res.data,
-              method: 'GET',
-              header: {
-                  'content-type': 'application/json' // 默认值
-              },
-              success(res) {
-                res.data.data.forEach(element => {
-                  element.data.content = that.cutTextLong(element.data.content,15)
-                });
-                  that.setData({
-                      notices: res.data.data,
-                      uid: parseInt(res.data),
-                  })
-                  console.log(res.data)
-                  console.log(that.data)
-              }
-          })
-      },
-      fail: () => {
-          console.log('not get uid')
-      }
-  })
+
   },
 
   /**
@@ -54,7 +27,35 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    wx.getStorage({
+      key: 'uid',
+      success: (resU) => {
+          console.log(resU.data)
+          wx.request({
+              url: 'https://wx.bitaxes.com/api/wx/user/notice/' + resU.data,
+              method: 'GET',
+              header: {
+                  'content-type': 'application/json' // 默认值
+              },
+              success(res) {
+                res.data.data.forEach(element => {
+                  element.data.content = that.cutTextLong(element.data.content,15)
+                  element.updated_at = element.updated_at.substring(5,10);
+                });
+                  that.setData({
+                      notices: res.data.data,
+                      uid: resU.data,
+                  })
+                  console.log(res.data)
+                  console.log(that.data)
+              }
+          })
+      },
+      fail: () => {
+          console.log('not get uid')
+      }
+  })
   },
 
   /**
@@ -98,4 +99,13 @@ Page({
     return text
   }
   },
+  navTo: function(e){
+    console.log(e.currentTarget.dataset)
+    var that = this
+    console.log(that.data.notices[e.currentTarget.dataset.index])
+
+    wx.navigateTo({
+      url: '../interaction/interaction?notice=' + JSON.stringify(that.data.notices[e.currentTarget.dataset.index])  + '&uid=' + that.data.uid,
+    })
+  }
 })
