@@ -70,6 +70,30 @@
         {
           "name": "pages/answer/answer",
           "pathName": "pages/answer/answer",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/product/product",
+          "pathName": "pages/product/product",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/interaction/interaction",
+          "pathName": "pages/interaction/interaction",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/feedback/feedback",
+          "pathName": "pages/feedback/feedback",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/product/product",
+          "pathName": "pages/product/product",
           "scene": null
         }
       ]

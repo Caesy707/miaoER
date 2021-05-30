@@ -269,6 +269,10 @@ else{
                         that.setData({
                             isMask: true
                         })
+                    }else{
+                        that.setData({
+                            failMask: true
+                        })
                     }
 
                 }

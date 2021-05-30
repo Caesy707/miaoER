@@ -12,7 +12,8 @@
         "pages/Ans/Ans",
         "pages/interaction/interaction",
         "pages/notes/notes",
-        "pages/mailbox/mailbox"
+        "pages/mailbox/mailbox",
+        "pages/product/product"
     ],
     "window": {
         "backgroundTextStyle": "light",
