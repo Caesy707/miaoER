@@ -197,23 +197,33 @@ Page({
     })
     console.log(sptime)
         var that=this
-        var ansLen = 4;
+        var ansLen = 0;
         that.data.Answer.forEach(function (value, index, array) {
-            if (index < 3) {
-                if (value == '') {
-                    wx.showToast({
-                        title: '请答完题再提交',
-                        icon: 'error',
-                        duration: 2000
-                    })
-                      
-                }
-            } else {
-                if (value == '') {
-                    ansLen = 3;
-                }
+            if(value != ''){
+                ansLen+=1
             }
+            // if (index < 3) {
+            //     if (value == '') {
+            //         wx.showToast({
+            //             title: '请答完题再提交',
+            //             icon: 'error',
+            //             duration: 2000
+            //         })
+                      
+            //     }
+            // } else {
+            //     if (value == '') {
+            //         ansLen = 3;
+            //     }
+            // }
         })
+        if(ansLen < 3){
+            wx.showToast({
+                            title: '请答完题再提交',
+                            icon: 'error',
+                            duration: 2000
+                        })
+        }
         // 答案保存入库请求 
         if (ansLen == 4) {
             wx.request({
@@ -233,7 +243,7 @@ Page({
                 },
                 success(res) {
                     console.log(res.data)
-                    var sc = star_count
+                    var sc = that.data.star_count
                     sc[res.data.record-1] = 1
                     if (res.data.record) {
                         that.setData({
@@ -250,7 +260,7 @@ Page({
             })
 
             console.log(this.data.Answer)
-        } else {
+        } else if(ansLen == 3) {
             wx.request({
                 url: 'https://wx.bitaxes.com/api/episode/question',
                 method: 'POST',
@@ -268,7 +278,7 @@ Page({
                 },
                 success(res) {
                     console.log(res.data)
-                    var sc = star_count
+                    var sc = that.data.star_count
                     sc[res.data.record-1] = 1
                     if (res.data.record) {
                         that.setData({

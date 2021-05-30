@@ -24,14 +24,13 @@ Page({
   })
   if(!n.read_at){
     wx.request({
-      url: 'https://wx.bitaxes.com/api/wx/user/notice/read',
+      url: 'https://wx.bitaxes.com/api/wx/user/notice/allread',
       method: 'POST',
       header: {
           'content-type': 'application/json' // 默认值
       },
       data: {
         "uid": options.uid,
-        "nid": n.id
       },
       success(res) {
         // res.data.data.forEach(element => {

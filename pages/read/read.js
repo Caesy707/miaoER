@@ -26,7 +26,8 @@ Page({
         isForward:false,
         spendtime:"0分0秒",
         episode: [], // 文章和题目数据
-        uid:0
+        uid:0,
+        star_count:[0,0,0]
     },
 
     /**
@@ -202,13 +203,6 @@ else{
             if(value != ''){
                 ansLen+=1
             }
-            if (ansLen < 3) {
-                wx.showToast({
-                    title: '请答完题再提交',
-                    icon: 'error',
-                    duration: 2000
-                })
-            }
             // if (index < 3) {
             //     if (value == '') {
             //         wx.showToast({
@@ -226,6 +220,13 @@ else{
             // }
         })
         console.log(ansLen)
+        if (ansLen < 3) {
+            wx.showToast({
+                title: '请答完题再提交',
+                icon: 'error',
+                duration: 2000
+            })
+        }
         // 答案保存入库请求 
         if (ansLen == 4) {
             wx.request({
@@ -247,13 +248,17 @@ else{
                 },
                 success(res) {
                     console.log(res.data)
+                    var sc = that.data.star_count
+                    sc[res.data.record-1] = 1
                     if (res.data.record) {
                         that.setData({
-                            isMask: true
+                            isMask: true,
+                            star_count: sc
                         })
                     }else{
                         that.setData({
-                            failMask: true
+                            failMask: true,
+                            star_count: sc
                         })
                     }
                 }
@@ -278,20 +283,24 @@ else{
                 },
                 success(res) {
                     console.log(res.data)
+                    var sc = that.data.star_count
+                    sc[res.data.record-1] = 1
                     if (res.data.record) {
                         that.setData({
-                            isMask: true
+                            isMask: true,
+                            star_count: sc
                         })
                     }else{
                         that.setData({
-                            failMask: true
+                            failMask: true,
+                            star_count: sc
                         })
                     }
 
                 }
             })
         }
-        console.log(this.data.Answer)
+        console.log(this.data)
     },
 
     onunload: function () {

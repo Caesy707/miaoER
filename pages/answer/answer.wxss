@@ -207,3 +207,9 @@ cover-image {
     text-decoration: underline;
     color: #ea9c01;
 }
+.star{
+    width: 506rpx;
+    position: absolute;
+    top: -137rpx;
+    left: 6rpx;
+}

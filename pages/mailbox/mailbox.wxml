@@ -5,7 +5,7 @@
     <view class="inform_title">{{item.data.title}}</view>
     <view class="inform" >{{item.data.content}}</view>
     <view class="time">{{item.updated_at}}</view>
-    <view class="circle" wx:if="{{!item.read_at}}"></view>
+    <view class="circle" wx:if="{{item.un_read_count}}">{{item.un_read_count}}</view>
   <!-- {{item.content}} -->
   </view>
   

@@ -397,6 +397,11 @@
         >
         </navigator>
       </view>
+      <view>
+        <image wx:if="{{star_count[0]}}" class="star" src="https://z3.ax1x.com/2021/05/25/2SfJCn.png" mode="widthFix"></image>
+        <image wx:if="{{star_count[1]}}"class="star" src="https://z3.ax1x.com/2021/05/25/2Sftg0.png" mode="widthFix"></image>
+        <image wx:if="{{star_count[2]}}"class="star" src="https://z3.ax1x.com/2021/05/25/2SfNvV.png" mode="widthFix"></image>
+      </view>
     </view>
   </view>
   <!-- 挑战失败 -->

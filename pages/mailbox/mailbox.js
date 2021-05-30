@@ -9,7 +9,15 @@ Page({
     uid: 0,
     startX: 0, //开始坐标
     startY: 0,
-    items: []
+    items: [{
+      data:{
+        'title':'互动消息',
+        'content':''
+      },
+      'updated_at': '',
+      'un_read_count': 0,
+      'isTouchMove': false
+    }]
   },
 
   /**
@@ -44,16 +52,29 @@ Page({
             'content-type': 'application/json' // 默认值
           },
           success(res) {
+            var re_c = 0
             res.data.data.forEach(element => {
               element.data.content = that.cutTextLong(element.data.content, 15)
               element.updated_at = element.updated_at.substring(5, 10);
               element.isTouchMove = false
+              if(!element.read_at){
+                re_c+=1
+              }
             });
+            console.log(re_c)
+            var reItem = that.data.items
+            reItem[0].data = {
+              'title':'互动消息',
+              'content': res.data.data[0].data.content
+            }
+            reItem[0].updated_at = res.data.data[0].updated_at
+            // reItem[0].un_read_count = re_c
+            reItem[0].un_read_count = re_c
 
             that.setData({
               notices: res.data.data,
               uid: resU.data,
-              items: res.data.data
+              items: reItem
             })
             console.log(res.data)
             console.log(that.data)
@@ -113,7 +134,7 @@ Page({
     console.log(that.data.notices[e.currentTarget.dataset.index])
 
     wx.navigateTo({
-      url: '../interaction/interaction?notice=' + JSON.stringify(that.data.notices[e.currentTarget.dataset.index]) + '&uid=' + that.data.uid,
+      url: '../interaction/interaction?notice=' + JSON.stringify(that.data.notices) + '&uid=' + that.data.uid,
     })
   },
   //   delete:function(){
@@ -185,7 +206,7 @@ Page({
     console.log(e)
     wx.request({
 
-      url: 'https://wx.bitaxes.com/api/wx/user/notice/' + e.currentTarget.dataset.nid,
+      url: 'https://wx.bitaxes.com/api/wx/user/notice/all/' + that.data.uid,
       method: 'DELETE',
       header: {
         'content-type': 'application/json' // 默认值
