@@ -120,6 +120,12 @@
           "pathName": "pages/translate/translate",
           "query": "eid=15&uid=3",
           "scene": null
+        },
+        {
+          "name": "pages/interaction/interaction",
+          "pathName": "pages/interaction/interaction",
+          "query": "",
+          "scene": null
         }
       ]
     }

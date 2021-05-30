@@ -95,16 +95,27 @@ cover-image {
     height: 85rpx;
     margin-bottom: 29rpx;
 }
-.submit {
-    width: 284rpx;
-    height: 91rpx;
+.submit{
+    width: 297rpx;
+    height: 100rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/31/2ZwmKx.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
     position: absolute;
-    bottom: -34rpx;
-    left:50%;
-    transform: translate(-50%);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/05/28/2kDHJA.png);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hoversubmit{
+    width: 287rpx;
+    height: 80rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/31/2Zwnr6.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    position: absolute;
+    bottom: 25rpx;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .succeed {
     max-width: 550rpx;

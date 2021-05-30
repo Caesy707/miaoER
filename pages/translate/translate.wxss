@@ -105,7 +105,7 @@ margin-bottom: 34rpx;
     font-size: 33.33rpx;
     color: #5c5c5c;
     position: absolute;
-    top: 0;
+    top: -8rpx;
     left: 147rpx;
 }
 

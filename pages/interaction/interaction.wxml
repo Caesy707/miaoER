@@ -4,7 +4,7 @@
       <image class="self_img" mode="widthFix" src="{{item.data.avatar}}"></image>
       <view class="self_name">{{item.data.nickname}}</view>
       <view class="praise">赞了这条读书笔记
-        <view class="iconfont icon-dianzan" bindtap="clickStar" style="color:{{color}}"></view>
+        <view class="iconfont icon-dianzan"></view>
       </view>
       <view class="time">{{item.updated_at}}</view>
     </view>

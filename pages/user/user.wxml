@@ -29,8 +29,11 @@
     >
       填写
     </view>
-
+<view>
+  <image class="catgif" src="https://z3.ax1x.com/2021/05/31/2Z0I78.gif"></image>
+</view>
   </view>
+  <!-- 未登录态 -->
   <view class="card-contain" wx:if="{{unregistered}}">
     <image
       class="card-oneself"
@@ -40,12 +43,11 @@
     <view class="card-text">
       点击查看微信头像
     </view>
-
   </view>
 
   <image
     class="card-img"
-    src="https://z3.ax1x.com/2021/05/06/glzExe.png"
+    src="https://z3.ax1x.com/2021/05/31/2ZB9NF.png"
     mode="widthFix"
   />
 </view>
@@ -54,7 +56,7 @@
     <view class="iconfont icon-shoucang"></view>
     <text>我的收藏</text>
   </navigator>
-  <navigator class="function1">
+  <navigator class="function1" url="../product/product"> 
     <view class="iconfont icon-guanyu"></view>
     <text>关于产品</text>
   </navigator>

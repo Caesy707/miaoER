@@ -22,10 +22,11 @@ margin: 69rpx auto;
 width: 68rpx;
 left: 35rpx;
 top: 21rpx;
+border-radius: 50%;
 }
 .self_name{
   position: absolute;
-  top: 27rpx;
+  top: 21rpx;
   left: 128rpx;
   font-size: 25rpx;
 }
@@ -39,6 +40,7 @@ top: 21rpx;
 .icon-dianzan{
   font-size: 20.83rpx;
   display: inline;
+  color: #eaa30a;
 }
 .time{
   position: absolute;

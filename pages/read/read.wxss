@@ -61,37 +61,30 @@ scroll-view {
 .choice {
     margin-bottom: 30rpx;
 }
-
-.submit {
-    background-image: url("https://z3.ax1x.com/2021/05/05/gKADII.png");
-    background-color: white;
-    height: 117rpx;
+.box_submit{
     width: 297rpx;
-    background-size: 90% 100%;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-top: 20rpx;
-    font-size: 41rpx;
-    font-weight: 400;
-    background-repeat: no-repeat;
-    text-indent: 0.5em;
+    height: 100rpx;
+    margin: auto;
+}
+.submit{
+    width: 297rpx;
+    height: 100rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/31/2ZwmKx.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+
+}
+.hoversubmit{
+    width: 287rpx;
+    height: 80rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/31/2Zwnr6.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+
+    background-position: 2rpx 1rpx;
 }
 
-.submit-1 {
-    height: 117rpx;
-    width: 297rpx;
-    background-image: url("https://z3.ax1x.com/2021/05/05/gKo3Jx.png");
-    background-size: 90% 100%;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-top: 20rpx;
-    font-size: 41rpx;
-    font-weight: 400;
-    background-repeat: no-repeat;
-    text-indent: 0.5em;
-}
+
 
 cover-view {
     position: fixed;

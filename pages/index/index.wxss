@@ -2,18 +2,28 @@ page {
     height: 100%;
     background-color: white;
 }
-
-.title-big {
-    width: 420rpx;
-    height: 225rpx;
+.title{
     position: relative;
     top: 127rpx;
-    left: 20%;
+}
+.catgif{
+    width: 417rpx;
+    position: absolute;
+    left: 50%;
+    bottom: -45rpx;
+    transform: translate(-50%);
+}
+.title-big {
+    width: 420rpx;
+    position: absolute;
+    top: 34rpx;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .button {
     position: relative;
-    top: 500rpx;
+    top: 700rpx;
 }
 
 .con {
@@ -143,12 +153,23 @@ page {
     background-repeat: no-repeat; 
     margin: 36rpx auto;
 }
+/* .help{
+    width: 287rpx;
+    height: 80rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/30/2ZYDPI.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    background-position: 2rpx 1rpx;
+    margin: 36rpx auto;
+} */
 .hoverhelp{
-    width: 290rpx;
-    height: 100rpx;
-    background-image: url("https://z3.ax1x.com/2021/05/29/2ECRFx.png");
+    width: 287rpx;
+    height: 80rpx;
+    background-image: url("https://z3.ax1x.com/2021/05/30/2ZYDPI.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     margin: 36rpx auto;
-    background-position: 10rpx -10rpx;
+    background-position: 2rpx 1rpx;
 }
+/* https://z3.ax1x.com/2021/05/29/2ECgT1.png
+https://z3.ax1x.com/2021/05/30/2ZYDPI.png */

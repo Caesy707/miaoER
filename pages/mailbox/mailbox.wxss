@@ -40,21 +40,36 @@ color:#949494;
   position: absolute;
   background: #e4614f;
   border-radius: 50%;
-  width: 28rpx;
-  height: 28rpx;
+  width: 30rpx;
+  height: 30rpx;
   left: 550rpx;
   top: 60rpx;
   font-size: 20rpx;
   text-align: center;
   color: #ffffff;
+  line-height: 30rpx;
 }
 .markread{
-  width: 267rpx;
-  height: 88rpx;
-  background-image: url(https://z3.ax1x.com/2021/05/29/2AJDRU.png) ;
+  width: 297rpx;
+  height: 100rpx;
+  background-image: url(https://z3.ax1x.com/2021/05/31/2Z0kef.png  ) ;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  margin: 30rpx auto;
+  position: fixed;
+    bottom: 173rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hovermark{
+  width: 277rpx;
+  height: 90rpx;
+  background-image: url(https://z3.ax1x.com/2021/05/31/2Z0Aw8.png ) ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: fixed;
+    bottom: 183rpx;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .icon-guanbi{
   position: absolute;

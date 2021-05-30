@@ -1,5 +1,6 @@
 <view class="con">
-  <view>
+  <view class="title">
+    <image class="catgif" src="https://z3.ax1x.com/2021/05/31/2Z050f.gif" mode="widthFix"></image>
     <image
       class="title-big"
       src="https://z3.ax1x.com/2021/05/22/gLutqU.png"

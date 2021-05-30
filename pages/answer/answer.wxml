@@ -104,7 +104,7 @@
 
     </swiper-item>
   </swiper>
-  <navigator wx:if="{{isshowAns}}" class="submit" hover-class="none" bindtap="submitAns">
+  <navigator wx:if="{{isshowAns}}" class="submit" hover-class="hoversubmit" bindtap="submitAns">
   </navigator>
   <!-- <swiper indicator-dots="true">
     <swiper-item>
@@ -418,6 +418,9 @@
           bindtap="changeAgain"
         >
         </navigator>
+      </view>
+      <view>
+        <image class="star" src="https://z3.ax1x.com/2021/05/31/2Z0W6I.png" mode="widthFix"></image>
       </view>
       <view>
         <navigator

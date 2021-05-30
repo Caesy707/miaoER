@@ -6,7 +6,6 @@ Page({
    */
   data: {
   color:"",
-  isPrise:false,
   notice: {}
   },
 
@@ -48,23 +47,6 @@ Page({
     console.log(that.data.notice)
   }
 
-  },
-  clickStar:function(){
-    if(this.data.isPrise){
-      this.setData({
-        color:"#343b4e",//点赞效果
-        isPrise:false
-       })
-       console.log(1)
-    }
-    else{
-      this.setData({
-        color:"#eaa30a",//点赞效果
-        isPrise:true
-       })
-       console.log(1)
-    }
-   
   }
 
 

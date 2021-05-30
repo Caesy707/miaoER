@@ -21,7 +21,14 @@
     left: 20rpx;
     border-radius: 50%;
 }
-
+.catgif{
+    width: 432rpx;
+    height: 219rpx;
+    position: absolute;
+    bottom: -18px;
+    right: -72px;
+    z-index: 1;
+}
 .card-text {
     position: absolute;
     font-size: 50rpx;
@@ -58,7 +65,7 @@
 
 .card-img {
     position: absolute;
-    top: 127rpx;
+    top: 222rpx;
     z-index: 0;
 }
 

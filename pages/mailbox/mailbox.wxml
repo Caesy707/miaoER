@@ -5,10 +5,9 @@
     <view class="inform_title">{{item.data.title}}</view>
     <view class="inform" >{{item.data.content}}</view>
     <view class="time">{{item.updated_at}}</view>
-    <view class="circle" wx:if="{{item.un_read_count}}">{{item.un_read_count}}</view>
+    <view class="circle" wx:if="{{item.un_read_count}}" > {{item.un_read_count}}</view>
   <!-- {{item.content}} -->
   </view>
-  
   <view class="del" catchtap="del" data-index="{{index}}" data-nid="{{item.id}}" url=''>删除</view>
  </view>
 
@@ -26,6 +25,6 @@
   
 <view class="iconfont icon-guanbi" bindtap="delete"></view>
 </view> -->
-<navigator class="markread" hover-class="none" bindtap="deleteAll"></navigator>
+<navigator class="markread" hover-class="hovermark" bindtap="deleteAll"></navigator>
 
 
