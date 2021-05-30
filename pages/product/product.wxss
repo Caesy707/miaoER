@@ -1,0 +1,25 @@
+.contain{
+  width: 648rpx;
+  min-height: 845rpx;
+  font-size: 25rpx;
+  background: #ffffff;
+  border-radius: 15rpx;
+  padding: 40rpx;
+
+  box-sizing:border-box;
+}
+.contain p{
+  font-size: 33.33rpx;
+}
+.outline{
+  width: 685rpx;
+  min-height:885rpx ;
+  margin: auto;
+  margin-top: 70rpx;
+  padding: 21rpx;
+  box-sizing:border-box;
+  background-image: url(https://z3.ax1x.com/2021/05/27/2C1ExP.png );
+  background-size: 100% 100%;
+  background-position-y: -5rpx;
+  background-repeat: no-repeat;
+}
