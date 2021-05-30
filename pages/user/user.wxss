@@ -211,3 +211,9 @@
     text-decoration: underline;
     z-index: 1;
 }
+.mailbox image{
+    width: 51rpx;
+    position: absolute;
+    top: 55rpx;
+    right: 87rpx;
+}

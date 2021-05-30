@@ -5,10 +5,12 @@
       src="{{AvatarUrl}}"
       mode="widthFix"
     />
+    <view class="mailbox">
+      <image src="https://z3.ax1x.com/2021/05/30/2ZP97d.png" mode="widthFix" bindtap="navigatorMail"></image>
+    </view>
     <view class="card-text">
       {{nickName}}
     </view>
-
     <view class="card-text1">
       英语等级：
       {{level[index].name}}

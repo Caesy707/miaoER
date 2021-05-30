@@ -158,8 +158,6 @@ Page({
             key: 'uid',
             success: (res) => {
                 console.log(res.data)
-
-
                 wx.request({
                     url: 'https://wx.bitaxes.com/api/wx/user/grade',
                     method: 'POST',
@@ -179,6 +177,11 @@ Page({
                 console.log('not get uid')
             }
 
+        })
+    },
+    navigatorMail:function(){
+        wx.navigateTo({
+          url: '../mailbox/mailbox',
         })
     }
 })
