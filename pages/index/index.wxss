@@ -66,10 +66,14 @@ page {
     width: 322rpx;
     height: 114rpx;
     position: fixed;
-    top: 767rpx;
-    left: 191rpx;
+    top: 792rpx;
+    left: 211rpx;
+    background: #fff;
 }
-
+.unmask navigator{
+    position: absolute;
+    top: -16rpx;
+}
 .dialogue_1 {
     width: 347rpx;
     height: 263rpx;
@@ -124,6 +128,7 @@ page {
 .hoverpersonal{
     height: 94rpx;
     width: 292rpx;
+
     background-image: url("https://z3.ax1x.com/2021/05/28/2kkS1S.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
@@ -140,7 +145,6 @@ page {
 .hoverhelp{
     height: 94rpx;
     width: 292rpx;
-    background: #b2b2b2;
     background-image: url("https://z3.ax1x.com/2021/05/29/2ECRFx.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
