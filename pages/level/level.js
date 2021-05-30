@@ -13,7 +13,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-        styleCss: [{
+        styleCss: [
+            {
                 top: 176,
                 left: 230,
                 transform: 0
@@ -114,7 +115,7 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
+    onShow: function (options) {
         var that = this;
         //获取英语等级
         wx.getStorage({
@@ -152,46 +153,34 @@ Page({
             }
         })
     },
-    showEpisode :function(length) {
+    // onShow: function(params) {
+    //     console.log(this.data.episode.length)
+    //     this.showEpisode(this.data.episode.length)
+    // },
+    showEpisode: function (length) {
         var that = this
-        var listLength = length
-        console.log(listLength)
+
         var levelInfoList = that.data.styleCss;
-        var newInfoList = JSON.parse(JSON.stringify(that.data.newlist));
         var lastLevelTop = levelInfoList[levelInfoList.length - 1].top
-        console.log(that.data.episode.length)
-        for (var i = 0; i < length; i++) {
+        let newInfoList = JSON.parse(JSON.stringify(that.data.newlist));
+
+        for (var i = 1; i < length/10; i++) {
             lastLevelTop = that.data.styleCss[that.data.styleCss.length - 1].top // 更新this.data.styleCss
             levelInfoList = that.data.styleCss
             newInfoList = JSON.parse(JSON.stringify(that.data.newlist));
-            // newInfoList = that.data.newlist;
             console.log(lastLevelTop)
             console.log(levelInfoList)
-
-            // for(var j=0;j<10;j++){
-            //     newInfoList[j].top=levelInfoList[j].top+lastLevelTop+190
-            //     console.log(newInfoList[j].top)
-            // } 
-            // newInfoList.forEach(function(element,index){
-            //     element.top = levelInfoList[i * 10 + index].top + lastLevelTop + 190
-            // } );
-            var arr = new Array()
             for (var j = 0; j < 10; j++) {
                 newInfoList[j].top = levelInfoList[j].top + lastLevelTop + 190
-                arr.push(JSON.parse(JSON.stringify(newInfoList[j])))
-                // console.log(newInfoList[j])
             }
-            //     that.setData({
-            //         styleCss:levelInfoList.concat(newInfoList),//数组追加
-            //         mapHeight: lastLevelTop*listLength
-            //    })
             console.log(newInfoList)
-            that.setData({
-                styleCss: levelInfoList.concat(arr), //数组追加
-                mapHeight: lastLevelTop * listLength,
-            })
+            that.data.styleCss = levelInfoList.concat(newInfoList)
             console.log(that.data.styleCss)
 
         }
+        that.setData({
+            styleCss: that.data.styleCss, //数组追加
+            mapHeight: that.data.styleCss[that.data.styleCss.length - 1].top,
+        })
     }
 })

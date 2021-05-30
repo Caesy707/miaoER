@@ -25,7 +25,8 @@ Page({
         Answer: ['', '', '', ''],
         isForward:false,
         spendtime:"0分0秒",
-        episode: [] // 文章和题目数据
+        episode: [], // 文章和题目数据
+        uid:0
     },
 
     /**
@@ -65,7 +66,8 @@ Page({
                         epi.content = content
                         that.setData({
                             episode: epi,
-                            eid: res.data.data.eid
+                            eid: res.data.data.eid,
+                            uid: options.uid
                         })
                         wx.setStorage({
                             key: "Episode",
@@ -224,9 +226,10 @@ else{
                     "ans2": that.data.Answer[1],
                     "ans3": that.data.Answer[2],
                     "ans4": that.data.Answer[3],
-                    "uid": that.data.episode.uid,
+                    // "uid": that.data.episode.uid,
+                    "uid": that.data.uid,
                     "eid": that.data.eid,
-                    "spend_time": "3分28秒"
+                    "spend_time": sptime
 
                 },
                 success(res) {
@@ -255,9 +258,9 @@ else{
                     "ans1": that.data.Answer[0],
                     "ans2": that.data.Answer[1],
                     "ans3": that.data.Answer[2],
-                    "uid": that.data.episode.uid,
+                    "uid": that.data.uid,
                     "eid": that.data.eid,
-                    "spend_time": "3分21秒"
+                    "spend_time": sptime
 
                 },
                 success(res) {

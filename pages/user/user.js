@@ -112,8 +112,8 @@ Page({
                 console.log(res.data)
                 this.setData({
                     user: res.data,
-                    AvatarUrl: res.data.avatarUrl,
-                    nickName: res.data.nickName,
+                    AvatarUrl: res.data.avatar_url,
+                    nickName: res.data.nickname,
                     unregistered: false,
                     registered: true
                 })

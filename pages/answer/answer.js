@@ -23,7 +23,8 @@ Page({
         episode:{},
         AnsSeleted: [],
         Answer:[],
-        spendtime:"0分0秒"
+        spendtime:"0分0秒",
+        uid: 0
     },
 
     /**
@@ -59,6 +60,15 @@ Page({
               console.log(res.data)
               that.setData({
                 episode: res.data
+              })
+            }
+        })
+        wx.getStorage({
+            key: 'uid',
+            success (res) {
+              console.log(res.data)
+              that.setData({
+                uid: res.data
               })
             }
         })
@@ -216,9 +226,9 @@ Page({
                     "ans2": that.data.Answer[1],
                     "ans3": that.data.Answer[2],
                     "ans4": that.data.Answer[3],
-                    "uid": that.data.episode.uid,
+                    "uid": that.data.uid,
                     "eid": that.data.eid,
-                    "spend_time": "3分28秒"
+                    "spend_time": sptime
                 },
                 success(res) {
                     console.log(res.data)
@@ -246,9 +256,9 @@ Page({
                     "ans1": that.data.Answer[0],
                     "ans2": that.data.Answer[1],
                     "ans3": that.data.Answer[2],
-                    "uid": that.data.episode.uid,
+                    "uid": that.data.uid,
                     "eid": that.data.eid,
-                    "spend_time": "3分21秒"
+                    "spend_time": sptime
 
                 },
                 success(res) {
