@@ -40,6 +40,7 @@ p{
     background-color: #ffffff;
     margin: auto;
     margin-top: 28rpx;
+    margin-bottom: 72rpx;
     font-family: Garamond;
     font-size: 41.67rpx;
 }
@@ -67,7 +68,8 @@ cover-image {
     box-sizing: border-box;
     width: 651rpx;
     background-color: #ffffff;
-    margin: 185rpx auto;
+    margin: auto;
+    margin-bottom:185rpx ;
     font-family: Garamond;
     font-size: 41.67rpx;
 }
@@ -85,7 +87,7 @@ cover-image {
 
 .onecomment {
     width: 100%;
-    min-height: 179rpx;
+    min-height: 142rpx;
     position: relative;
 overflow: hidden;
 margin-bottom: 34rpx;
@@ -96,10 +98,11 @@ margin-bottom: 34rpx;
     width: 93rpx;
     position: absolute;
     left: 35rpx;
+    border-radius: 50%;
 }
 
 .oneself {
-    font-size: 25rpx;
+    font-size: 33.33rpx;
     color: #5c5c5c;
     position: absolute;
     top: 0;
@@ -108,14 +111,32 @@ margin-bottom: 34rpx;
 
 .oneself_text {
     width: 475rpx;
-    font-size: 25rpx;
+    font-size: 33.33rpx;
     margin-top: 54rpx;
     margin-left: 147rpx;
 }
 
 .icon-dianzan {
     position: absolute;
-    font-size: 25rpx;
+    font-size: 33.33rpx;
     right: 43rpx;
     top: 0;
+}
+.againchallenged{
+    width: 297rpx;
+    height: 100rpx;
+    background-image: url(https://z3.ax1x.com/2021/05/30/2ZnZiF.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-bottom: 40rpx;
+}
+.hoveragain{
+    width: 260rpx;
+    height: 100rpx;
+    background-image: url(https://z3.ax1x.com/2021/05/30/2ZnEIU.png );
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-bottom: 40rpx;
 }

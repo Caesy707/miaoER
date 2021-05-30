@@ -102,51 +102,53 @@ page {
     pointer-events: none;
 }
 .challenge{
-    height: 94rpx;
-    width: 292rpx;
+    width: 297rpx;
+    height: 100rpx;
     background-image: url("https://z3.ax1x.com/2021/05/28/2kiRG8.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     margin: 36rpx auto;   
 }
 .hoverchallenge{
-    height: 94rpx;
-    width: 292rpx;
+    width: 297rpx;
+    height: 100rpx;
     background-image: url("https://z3.ax1x.com/2021/05/28/2ki2Pf.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
+    background-position: 10rpx -10rpx;
     margin: 36rpx auto;   
 }
 .personal{
-    height: 94rpx;
-    width: 292rpx;
+    width: 297rpx;
+    height: 100rpx;
     background-image: url("https://z3.ax1x.com/2021/05/28/2kkp6g.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     margin: 36rpx auto;
 }
 .hoverpersonal{
-    height: 94rpx;
-    width: 292rpx;
-
+    width: 297rpx;
+    height: 100rpx;
+    background-position: 10rpx -10rpx;
     background-image: url("https://z3.ax1x.com/2021/05/28/2kkS1S.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     margin: 36rpx auto;
 }
 .help{
-    height: 94rpx;
-    width: 292rpx;
+    width: 297rpx;
+    height: 100rpx;
     background-image: url("https://z3.ax1x.com/2021/05/29/2ECgT1.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     margin: 36rpx auto;
 }
 .hoverhelp{
-    height: 94rpx;
-    width: 292rpx;
+    width: 290rpx;
+    height: 100rpx;
     background-image: url("https://z3.ax1x.com/2021/05/29/2ECRFx.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     margin: 36rpx auto;
+    background-position: 10rpx -10rpx;
 }
