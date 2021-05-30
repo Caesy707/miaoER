@@ -14,6 +14,7 @@ scroll-view {
     margin: auto;
     margin-top: 28rpx;
     font-family: Garamond;
+    border-radius: 10rpx;
 }
 
 .read_title {
@@ -29,11 +30,12 @@ scroll-view {
 .answer_box {
     width: 651rpx;
     background-color: #ffffff;
-    margin: 28rpx auto;
+    margin: 28rpx auto 304rpx auto;
     font-family: Garamond;
     font-size: 41.67rpx;
-    padding: 0 36rpx;
+    padding: 45rpx 36rpx;
     box-sizing: border-box;
+    border-radius: 10rpx;
 }
 
 .answer_title {
