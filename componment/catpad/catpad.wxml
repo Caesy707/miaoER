@@ -17,7 +17,8 @@
   <view class="iconfont icon-iconfontxingxing" style="colo:{{}}"></view>
 
 ======= -->
-  <view class="iconfont icon-iconfontxingxing" style="{{info.Record>0?'color:#fffc35':''}}"></view>
+
+  <view  class="iconfont icon-iconfontxingxing" style="{{info.Record>0?'color:#fffc35':''}}"></view>
   <view class="iconfont icon-iconfontxingxing"style="{{info.Record>1?'color:#fffc35':''}}"></view>
   <view class="iconfont icon-iconfontxingxing"style="{{info.Record>2?'color:#fffc35':''}}"></view>
 

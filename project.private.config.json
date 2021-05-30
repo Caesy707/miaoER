@@ -94,6 +94,25 @@
         {
           "name": "pages/product/product",
           "pathName": "pages/product/product",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/read/read",
+          "pathName": "pages/read/read",
+          "query": "eid=15",
+          "scene": null
+        },
+        {
+          "name": "pages/read/read",
+          "pathName": "pages/read/read",
+          "query": "eid=15",
+          "scene": null
+        },
+        {
+          "name": "pages/read/read",
+          "pathName": "pages/read/read",
+          "query": "eid=15",
           "scene": null
         }
       ]

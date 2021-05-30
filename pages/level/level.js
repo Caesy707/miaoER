@@ -174,7 +174,6 @@ Page({
             console.log(newInfoList)
             that.data.styleCss = levelInfoList.concat(newInfoList)
             console.log(that.data.styleCss)
-
         }
         that.setData({
             styleCss: that.data.styleCss, //数组追加

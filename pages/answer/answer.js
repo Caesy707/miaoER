@@ -24,14 +24,14 @@ Page({
         AnsSeleted: [],
         Answer:[],
         spendtime:"0分0秒",
-        uid: 0
+        uid: 0,
+        isshowAns:false
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) { 
-      
+    onLoad: function(options) {     
         var that = this
         console.log(options)
         wx.getStorage({
@@ -322,5 +322,21 @@ Page({
      timestamp = timestamp / 1000;  
     console.log("当前时间戳为：" + timestamp);  
     return(timestamp)
+    },
+    changeSwiper:function(e){
+        var that=this
+       console.log(e.detail.current)
+console.log(that.data.episode.questions.length)//题目长度
+       var current=e.detail.current
+       if(current==that.data.episode.questions.length-1){
+           this.setData({
+             isshowAns:true
+           })
+       }
+       else{
+        this.setData({
+            isshowAns:false
+          })
+       }
     }
 })

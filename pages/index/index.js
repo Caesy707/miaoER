@@ -29,17 +29,24 @@ Page({
     },
     onLoad() {
         var that = this;
-        // if (wx.getUserProfile) {
-        //     this.setData({
-        //         canIUseGetUserProfile: true
-        //     })
-        // }
+        if (wx.getUserProfile) {
+            this.setData({
+                canIUseGetUserProfile: true
+            })
+        }
         // wx.clearStorage({
         //     complete: (res) => {
         //         console.log("clear")
         //     },
         // })
         // 检查是否过期
+        wx.getStorage({
+            key: 'uid',
+            success: (res) => {
+                console.log(res)
+            },
+            fail: (res)=>{
+                console.log(res)
         wx.checkSession({
             success() {
                 console.log("未过期")
@@ -68,10 +75,10 @@ Page({
                                         data: reqRes.data.data.id,
                                         key: 'uid',
                                     })
-                                    wx.setStorage({
-                                        data: reqRes.data.data,
-                                        key: 'user',
-                                    })
+                                    // wx.setStorage({
+                                    //     data: reqRes.data.data,
+                                    //     key: 'user',
+                                    // })
 
                                 }
                             })
@@ -117,103 +124,117 @@ Page({
                 })
             }
         })
+    }
+})
+        
         this.getgrade()
-
-    },
+        },
     getUserProfile(e) {
         var that = this
         console.log(that.data.uid)
-        if (that.data.isShow) {
-            wx.getUserProfile({
-                desc: '展示用户信息',
-                success: (res) => {
-                    console.log(res.userInfo)
-                    this.setData({
-                        userInfo: res.userInfo,
-                        hasUserInfo: true,
-                        isShowtoo: false
-                    })
-                    wx.setStorage({
-                        data: res.userInfo,
-                        key: 'user',
-                    })
-                    // wx.getStorage({
-                    //     key: 'uid',
-                    //     success (uidRes) {
-                    //       console.log(uidRes.data)
+        wx.getStorage({
+            key: 'user',
+            success: (res) => {
+                that.navigateTo(e)
+                console.log(res)
+            },
+            fail: (res)=>{
+                console.log(res)
 
-                    //       wx.request({
-                    //         url: 'https://wx.bitaxes.com/api/wx/user/userinfo', 
-                    //         method: 'POST',
-                    //         header: {
-                    //         'content-type': 'application/json' // 默认值
-                    //         },
-                    //         data:{
-                    //             "uid": uid.data,
-                    //             "ans2": that.data.Answer[1],
-                    //             "ans3": that.data.Answer[2],
-                    //             "uid": that.data.episode.uid,
-                    //             "eid": that.data.eid,
-                    //             "spend_time":"3分21秒"
-
-                    //         },
-                    //         success(res) {
-                    //             console.log(res.data)
-                    //         }
-                    //     })
-                    //     }
-                    // })
-
-                    wx.request({
-                        url: 'https://wx.bitaxes.com/api/wx/user/userinfo',
-                        method: 'POST',
-                        header: {
-                            'content-type': 'application/json' // 默认值
-                        },
-                        data: {
-                            "uid": that.data.uid,
-                            "nickName": res.userInfo.nickName,
-                            "avatarUrl": res.userInfo.avatarUrl,
-                            "gender": res.userInfo.gender,
-                            "country": res.userInfo.country,
-                            "province": res.userInfo.province,
-                            "city": res.userInfo.city,
-                            "language": res.userInfo.language
-
-
-                        },
-                        success(res) {
-                            console.log(res.data)
-                        }
-                    })
-
-
-                    // wx.navigateTo({
-                    //     url: '../user/user',
-                    // })
-                    that.navigateTo(e)
-                    
-                },
-                fail: () => {
-                    // console.log(1)
-                    // wx.navigateTo({
-                    //     url: '../user/user',
-                    // })
-                    // wx.showModal({
-                    //     title: '提示',
-                    //     content: '我们需要你的用户信息',
-                    //     success (res) {
-                    //       if (res.confirm) {
-                    //         console.log('用户点击确定')
-                    //       } else if (res.cancel) {
-                    //         console.log('用户点击取消')
-                    //       }
-                    //     }
-                    //   })
-                }
-            })
+                wx.getUserProfile({
+                    desc: '展示用户信息',
+                    success: (res) => {
+                        console.log(res.userInfo)
+                        this.setData({
+                            userInfo: res.userInfo,
+                            hasUserInfo: true,
+                            isShowtoo: false
+                        })
+                        wx.setStorage({
+                            data: res.userInfo,
+                            key: 'user',
+                        })
+                        // wx.getStorage({
+                        //     key: 'uid',
+                        //     success (uidRes) {
+                        //       console.log(uidRes.data)
+    
+                        //       wx.request({
+                        //         url: 'https://wx.bitaxes.com/api/wx/user/userinfo', 
+                        //         method: 'POST',
+                        //         header: {
+                        //         'content-type': 'application/json' // 默认值
+                        //         },
+                        //         data:{
+                        //             "uid": uid.data,
+                        //             "ans2": that.data.Answer[1],
+                        //             "ans3": that.data.Answer[2],
+                        //             "uid": that.data.episode.uid,
+                        //             "eid": that.data.eid,
+                        //             "spend_time":"3分21秒"
+    
+                        //         },
+                        //         success(res) {
+                        //             console.log(res.data)
+                        //         }
+                        //     })
+                        //     }
+                        // })
+    
+                        wx.request({
+                            url: 'https://wx.bitaxes.com/api/wx/user/userinfo',
+                            method: 'POST',
+                            header: {
+                                'content-type': 'application/json' // 默认值
+                            },
+                            data: {
+                                "uid": that.data.uid,
+                                "nickName": res.userInfo.nickName,
+                                "avatarUrl": res.userInfo.avatarUrl,
+                                "gender": res.userInfo.gender,
+                                "country": res.userInfo.country,
+                                "province": res.userInfo.province,
+                                "city": res.userInfo.city,
+                                "language": res.userInfo.language
+    
+    
+                            },
+                            success(res) {
+                                console.log(res.data)
+                            }
+                        })
+    
+    
+                        // wx.navigateTo({
+                        //     url: '../user/user',
+                        // })
+                        that.navigateTo(e)
+                        
+                    },
+                    fail: () => {
+                        // console.log(1)
+                        // wx.navigateTo({
+                        //     url: '../user/user',
+                        // })
+                        // wx.showModal({
+                        //     title: '提示',
+                        //     content: '我们需要你的用户信息',
+                        //     success (res) {
+                        //       if (res.confirm) {
+                        //         console.log('用户点击确定')
+                        //       } else if (res.cancel) {
+                        //         console.log('用户点击取消')
+                        //       }
+                        //     }
+                        //   })
+                    }
+                })
+            }
+        })
+        if (wx.getUserProfile) {
+            
         }else{
-            that.navigateTo(e)
+           
         }
     },
     navigateTo(e) {
