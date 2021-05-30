@@ -93,6 +93,10 @@ Page({
                 wx.login({
                     success(res) {
                         if (res.code) {
+                            wx.setStorage({
+                                data: res.code,
+                                key: 'uid',
+                            })
                             //发起网络请求
                             wx.request({
                                 url: 'https://wx.bitaxes.com/api/wx/user/login/' + res.code,
