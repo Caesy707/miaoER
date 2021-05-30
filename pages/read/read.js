@@ -23,8 +23,8 @@ Page({
             [true, true, true, true]
         ],
         Answer: ['', '', '', ''],
-        collect: true,
         isForward:false,
+        spendtime:"0分0秒",
         episode: [] // 文章和题目数据
     },
 
@@ -32,17 +32,17 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        var app=getApp()
+        app.globalData.firsttime= this.time()//开始页面计时
         console.log(options)
         const that = this;
         // options.eid=1
         var reqUrl = ''
-
         wx.getStorage({
             key: 'uid',
             success: (res) => {
                 console.log(res.data)
                 options.uid = res.data
-
                 console.log(options.uid)
                 // var eid = 1;
                 // var uid = 1;
@@ -172,18 +172,6 @@ else{
             }
         })
     },
-    //收藏与未收藏的切换
-    changeCollect: function () {
-        if (this.data.collect) {
-            this.setData({
-                collect: false
-            })
-        } else {
-            this.setData({
-                collect: true
-            })
-        }
-    },
     getinform: function (e) {
         console.log(e)
     },
@@ -196,7 +184,18 @@ else{
     submitAns: function () {
         var that = this;
         var ansLen = 4;
-
+        var app = getApp();
+        app.globalData.lasttime= this.time()
+        var usetime=  app.globalData.lasttime- app.globalData.firsttime
+        //秒
+        var second=usetime%60
+        //分
+        var min=parseInt(usetime/60)
+        var sptime=min.toString()+"分"+second.toString()+"秒"
+        this.setData({
+            spendtime:sptime 
+        })
+        console.log(sptime)
         that.data.Answer.forEach(function (value, index, array) {
             if (index < 3) {
                 if (value == '') {
@@ -324,4 +323,10 @@ else{
             }
         })
     },
+    time:function(){
+        //获取当前时间戳
+        var timestamp = Date.parse(new Date());  
+        timestamp = timestamp / 1000;  
+       return(timestamp)
+       }
 })

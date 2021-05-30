@@ -103,12 +103,6 @@ cover-image {
     margin-bottom: 29rpx;
 }
 
-.title-image {
-    width: 50rpx;
-    height: 50rpx;
-    display: inline-block;
-}
-
 .succeed {
     max-width: 550rpx;
     position: relative;
@@ -192,4 +186,21 @@ cover-image {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(https://z3.ax1x.com/2021/05/28/2kBbuT.png);
+}
+.outlineTime{
+    font-size: 25rpx;
+    position: absolute;
+    top: 170rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.outlineTime view{
+    display: inline;
+}
+.timeTitle{
+    margin-right: 30rpx;
+}
+.time{
+    text-decoration: underline;
+    color: #ea9c01;
 }

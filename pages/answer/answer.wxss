@@ -3,6 +3,7 @@
     height: 620rpx;
     background-color: #fff;
     margin: auto;
+    border-radius: 10rpx;
     margin-top: 2rpx;
 }
 
@@ -62,6 +63,7 @@
     width: 688rpx;
     position: relative;
     margin: auto;
+    border-radius: 10rpx;
     margin-top: 24rpx;
     height: 550rpx;
     background-position: center;
@@ -83,7 +85,7 @@ swiper {
 
 cover-view {
     position: fixed;
-    top: 715rpx;
+    top: 500rpx;
     right: 0;
     z-index: 1;
 }
@@ -97,7 +99,7 @@ cover-image {
     width: 284rpx;
     height: 91rpx;
     position: absolute;
-    bottom: 7rpx;
+    bottom: -34rpx;
     left:50%;
     transform: translate(-50%);
     background-size: contain;
@@ -187,4 +189,21 @@ cover-image {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(https://z3.ax1x.com/2021/05/28/2kBbuT.png);
+}
+.outlineTime{
+    font-size: 25rpx;
+    position: absolute;
+    top: 170rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.outlineTime view{
+    display: inline;
+}
+.timeTitle{
+    margin-right: 30rpx;
+}
+.time{
+    text-decoration: underline;
+    color: #ea9c01;
 }

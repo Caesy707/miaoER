@@ -14,6 +14,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    firsttime:"",
+    lasttime:"",
+    sptime:"0分0秒"
   }
 })

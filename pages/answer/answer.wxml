@@ -2,7 +2,6 @@
   <cover-image src="https://z3.ax1x.com/2021/05/22/gLvGOP.png" bindtap="changePages">
 
   </cover-image>
-
 </cover-view>
 
 <scroll-view
@@ -375,9 +374,13 @@
   </swiper> -->
 </view>
   <!-- 挑战成功 -->
-  <view class="mask" wx:if="{{isMask}}">
+  <view class="mask"  wx:if="{{isMask}}">
     <view class="succeed">
       <view>
+        <view class="outlineTime">
+          <view class="timeTitle">闯关时间为:</view>
+      <view class="time">{{spendtime}}</view>
+    </view>
         <navigator
           class="next"
           hover-class="next1"
@@ -399,6 +402,10 @@
 <view class="mask" wx:if="{{failMask}}">
   <view class="fail">
       <view>
+        <view class="outlineTime">
+          <view class="timeTitle">闯关时间为:</view>
+      <view class="time">{{spendtime}}</view>
+    </view>
         <navigator
           class="challenge"
           hover-class="none"

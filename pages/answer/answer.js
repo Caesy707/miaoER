@@ -23,14 +23,14 @@ Page({
         episode:{},
         AnsSeleted: [],
         Answer:[],
-
-
+        spendtime:"0分0秒"
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function(options) { 
+      
         var that = this
         console.log(options)
         wx.getStorage({
@@ -152,9 +152,9 @@ Page({
     },
     changePages: function() {
         var that = this;
-        // wx.navigateTo({
-        //     url: '../read/read',
-        // })
+        wx.navigateTo({
+            url: '../read/read',
+        })
         wx.setStorage({
             key:"AnsSeleted",
             data:this.data.AnsSeleted
@@ -162,28 +162,31 @@ Page({
         let pages=getCurrentPages();
   	    let beforePage=pages[pages.length-2];
         wx.navigateBack({
-            
             success: function () {
                 wx.setStorage({
                     key:"Answer",
                     data:that.data.Answer
                   })
-                  beforePage.SyncAnswerByStorage(); // 执行前一个页面的onLoad方法
-
+                beforePage.SyncAnswerByStorage(); // 执行前一个页面的onLoad方法
           }
         });
     },
-
-
-
-
-
-
-
     submitAns: function () {
-        var that = this;
+        var app = getApp();
+        app.globalData.lasttime= this.time()
+        var time=getApp().globalData.firsttime
+        var usetime= app.globalData.lasttime- time
+        //秒
+        var second=usetime%60
+        //分
+        var min=parseInt(usetime/60)
+       var sptime=min.toString()+"分"+second.toString()+"秒"
+       this.setData({
+        spendtime:sptime
+    })
+    console.log(sptime)
+        var that=this
         var ansLen = 4;
-
         that.data.Answer.forEach(function (value, index, array) {
             if (index < 3) {
                 if (value == '') {
@@ -216,7 +219,6 @@ Page({
                     "uid": that.data.episode.uid,
                     "eid": that.data.eid,
                     "spend_time": "3分28秒"
-
                 },
                 success(res) {
                     console.log(res.data)
@@ -278,7 +280,6 @@ Page({
     },
     searchAns: function () {
         var that = this;
-
         wx.navigateTo({
             url: '../translate/translate?eid=' + that.data.episode.eid,
             success(res) {
@@ -300,4 +301,12 @@ Page({
             }
         })
     },
+    //获取当前时间
+    time:function(){
+     //获取当前时间戳
+     var timestamp = Date.parse(new Date());  
+     timestamp = timestamp / 1000;  
+    console.log("当前时间戳为：" + timestamp);  
+    return(timestamp)
+    }
 })

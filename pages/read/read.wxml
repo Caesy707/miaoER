@@ -29,13 +29,7 @@
     <view class="read_box">
       <view class="read_title">
         {{ episode.title }}
-        <image
-          class="title-image"
-          src="{{collect?'https://z3.ax1x.com/2021/05/22/gLUqgS.png':'https://z3.ax1x.com/2021/05/22/gLULjg.png '}}"
-          mode="widthFix"
-          bindtap="changeCollect"
-        />
-
+       
       </view>
       <!-- <view class="read_contain">
     
@@ -205,6 +199,10 @@
   <view class="mask" wx:if="{{isMask}}">
     <view class="succeed">
       <view>
+        <view class="outlineTime">
+          <view class="timeTitle">闯关时间为:</view>
+      <view class="time">{{spendtime}}</view>
+    </view>
         <navigator
           class="next"
           hover-class="next1"
@@ -226,6 +224,10 @@
 <view class="mask" wx:if="{{failMask}}">
   <view class="fail">
       <view>
+        <view class="outlineTime">
+          <view class="timeTitle">闯关时间为:</view>
+      <view class="time">{{spendtime}}</view>
+    </view>
         <navigator
           class="challenge"
           hover-class="none"
