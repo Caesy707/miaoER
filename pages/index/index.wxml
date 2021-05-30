@@ -22,7 +22,7 @@
   <view class="inset"></view>
   <view class="dialogue"></view>
 </view>
-<view class="mask forbid" wx:if="{{isShowtoo}}">
+<view class="mask forbid" wx:if="{{isShowtoo}}" >
   <view class="unmask">
     <navigator class="personal" hover-class="hoverpersonal"  bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"  data-index="2"></navigator>
   </view>

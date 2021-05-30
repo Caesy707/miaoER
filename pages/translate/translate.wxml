@@ -13,7 +13,7 @@
     </cover-image>
     <cover-image
       class=""
-      src="{{collect?'https://z3.ax1x.com/2021/05/26/295ECQ.png':'https://z3.ax1x.com/2021/05/26/29pOR1.png '}}"
+      src="{{collect?'https://z3.ax1x.com/2021/05/31/2ZBh8J.png':'https://z3.ax1x.com/2021/05/26/29pOR1.png '}}"
       bindtap="changeCollect"
     >
 
