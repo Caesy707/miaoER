@@ -19,6 +19,7 @@
     position: absolute;
     top: 40rpx;
     left: 20rpx;
+    border-radius: 50%;
 }
 
 .card-text {

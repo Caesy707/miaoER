@@ -25,7 +25,8 @@ Page({
             },
             {
                 top: 510,
-                left: 106
+                left: 144,
+                transform:9
             },
             {
                 top: 602,

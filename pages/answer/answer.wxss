@@ -1,6 +1,6 @@
 .top {
     width: 688rpx;
-    height: 620rpx;
+    height: 50%;
     background-color: #fff;
     margin: auto;
     border-radius: 10rpx;
@@ -65,7 +65,7 @@
     margin: auto;
     border-radius: 10rpx;
     margin-top: 24rpx;
-    height: 550rpx;
+    height: 45%;
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;

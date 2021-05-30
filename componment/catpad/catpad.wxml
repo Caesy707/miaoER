@@ -18,9 +18,11 @@
 
 ======= -->
 
-  <view  class="iconfont icon-iconfontxingxing" style="{{info.Record>0?'color:#fffc35':''}}"></view>
-  <view class="iconfont icon-iconfontxingxing"style="{{info.Record>1?'color:#fffc35':''}}"></view>
-  <view class="iconfont icon-iconfontxingxing"style="{{info.Record>2?'color:#fffc35':''}}"></view>
+<view class="xingji" wx:if="{{info.Record != 0}}">  
+  <view  class="iconfont icon-xingji" style="{{info.Record>0?'color:#eb9b00':''}}"></view>
+  <view class="iconfont icon-xingji"style="{{info.Record>1?'color:#eb9b00':''}}"></view>
+  <view class="iconfont icon-xingji"style="{{info.Record>2?'color:#eb9b00':''}}"></view>
+</view>
 
 </view>
 

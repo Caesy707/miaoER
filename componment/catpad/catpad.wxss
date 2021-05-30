@@ -25,4 +25,12 @@
 .maozhao_1 {
     transform: rotate(50deg);
 }
+.icon-xingji{
+    font-size: 47rpx;
+    margin-left: -5rpx;
+    color: #b6b6b6;
+}
 
+.xingji{
+    margin-left: -20rpx;
+}
