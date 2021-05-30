@@ -162,7 +162,7 @@ Page({
     },
     changePages: function() {
         var that = this;
-        wx.navigateTo({
+        wx.redirectTo({
             url: '../read/read',
         })
         wx.setStorage({
