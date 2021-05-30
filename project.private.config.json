@@ -20,8 +20,38 @@
           "scene": null
         },
         {
-          "name": "pages/index/index",
-          "pathName": "pages/index/index",
+          "name": "pages/mailbox/mailbox",
+          "pathName": "pages/mailbox/mailbox",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/answer/answer",
+          "pathName": "pages/answer/answer",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/translate/translate",
+          "pathName": "pages/translate/translate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/answer/answer",
+          "pathName": "pages/answer/answer",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Ans/Ans",
+          "pathName": "pages/Ans/Ans",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/user",
+          "pathName": "pages/user/user",
           "query": "",
           "scene": null
         },
@@ -32,21 +62,14 @@
           "scene": null
         },
         {
-          "name": "pages/mailbox/mailbox",
-          "pathName": "pages/mailbox/mailbox",
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
           "query": "",
           "scene": null
         },
         {
-          "name": "pages/interaction/interaction",
-          "pathName": "pages/interaction/interaction",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/notes/notes",
-          "pathName": "pages/notes/notes",
-          "query": "",
+          "name": "pages/answer/answer",
+          "pathName": "pages/answer/answer",
           "scene": null
         }
       ]

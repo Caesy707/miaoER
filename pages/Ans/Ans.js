@@ -42,7 +42,6 @@ Page({
         // console.log(userEpisode.que1.charCodeAt(0)-65)
         // console.log(res.data.questions[0].answer.charCodeAt(0)-65)
         var ans = new Array()
-
         // 问题1答案
         ans[0] = [0,0,0,0];
         if(userEpisode.que1.substring(1,2) == 'T'){
@@ -208,9 +207,7 @@ Page({
         }
       })
     } else {
-
       wx.request({
-
         url: 'https://wx.bitaxes.com/api/episode/star',
         method: 'POST',
         header: {

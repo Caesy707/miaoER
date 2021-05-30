@@ -159,11 +159,9 @@ Page({
     // },
     showEpisode: function (length) {
         var that = this
-
         var levelInfoList = that.data.styleCss;
         var lastLevelTop = levelInfoList[levelInfoList.length - 1].top
         let newInfoList = JSON.parse(JSON.stringify(that.data.newlist));
-
         for (var i = 1; i < length/10; i++) {
             lastLevelTop = that.data.styleCss[that.data.styleCss.length - 1].top // 更新this.data.styleCss
             levelInfoList = that.data.styleCss
