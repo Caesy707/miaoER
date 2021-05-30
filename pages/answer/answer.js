@@ -25,7 +25,8 @@ Page({
         Answer:[],
         spendtime:"0分0秒",
         uid: 0,
-        isshowAns:false
+        isshowAns:false,
+        star_count: [0, 0, 0]
     },
 
     /**
@@ -232,13 +233,17 @@ Page({
                 },
                 success(res) {
                     console.log(res.data)
+                    var sc = star_count
+                    sc[res.data.record-1] = 1
                     if (res.data.record) {
                         that.setData({
-                            isMask: true
+                            isMask: true,
+                            star_count: sc
                         })
                     }else{
                         that.setData({
-                            failMask: true
+                            failMask: true,
+                            star_count: sc
                         })
                     }
                 }
@@ -263,20 +268,24 @@ Page({
                 },
                 success(res) {
                     console.log(res.data)
+                    var sc = star_count
+                    sc[res.data.record-1] = 1
                     if (res.data.record) {
                         that.setData({
-                            isMask: true
+                            isMask: true,
+                            star_count: sc
                         })
                     }else{
                         that.setData({
-                            failMask: true
+                            failMask: true,
+                            star_count: sc
                         })
                     }
 
                 }
             })
         }
-        console.log(this.data.Answer)
+        console.log(this.data)
     },
     //下一关按钮
     changeNext: function () {

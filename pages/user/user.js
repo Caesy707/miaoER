@@ -45,13 +45,13 @@ Page({
     onLoad() {
         var that = this
         this.getinform()
-        if (wx.getStorage) {
-            this.setData({
-                AvatarUrl: "userAvatarUrl",
-                nickName: "usernickName"
+        // if (wx.getStorage) {
+        //     this.setData({
+        //         AvatarUrl: "userAvatarUrl",
+        //         nickName: "usernickName"
 
-            })
-        }
+        //     })
+        // }
         wx.request({
             url: 'https://wx.bitaxes.com/api/episode/grades',
             method: 'GET',
@@ -109,11 +109,11 @@ Page({
         wx.getStorage({
             key: 'user',
             success: (res) => {
-                console.log(res.data)
+                console.log(res)
                 this.setData({
                     user: res.data,
-                    AvatarUrl: res.data.avatar_url,
-                    nickName: res.data.nickname,
+                    AvatarUrl: res.data.avatarUrl,
+                    nickName: res.data.nickName,
                     unregistered: false,
                     registered: true
                 })

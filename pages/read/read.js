@@ -185,7 +185,7 @@ else{
 
     submitAns: function () {
         var that = this;
-        var ansLen = 4;
+        var ansLen = 0;
         var app = getApp();
         app.globalData.lasttime= this.time()
         var usetime=  app.globalData.lasttime- app.globalData.firsttime
@@ -199,20 +199,33 @@ else{
         })
         console.log(sptime)
         that.data.Answer.forEach(function (value, index, array) {
-            if (index < 3) {
-                if (value == '') {
-                    wx.showToast({
-                        title: '请答完题再提交',
-                        icon: 'error',
-                        duration: 2000
-                    })
-                }
-            } else {
-                if (value == '') {
-                    ansLen = 3;
-                }
+            if(value != ''){
+                ansLen+=1
             }
+            if (ansLen < 3) {
+                wx.showToast({
+                    title: '请答完题再提交',
+                    icon: 'error',
+                    duration: 2000
+                })
+            }
+            // if (index < 3) {
+            //     if (value == '') {
+            //         wx.showToast({
+            //             title: '请答完题再提交',
+            //             icon: 'error',
+            //             duration: 2000
+            //         })
+            //     }
+            // } else {
+            //     if (value == '') {
+            //         ansLen = 3;
+            //     }else{
+            //         ansLen = 4;  
+            //     }
+            // }
         })
+        console.log(ansLen)
         // 答案保存入库请求 
         if (ansLen == 4) {
             wx.request({
@@ -247,7 +260,7 @@ else{
             })
 
             console.log(this.data.Answer)
-        } else {
+        } else if(ansLen == 3){
             wx.request({
                 url: 'https://wx.bitaxes.com/api/episode/question',
                 method: 'POST',

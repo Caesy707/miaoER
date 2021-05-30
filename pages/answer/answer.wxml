@@ -11,9 +11,9 @@
   show-scrollbar="true"
 >
   <view class="view-1">
-    <view class="read_title">
+    <!-- <view class="read_title">
       {{ episode.title }}
-    </view>
+    </view> -->
     <!-- <view class="read_contain">
       For the past five years, Paula Smith, a historian of science, has devoted herself to re-creating long-forgotten techniques. While doing research for her new book, she came across a 16th-century French manuscriptconsisting of nearly 1,000 sets of instructions, covering subjects from tool making to finding the best sand.
       The author's intention remains as mysterious as his name; he may have been simply taking notes for his own records. But Smith was struck mainly by the fact that she didn't truly grasp any of the skills the author described. "You simply can't get an understanding of that handwork by reading about it," she says.

@@ -2,7 +2,7 @@
 <view class="message">
 <view class="self">
 <image class="self_img" mode="widthFix" src="{{notice.data.avatar}}"></image>
-<view class="self_name">{{notice.data.note.user[0].nickname}}</view>
+<view class="self_name">{{notice.data.nickname}}</view>
 <view class="praise">赞了这条读书笔记
   <view class="iconfont icon-dianzan" bindtap="clickStar" style="color:{{color}}"></view>
 </view>

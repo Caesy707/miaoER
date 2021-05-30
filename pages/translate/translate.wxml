@@ -38,9 +38,9 @@
       id="header"
     />
     <view class="read_box">
-      <view class="read_title">
+      <!-- <view class="read_title">
         {{ episode.title }}
-      </view>
+      </view> -->
       <wxparse data="{{episode.content}}"></wxparse>
 
       <view class="read_contain">
