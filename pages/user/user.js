@@ -18,6 +18,7 @@ Page({
         unregistered: true,
         registered: false,
         isModal: false,
+        hasGrade: 0,
         // level: [{
         //         id: 0,
         //         name: "四级"
@@ -40,7 +41,8 @@ Page({
         uid: 0,
         fillshow: false, //填写是否显示
         reviseshow:true, //修改是否显示
-        isMask: false //引导
+        isMask: false, //引导
+        isMask2: false 
     },
     onLoad() {
         var that = this
@@ -86,13 +88,13 @@ Page({
                         if (resGrade.data.data != '0') {
                             that.setData({
                                 index: parseInt(resGrade.data.data) - 3,
-
+                                hasGrade:1
                             })
                         } else {
                             that.setData({
                                 fillshow: true, //填写是否显示
                                 reviseshow: false, //修改是否显示
-                                isMask: true //引导
+                                isMask: true, //引导
                             })
                         }
                     }
@@ -133,9 +135,16 @@ Page({
         })
     },
     hiddenModal: function() {
+        console.log(this.data)
+        var that = this
         this.setData({
             isModal: false
         })
+        if(that.data.hasGrade){
+            that.setData({
+                isMask2: true
+            })
+        }
     },
     changeCheck: function(e) {
 
@@ -166,6 +175,15 @@ Page({
                     },
                     success(res) {
                         console.log(res.data)
+                        if(!that.data.hasGrade){
+                            that.setData({
+                                hasGrade: 1
+                            })
+                        }
+                        wx.setStorage({
+                            key: 'hasGrade',
+                            data: 1
+                        })
                     }
                 })
             },
@@ -178,6 +196,11 @@ Page({
     navigatorMail:function(){
         wx.navigateTo({
           url: '../mailbox/mailbox',
+        })
+    },
+    clickMask2:function(params) {
+        this.setData({
+            isMask2: false
         })
     }
 })

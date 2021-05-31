@@ -27,7 +27,8 @@ Page({
         spendtime:"0分0秒",
         episode: [], // 文章和题目数据
         uid:0,
-        star_count:[0,0,0]
+        star_count:[0,0,0],
+        jianHidden:false
     },
 
     /**
@@ -253,12 +254,14 @@ else{
                     if (res.data.record) {
                         that.setData({
                             isMask: true,
-                            star_count: sc
+                            star_count: sc,
+                            jianHidden:true
                         })
                     }else{
                         that.setData({
                             failMask: true,
-                            star_count: sc
+                            star_count: sc,
+                            jianHidden:true
                         })
                     }
                 }
@@ -288,12 +291,14 @@ else{
                     if (res.data.record) {
                         that.setData({
                             isMask: true,
-                            star_count: sc
+                            star_count: sc,
+                            jianHidden:true
                         })
                     }else{
                         that.setData({
                             failMask: true,
-                            star_count: sc
+                            star_count: sc,
+                            jianHidden:true
                         })
                     }
 

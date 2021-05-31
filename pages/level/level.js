@@ -131,6 +131,13 @@ Page({
                     },
                     success(resGrade) {
                         console.log(resGrade)
+                        if(resGrade.data.data == "0"){
+                            wx.showToast({
+                                title: '请填写等级',
+                                icon: 'error',
+                                duration: 2000
+                              })
+                        }else{
                         wx.request({
                             url: 'https://wx.bitaxes.com/api/episode/all/' + resGrade.data.data + '/' + res.data,
 
@@ -146,6 +153,7 @@ Page({
                                 console.log("fail")
                             }
                         })
+                    }
                     }
                 })
             },

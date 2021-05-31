@@ -125,8 +125,8 @@
   </view>
 </view>
 <!-- 步骤四 -->
-<!-- <view class="mask">
+<view class="mask"  wx:if="{{isMask2}}" bindtap="clickMask2">
   <image class="catlogo" src="https://z3.ax1x.com/2021/05/31/2eFd2t.png"></image>
   <image class="cattalk" src="https://z3.ax1x.com/2021/05/31/2ek7Of.png" mode="widthFix"></image>
-</view> -->
+</view>
 

@@ -19,6 +19,7 @@ Page({
         isShow: false,
         isShowtoo: false,
         uid: 0,
+        hasGrade: false
         // infoFlag = false
         // hasUserInfo: false      //数据库是否有用户信息
     },
@@ -41,6 +42,35 @@ Page({
             key: 'uid',
             success: (res) => {
                 console.log(res)
+                wx.getStorage({
+                    key: 'hasGrade',
+                    fail: (hasGradeRes)=>{
+                        // 获取grade
+                wx.request({
+                    url: 'https://wx.bitaxes.com/api/wx/user/grade/' + res.data,
+                    method: 'GET',
+                    header: {
+                        'content-type': 'application/json' // 默认值
+                    },
+                    success(resGrade) {
+                        if(resGrade.data.data == '0'){
+                            that.setData({
+                                isShow: true,
+                                hasGrade: false
+                            })
+                        }else{
+                            that.setData({
+                                hasGrade: true
+                            })
+                            wx.setStorage({
+                                key: 'hasGrade',
+                                data: 1
+                            })
+                        }
+                    }
+                })
+                    }
+                })
             },
             fail: (res) => {
                 console.log(res)
@@ -274,9 +304,9 @@ Page({
     },
     //第二次点击
     secondmask() {
-        this.setData({
-            isShowtoo: false
-        })
+        // this.setData({
+        //     isShowtoo: false
+        // })
     },
     onShow: function(){
         var that = this
@@ -288,6 +318,7 @@ Page({
         wx.getStorage({
             key: 'user',
             success: (res) => {
+                console.log(res)
                 that.setData({
                     hasUserInfoInStorage: true
                 })
@@ -296,6 +327,22 @@ Page({
                 console.log(res)
                 that.setData({
                     hasUserInfoInStorage: false
+                })
+            }
+        })
+        wx.getStorage({
+            key: 'hasGrade',
+            success: (res)=>{
+                console.log(res)
+                that.setData({
+                    hasGrade: true,
+                    isShowtoo: false
+                })
+            },
+            fail: ()=>{
+                console.log("fail")
+                that.setData({
+                    hasGrade: false,
                 })
             }
         })

@@ -228,6 +228,7 @@
   <!-- 挑战失败 -->
 
 <view class="mask"     wx:if="{{failMask}}" >
+<!-- <view class="mask"     wx:if="{{1}}" > -->
   <view class="fail">
       <view>
         <view class="outlineTime">
