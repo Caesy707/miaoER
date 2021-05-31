@@ -230,8 +230,8 @@ Page({
     }
   },
   onUnload: function(params) {
-    wx.navigateTo({
-      url: '../level/level',
-    })
+    // wx.navigateTo({
+    //   url: '../level/level',
+    // })
   }
 })

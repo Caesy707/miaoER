@@ -64,7 +64,7 @@
         <wxparse data="{{ episode.translate}}"></wxparse>
       </view>
     </view>
-    <navigator class="againchallenged" hover-class="hoveragain">
+    <navigator class="againchallenged" bindtap="againChallenged" hover-class="hoveragain">
     </navigator>
     <view class="comment" wx:if="{{episode.notes.length}}">
       <view class="comment_title">

@@ -228,5 +228,11 @@ else{
         wx.navigateTo({
           url:'../notes/notes?aid=' + this.data.aid + '&uid=' + this.data.uid + '&eid=' + this.data.eid,
         })
+    },
+    againChallenged: function(params) {
+        wx.redirectTo({
+          url: '../read/read?eid=' + this.data.eid,
+        })
+        
     }
 })
