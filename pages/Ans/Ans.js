@@ -228,5 +228,10 @@ Page({
         }
       })
     }
+  },
+  onUnload: function(params) {
+    wx.navigateTo({
+      url: '../level/level',
+    })
   }
 })

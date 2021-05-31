@@ -55,7 +55,7 @@ Page({
             var re_c = 0
             res.data.data.forEach(element => {
               element.data.content = that.cutTextLong(element.data.content, 15)
-              element.updated_at = element.updated_at.substring(5, 10);
+              element.updated_at = element.updated_at.substring(5, 10) + " " +element.updated_at.substring(11, 19);
               element.isTouchMove = false
               if(!element.read_at){
                 re_c+=1

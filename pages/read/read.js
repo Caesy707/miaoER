@@ -313,6 +313,11 @@ else{
         //     //调用上一个页面的onShow方法
         //     prePage.onLoad()
         // }
+            console.log('监听页面卸载')
+         
+            wx.navigateTo({
+              url: '../level/level'
+            })
     },
     //下一关按钮
     changeNext: function () {
