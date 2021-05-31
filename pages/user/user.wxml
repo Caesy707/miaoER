@@ -92,6 +92,8 @@
   </radio-group>
 
 </view>
+<!-- 步骤三 -->
+
 <view class="mask" wx:if="{{isMask}}">
   <image
     class="firstcatpad"
@@ -119,6 +121,7 @@
       class="revise1"
       bindtap="showModal"
       wx:if="{{reviseshow}}"
+   
     >
       修改
     </view>

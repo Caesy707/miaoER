@@ -42,7 +42,7 @@ Page({
         fillshow: false, //填写是否显示
         reviseshow:true, //修改是否显示
         isMask: false, //引导
-        isMask2: false 
+        isMask2: false ,
     },
     onLoad() {
         var that = this
