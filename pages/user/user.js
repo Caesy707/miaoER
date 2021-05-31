@@ -175,9 +175,13 @@ Page({
                     },
                     success(res) {
                         console.log(res.data)
-                        if(!that.data.hasGrade){
+                        if(res.data.data.isNewUser){
                             that.setData({
                                 hasGrade: 1
+                            })
+                        }else{
+                            that.setData({
+                                hasGrade: 0
                             })
                         }
                         wx.setStorage({

@@ -110,6 +110,7 @@ Page({
                 left: 300
             }
         ],
+        firstOpen:true
     },
 
 
@@ -119,6 +120,54 @@ Page({
     onShow: function (options) {
         var that = this;
         //获取英语等级
+        that.data.styleCss = [
+            {
+                top: 176,
+                left: 230,
+                transform: 0
+            },
+            {
+                top: 334,
+                left: 156
+            },
+            {
+                top: 510,
+                left: 144,
+                transform:9
+            },
+            {
+                top: 602,
+                left: 310,
+                transform: -49
+            },
+            {
+                top: 742,
+                left: 480,
+                transform: -43
+            },
+            {
+                top: 880,
+                left: 344
+            },
+            {
+                top: 1092,
+                left: 386,
+                transform: -29
+            },
+            {
+                top: 1282,
+                left: 524,
+                transform: -35
+            },
+            {
+                top: 1480,
+                left: 384
+            },
+            {
+                top: 1647,
+                left: 300
+            }
+        ]
         wx.getStorage({
             key: 'uid',
             success: (res) => {
@@ -147,7 +196,13 @@ Page({
                                     episode: reqRes.data.data,
                                     listLength: reqRes.data.data.length
                                 })
-                                that.showEpisode(reqRes.data.data.length)
+                                console.log(that.data)
+                                if(that.data.firstOpen){
+                                    that.showEpisode(reqRes.data.data.length)
+                                    that.setData({
+                                        firstOpen: true
+                                    })
+                                }
                             },
                             fail: () => {
                                 console.log("fail")
