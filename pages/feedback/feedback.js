@@ -75,7 +75,6 @@ Page({
     var that = this;
     console.log(that.data.content)
     wx.request({
-
       url: 'https://wx.bitaxes.com/api/feedback', 
       method: 'POST',
       header: {

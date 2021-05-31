@@ -130,6 +130,12 @@
         {
           "name": "pages/notes/notes",
           "pathName": "pages/notes/notes",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/feedback/feedback",
+          "pathName": "pages/feedback/feedback",
           "scene": null
         }
       ]
