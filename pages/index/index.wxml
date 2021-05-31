@@ -8,9 +8,9 @@
     />
   </view>
   <view class="button">
-<navigator class="challenge" hover-class="hoverchallenge" bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"  data-index="1"></navigator>
-<navigator class="personal" hover-class="hoverpersonal"  bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"  data-index="2"></navigator>
-<navigator class="help" hover-class="hoverhelp"  bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"  data-index="3" ></navigator>
+<navigator class="challenge" hover-class="hoverchallenge" bindtap="getUserProfile"  data-index="1"></navigator>
+<navigator class="personal" hover-class="hoverpersonal"  bindtap="getUserProfile"  data-index="2"></navigator>
+<navigator class="help" hover-class="hoverhelp"  bindtap="getUserProfile"  data-index="3" ></navigator>
   </view>
 
 </view>
