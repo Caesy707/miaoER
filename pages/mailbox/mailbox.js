@@ -55,7 +55,7 @@ Page({
             var re_c = 0
             res.data.data.forEach(element => {
               element.data.content = that.cutTextLong(element.data.content, 15)
-              element.updated_at = element.updated_at.substring(5, 10) + " " +element.updated_at.substring(11, 19);
+              element.updated_at = element.updated_at.substring(5, 10) + " " +element.updated_at.substring(11, 16);
               element.isTouchMove = false
               if(!element.read_at){
                 re_c+=1
@@ -67,7 +67,7 @@ Page({
               'title':'互动消息',
               'content': res.data.data[0].data.content
             }
-            reItem[0].updated_at = res.data.data[0].updated_at
+            reItem[0].updated_at = res.data.data[0].updated_at.substring(0, 5)
             // reItem[0].un_read_count = re_c
             reItem[0].un_read_count = re_c
 

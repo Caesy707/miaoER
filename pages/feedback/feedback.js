@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    uid:0,
+    uid: 0,
     content: ''
   },
 
@@ -14,10 +14,10 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      uid:options.uid
+      uid: options.uid
     })
   },
-  input: function(e){
+  input: function (e) {
     // console.log(e)
     this.setData({
       content: e.detail.value
@@ -71,7 +71,7 @@ Page({
   onShareAppMessage: function () {
 
   },
-  submit:function(){
+  submit: function () {
     var that = this;
     console.log(that.data.content)
     wx.request({
@@ -80,12 +80,32 @@ Page({
       header: {
         'content-type': 'application/json' // 默认值
       },
-      data:{
+      data: {
         "uid": that.data.uid,
         "content": that.data.content,
       },
       success(res) {
         console.log(res.data)
+        // wx.showModal({
+        //   title: '提示',
+        //   content: '提交成功',
+        //   success (res) {
+        //     if (res.confirm) {
+        //       console.log('用户点击确定')
+        //       that.setData({
+        //         content: ''
+        //       })
+        //     } 
+        //   }
+        // })
+        wx.showToast({
+          title: '提交成功',
+          icon: 'success',
+          duration: 2000
+        })
+        that.setData({
+          content: ''
+        })
       }
     })
 
