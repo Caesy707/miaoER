@@ -14,10 +14,11 @@
   </view>
 
 </view>
+
 <view
+wx:if="{{isShow}}"
   class="mask"
   bindtap="firstmask"
-  wx:if="{{isShow}}"
 >
   <view class="inset"></view>
   <view class="dialogue"></view>

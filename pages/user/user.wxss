@@ -232,3 +232,19 @@
     height: 100rpx;
     line-height: 100rpx;
 }
+.catlogo{
+    width: 192rpx;
+    height: 182rpx;
+    position: absolute;
+    top: 443rpx;
+    left: 120rpx;
+}
+.cattalk{
+    
+    width: 413rpx;
+    height: 318rpx;
+    position: absolute;
+    top: 198rpx;
+    left: 260rpx;
+
+}

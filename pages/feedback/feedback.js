@@ -86,18 +86,6 @@ Page({
       },
       success(res) {
         console.log(res.data)
-        // wx.showModal({
-        //   title: '提示',
-        //   content: '提交成功',
-        //   success (res) {
-        //     if (res.confirm) {
-        //       console.log('用户点击确定')
-        //       that.setData({
-        //         content: ''
-        //       })
-        //     } 
-        //   }
-        // })
         wx.showToast({
           title: '提交成功',
           icon: 'success',

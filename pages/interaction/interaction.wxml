@@ -7,6 +7,7 @@
         <view class="iconfont icon-dianzan"></view>
       </view>
       <view class="time">{{item.updated_at}}</view>
+      <view class="iconfont icon-guanbi"></view>
     </view>
     <view class="outcontain">
       <!-- <view class="contain_title">四级-第一关</view> -->
