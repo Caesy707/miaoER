@@ -39,7 +39,7 @@ Page({
         index: 4,
         uid: 0,
         fillshow: false, //填写是否显示
-        reviseshow: true, //修改是否显示
+        reviseshow:true, //修改是否显示
         isMask: false //引导
     },
     onLoad() {
@@ -124,13 +124,9 @@ Page({
             }
 
         })
-
-
-
-
     },
     showModal: function() {
-        console.log(1)
+        console.log(2)
         this.setData({
             isModal: true,
             isMask: false

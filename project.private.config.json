@@ -126,6 +126,11 @@
           "pathName": "pages/interaction/interaction",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/notes/notes",
+          "pathName": "pages/notes/notes",
+          "scene": null
         }
       ]
     }

@@ -71,6 +71,7 @@
   wx:if="{{isModal}}"
   bindtap="hiddenModal"
 ></view>
+<!-- 模态框 -->
 <view class="modal" wx:if="{{isModal}}">
   <radio-group bindchange="changeCheck">
     <view
@@ -78,7 +79,7 @@
       wx:for="{{level}}"
       wx:key="id"
     >
-      <label class="flex flex-sub">
+      <label class="flex flex-sub choic">
         <view class="flex-font flex-sub"> {{item.name}}</view>
         <radio
           class="round"

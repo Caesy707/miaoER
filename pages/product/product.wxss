@@ -1,35 +1,8 @@
-.contain{
-  width: 648rpx;
-  min-height: 845rpx;
-  font-size: 25rpx;
-  background: #e8e8e8;
-  border-radius: 15rpx;
-  padding:100rpx 40rpx 100rpx 40rpx;
-  box-sizing:border-box;
-}
-.outtext{
-  width: 100%;
-  min-height: 690rpx;
-  background-repeat: no-repeat;
-  background-size: 114% 187%;
-  background-image: url(https://z3.ax1x.com/2021/05/30/2VyCmq.png);
-  background-position: -50rpx -259rpx;
-}
-text{
-  font-size: 33.33rpx;
-  line-height: 62rpx;
-  text-indent: 59rpx;
-  display: inline-block;
-}
 .outline{
-  width: 685rpx;
-  min-height:969rpx ;
-  margin: auto;
-  margin-top: 70rpx;
-  padding: 33rpx 22rpx 22rpx 22rpx;
-  box-sizing:border-box;
-  background-image: url(https://z3.ax1x.com/2021/05/27/2C1ExP.png );
-  background-size: 100% 100%;
-  background-position-y: -5rpx;
+  background-image: url(https://z3.ax1x.com/2021/05/31/2ZgWes.png);
   background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 686rpx;
+  height: 1280rpx;
+  margin: auto;
 }

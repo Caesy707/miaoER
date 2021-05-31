@@ -3,12 +3,19 @@
   min-height: 748rpx;
   margin: auto;
   margin-top: 70rpx;
-  padding: 21rpx;
+  position: relative;
+  /* padding: 21rpx;
   box-sizing: border-box;
   background-image: url(https://z3.ax1x.com/2021/05/27/2C1ExP.png);
   background-size: 100% 100%;
   background-position-y: -9rpx;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+}
+.outline image{
+  position: absolute;
+  top: -10rpx;
+  width: 667rpx;
+  height: 705rpx;
 }
 .contain{
   width: 648rpx;

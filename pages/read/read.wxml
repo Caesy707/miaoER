@@ -195,8 +195,8 @@
     </view>
   </view>
   <!-- 挑战成功 -->
-
-  <view class="mask"  wx:if="{{isMask}}">
+ 
+  <view class="mask"   wx:if="{{isMask}}" >
     <view class="succeed">
       <view>
         <view class="outlineTime">
@@ -227,7 +227,7 @@
   </view>
   <!-- 挑战失败 -->
 
-<view class="mask"   wx:if="{{failMask}}">
+<view class="mask"     wx:if="{{failMask}}" >
   <view class="fail">
       <view>
         <view class="outlineTime">

@@ -140,7 +140,6 @@ Page({
             },
             fail: (res)=>{
                 console.log(res)
-
                 wx.getUserProfile({
                     desc: '展示用户信息',
                     success: (res) => {
@@ -203,13 +202,10 @@ Page({
                                 console.log(res.data)
                             }
                         })
-    
-    
                         // wx.navigateTo({
                         //     url: '../user/user',
                         // })
-                        that.navigateTo(e)
-                        
+                        that.navigateTo(e)     
                     },
                     fail: () => {
                         // console.log(1)
@@ -231,11 +227,11 @@ Page({
                 })
             }
         })
-        if (wx.getUserProfile) {
+        // if (wx.getUserProfile) {
             
-        }else{
+        // }else{
            
-        }
+        // }
     },
     navigateTo(e) {
         var index = e.currentTarget.dataset.index
