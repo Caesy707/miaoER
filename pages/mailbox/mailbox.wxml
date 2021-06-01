@@ -1,6 +1,6 @@
 <view class="have_message">
   <!-- <view class="outline"></view> -->
- <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
+ <view wx:if="{{!items[0].hasMes}}" class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
   <view class="content" bindtap="navTo" data-index="{{index}}">
     <image class="inform_img" mode="widthFix" src="https://z3.ax1x.com/2021/05/28/2kpuXn.png"></image>
     <view class="inform_title">{{item.data.title}}</view>
@@ -23,9 +23,9 @@
   
 <view class="iconfont icon-guanbi" bindtap="delete"></view>
 </view> -->
-<navigator class="markread" hover-class="hovermark" bindtap="deleteAll"></navigator>
+<navigator wx:if="{{!items[0].hasMes}}" class="markread" hover-class="hovermark" bindtap="deleteAll"></navigator>
 </view>
 <!-- 没有消息的情况 -->
-<!-- <view class="no_message"></view> -->
+<view wx:if="{{items[0].hasMes}}" class="no_message"></view>
 
 
