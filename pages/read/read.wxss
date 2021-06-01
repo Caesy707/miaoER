@@ -80,7 +80,6 @@ scroll-view {
     background-image: url("https://z3.ax1x.com/2021/05/31/2Zwnr6.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
-
     background-position: 2rpx 1rpx;
 }
 
@@ -106,7 +105,7 @@ cover-image {
     height: 627rpx;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/05/25/2Sh1sK.png);
+    background-image: url(https://z3.ax1x.com/2021/06/01/2uvHRP.png);
 }
 
 .next {
@@ -124,8 +123,8 @@ cover-image {
     width: 220rpx;
     height: 64rpx;
     position: absolute;
-    bottom: 107rpx;
-    left: 66rpx;
+    bottom: 103rpx;
+    left: 56rpx;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(https://z3.ax1x.com/2021/05/25/2S5DUg.png);
@@ -161,17 +160,27 @@ cover-image {
     height: 627rpx;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/05/28/2kBLbF.png);
+    background-image: url(https://z3.ax1x.com/2021/06/01/2uv7Gt.png);
 }
 .challenge{
     width: 220rpx;
-    height: 64rpx;
+    height: 73rpx;
     position: absolute;
     bottom: 92rpx;
     left: 49rpx;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(https://z3.ax1x.com/2021/05/28/2kBqDU.png);
+}
+.hoverChallenge{
+    width: 220rpx;
+    height: 73rpx;
+    position: absolute;
+    bottom: 103rpx;
+    left: 56rpx;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://z3.ax1x.com/2021/06/01/2uzwN9.png);
 }
 .translation{
     width: 220rpx;
@@ -182,6 +191,16 @@ cover-image {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(https://z3.ax1x.com/2021/05/28/2kBbuT.png);
+}
+.hoverTran{
+    width: 180rpx;
+    height: 64rpx;
+    position: absolute;
+    bottom: 95rpx;
+    right: 76rpx;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(https://z3.ax1x.com/2021/06/01/2uzdAJ.png);
 }
 .outlineTime{
     font-size: 25rpx;

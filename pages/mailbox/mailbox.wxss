@@ -131,3 +131,11 @@ color:#949494;
   -webkit-transform: translateX(0);
   transform: translateX(0);
  }
+ .no_message{
+   width: 100%;
+   height: 100%;
+   background-size: 215rpx 379rpx;
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   background-image: url(https://z3.ax1x.com/2021/06/01/2K9WEF.png);
+ }

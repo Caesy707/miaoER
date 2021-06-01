@@ -375,8 +375,8 @@
   </swiper> -->
 </view>
   <!-- 挑战成功 -->
-  
-  <view class="mask"wx:if="{{isMask}}" >
+
+  <view class="mask"   wx:if="{{isMask}}">
     <view class="succeed">
       <view>
         <view class="outlineTime">
@@ -406,7 +406,7 @@
     </view>
   </view>
   <!-- 挑战失败 -->
-<view class="mask" wx:if="{{failMask}}">
+<view class="mask"    wx:if="{{failMask}}" >
   <view class="fail">
       <view>
         <view class="outlineTime">
@@ -415,7 +415,7 @@
     </view>
         <navigator
           class="challenge"
-          hover-class="none"
+          hover-class="hoverChallenge"
           bindtap="changeAgain"
         >
         </navigator>
@@ -426,7 +426,7 @@
       <view>
         <navigator
           class="translation"
-          hover-class="none"
+          hover-class="hoverTran"
           bindtap="searchAns"
         >
         </navigator>
