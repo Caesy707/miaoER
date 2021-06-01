@@ -75,17 +75,18 @@
 <view class="modal" wx:if="{{isModal}}">
   <radio-group bindchange="changeCheck">
     <view
+    
       class="cu-item"
       wx:for="{{level}}"
       wx:key="id"
     >
-      <label class="flex flex-sub choic">
-        <view class="flex-font flex-sub"> {{item.name}}</view>
-        <radio
+      <label class="flex flex-sub choic"data-index="{{item.id}}"
+          bindtap="change" >
+        <view class="flex-font flex-sub" > {{item.name}}</view>
+        <radio 
           class="round"
           color="#ffa557"
-          data-index="{{item.id}}"
-          bindtap="change"
+          
         ></radio>
       </label>
     </view>
