@@ -15,92 +15,92 @@ Page({
     data: {
         eid: 0,
         isMask: false,
-        failMask:false,
+        failMask: false,
         AisChecked: true,
         BisChecked: true,
         CisChecked: true,
         DisChecked: true,
-        episode:{},
+        episode: {},
         AnsSeleted: [],
-        Answer:[],
-        spendtime:"0分0秒",
+        Answer: [],
+        spendtime: "0分0秒",
         uid: 0,
-        isshowAns:false,
+        isshowAns: false,
         star_count: [0, 0, 0]
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {     
+    onLoad: function (options) {
         var that = this
         console.log(options)
         wx.getStorage({
             key: 'AnsSeleted',
-            success (res) {
-              console.log(res.data)
-              that.setData({
-                eid: options.eid,
-                AnsSeleted: res.data
-              })
+            success(res) {
+                console.log(res.data)
+                that.setData({
+                    eid: options.eid,
+                    AnsSeleted: res.data
+                })
             }
         })
         wx.getStorage({
             key: 'Answer',
-            success (res) {
-              console.log(res.data)
-              that.setData({
-                Answer: res.data
-              })
+            success(res) {
+                console.log(res.data)
+                that.setData({
+                    Answer: res.data
+                })
             }
         })
 
         wx.getStorage({
             key: 'Episode',
-            success (res) {
-              console.log(res.data)
-              that.setData({
-                episode: res.data
-              })
+            success(res) {
+                console.log(res.data)
+                that.setData({
+                    episode: res.data
+                })
             }
         })
         wx.getStorage({
             key: 'uid',
-            success (res) {
-              console.log(res.data)
-              that.setData({
-                uid: res.data
-              })
+            success(res) {
+                console.log(res.data)
+                that.setData({
+                    uid: res.data
+                })
             }
         })
     },
-    changeColor: function(e) {
+    changeColor: function (e) {
         console.log(e.currentTarget.dataset.ans);
         console.log(e.currentTarget.dataset.index)
-        var dontSelete = [true,true,true,true];
+        var dontSelete = [true, true, true, true];
         if (this.data.AnsSeleted[e.currentTarget.dataset.index][e.currentTarget.dataset.ans]) {
             var temp = this.data.AnsSeleted
             dontSelete[e.currentTarget.dataset.ans] = false
             temp[e.currentTarget.dataset.index] = dontSelete;
 
             var ans = this.data.Answer
-            switch(e.currentTarget.dataset.ans) {
+            switch (e.currentTarget.dataset.ans) {
                 case '0':
                     ans[e.currentTarget.dataset.index] = 'A'
-                   break;
+                    break;
                 case '1':
                     ans[e.currentTarget.dataset.index] = 'B'
-                   break;
+                    break;
                 case '2':
                     ans[e.currentTarget.dataset.index] = 'C'
-                break;
+                    break;
                 case '3':
                     ans[e.currentTarget.dataset.index] = 'D'
-                break;
+                    break;
                 default:
-                   
-           } 
-            
+
+            }
+
             this.setData({
                 AnsSeleted: temp,
                 Answer: ans
@@ -161,46 +161,46 @@ Page({
         // }
 
     },
-    changePages: function() {
+    changePages: function () {
         var that = this;
         wx.redirectTo({
             url: '../read/read',
         })
         wx.setStorage({
-            key:"AnsSeleted",
-            data:this.data.AnsSeleted
-          })
-        let pages=getCurrentPages();
-  	    let beforePage=pages[pages.length-2];
+            key: "AnsSeleted",
+            data: this.data.AnsSeleted
+        })
+        let pages = getCurrentPages();
+        let beforePage = pages[pages.length - 2];
         wx.navigateBack({
             success: function () {
                 wx.setStorage({
-                    key:"Answer",
-                    data:that.data.Answer
-                  })
+                    key: "Answer",
+                    data: that.data.Answer
+                })
                 beforePage.SyncAnswerByStorage(); // 执行前一个页面的onLoad方法
-          }
+            }
         });
     },
     submitAns: function () {
         var app = getApp();
-        app.globalData.lasttime= this.time()
-        var time=getApp().globalData.firsttime
-        var usetime= app.globalData.lasttime- time
+        app.globalData.lasttime = this.time()
+        var time = getApp().globalData.firsttime
+        var usetime = app.globalData.lasttime - time
         //秒
-        var second=usetime%60
+        var second = usetime % 60
         //分
-        var min=parseInt(usetime/60)
-       var sptime=min.toString()+"分"+second.toString()+"秒"
-       this.setData({
-        spendtime:sptime
-    })
-    console.log(sptime)
-        var that=this
+        var min = parseInt(usetime / 60)
+        var sptime = min.toString() + "分" + second.toString() + "秒"
+        this.setData({
+            spendtime: sptime
+        })
+        console.log(sptime)
+        var that = this
         var ansLen = 0;
         that.data.Answer.forEach(function (value, index, array) {
-            if(value != ''){
-                ansLen+=1
+            if (value != '') {
+                ansLen += 1
             }
             // if (index < 3) {
             //     if (value == '') {
@@ -209,7 +209,7 @@ Page({
             //             icon: 'error',
             //             duration: 2000
             //         })
-                      
+
             //     }
             // } else {
             //     if (value == '') {
@@ -217,12 +217,12 @@ Page({
             //     }
             // }
         })
-        if(ansLen < 3){
+        if (ansLen < 3) {
             wx.showToast({
-                            title: '请答完题再提交',
-                            icon: 'error',
-                            duration: 2000
-                        })
+                title: '请答完题再提交',
+                icon: 'error',
+                duration: 2000
+            })
         }
         // 答案保存入库请求 
         if (ansLen == 4) {
@@ -244,13 +244,13 @@ Page({
                 success(res) {
                     console.log(res.data)
                     var sc = that.data.star_count
-                    sc[res.data.record-1] = 1
+                    sc[res.data.record - 1] = 1
                     if (res.data.record) {
                         that.setData({
                             isMask: true,
                             star_count: sc
                         })
-                    }else{
+                    } else {
                         that.setData({
                             failMask: true,
                             star_count: sc
@@ -260,7 +260,7 @@ Page({
             })
 
             console.log(this.data.Answer)
-        } else if(ansLen == 3) {
+        } else if (ansLen == 3) {
             wx.request({
                 url: 'https://wx.bitaxes.com/api/episode/question',
                 method: 'POST',
@@ -279,13 +279,13 @@ Page({
                 success(res) {
                     console.log(res.data)
                     var sc = that.data.star_count
-                    sc[res.data.record-1] = 1
+                    sc[res.data.record - 1] = 1
                     if (res.data.record) {
                         that.setData({
                             isMask: true,
                             star_count: sc
                         })
-                    }else{
+                    } else {
                         that.setData({
                             failMask: true,
                             star_count: sc
@@ -335,27 +335,26 @@ Page({
         })
     },
     //获取当前时间
-    time:function(){
-     //获取当前时间戳
-     var timestamp = Date.parse(new Date());  
-     timestamp = timestamp / 1000;  
-    console.log("当前时间戳为：" + timestamp);  
-    return(timestamp)
+    time: function () {
+        //获取当前时间戳
+        var timestamp = Date.parse(new Date());
+        timestamp = timestamp / 1000;
+        console.log("当前时间戳为：" + timestamp);
+        return (timestamp)
     },
-    changeSwiper:function(e){
-        var that=this
-       console.log(e.detail.current)
-console.log(that.data.episode.questions.length)//题目长度
-       var current=e.detail.current
-       if(current==that.data.episode.questions.length-1){
-           this.setData({
-             isshowAns:true
-           })
-       }
-       else{
-        this.setData({
-            isshowAns:false
-          })
-       }
+    changeSwiper: function (e) {
+        var that = this
+        console.log(e.detail.current)
+        console.log(that.data.episode.questions.length) //题目长度
+        var current = e.detail.current
+        if (current == that.data.episode.questions.length - 1) {
+            this.setData({
+                isshowAns: true
+            })
+        } else {
+            this.setData({
+                isshowAns: false
+            })
+        }
     }
 })

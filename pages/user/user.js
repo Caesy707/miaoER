@@ -206,5 +206,17 @@ Page({
         this.setData({
             isMask2: false
         })
+    },
+    onShareAppMessage(){
+        wx.showShareMenu({
+            withShareTicket: true,
+            menus: ['shareAppMessage', 'shareTimeline']
+          })
+    },
+    onShareTimeline(){
+        wx.showShareMenu({
+            withShareTicket: true,
+            menus: ['shareAppMessage', 'shareTimeline']
+          })
     }
 })
