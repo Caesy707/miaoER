@@ -140,7 +140,7 @@ Page({
         this.setData({
             isModal: false
         })
-        if(that.data.hasGrade){
+        if(!that.data.hasGrade){
             that.setData({
                 isMask2: true
             })
@@ -177,11 +177,11 @@ Page({
                         console.log(res.data)
                         if(res.data.data.isNewUser){
                             that.setData({
-                                hasGrade: 1
+                                hasGrade: 0
                             })
                         }else{
                             that.setData({
-                                hasGrade: 0
+                                hasGrade: 1
                             })
                         }
                         wx.setStorage({
