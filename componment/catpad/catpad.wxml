@@ -8,7 +8,7 @@
     hover-class="none"
     bindtap="navTo"
     data-infoId = '{{info.id}}'
-    data-hasRecord = "{{info.Record==0?'0':'1'}}"
+    data-hasRecord = "{{info.Record<=0?'0':'1'}}"
     open-type="navigate"
   ></navigator>
 <!-- <<<<<<< Updated upstream
@@ -18,7 +18,7 @@
 
 ======= -->
 
-<view class="xingji" wx:if="{{info.Record != 0}}">  
+<view class="xingji" wx:if="{{info.Record != -1}}">  
   <view  class="iconfont icon-xingji" style="{{info.Record>0?'color:#eb9b00':''}}"></view>
   <view class="iconfont icon-xingji"style="{{info.Record>1?'color:#eb9b00':''}}"></view>
   <view class="iconfont icon-xingji"style="{{info.Record>2?'color:#eb9b00':''}}"></view>
