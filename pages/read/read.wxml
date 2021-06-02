@@ -176,7 +176,7 @@
             />
           </view>
           <view class="answer_A">
-            {{item.option_a}}
+            {{item.option_d}}
           </view>
         </view>
       </view>

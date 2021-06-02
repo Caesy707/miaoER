@@ -63,6 +63,23 @@ Page({
                     success(res) {
                         console.log(reqUrl)
                         console.log(res.data)
+                        if(res.data.code == "20002"){
+                            wx.showToast({
+                                title: '关卡更新中',
+                                icon: 'success',
+                                duration: 2000,
+                                success(){
+                                    setTimeout(function () {
+                                        //要延时执行的代码
+                                        wx.redirectTo({
+                                            url: '../index/index',
+                                          })
+                                    }, 2000) //延迟时间
+                                   
+                                }
+                              })
+
+                        }else{
                         var epi = res.data.data
                         var content = '<div style="min-height:200rpx;font-size:41.67rpx;padding:36rpx;word-break: break-word;line-height:50rpx;">' +epi.content + '</div>';
                         epi.content = content
@@ -77,6 +94,7 @@ Page({
                         })
                         console.log(res.data)
                         console.log(that.data)
+                    }
                     }
                 })
             },

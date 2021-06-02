@@ -7,6 +7,7 @@
     style="color:{{styleCss[index].color}};top:{{styleCss[index].top}}rpx;left:{{styleCss[index].left}}rpx;transform:rotate({{styleCss[index].transform}}deg)"
     index='{{index+1}}'
     info='{{episode[index]}}'
+    previou_record="{{episode[index-1].Record}}"
     wx:if='episode[index].order'
   ></catpad>
 

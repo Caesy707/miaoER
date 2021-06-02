@@ -26,28 +26,37 @@ Page({
   submit: function () {
     var that = this;
     console.log(that.data.content)
-    wx.request({
-      url: 'https://wx.bitaxes.com/api/feedback', 
-      method: 'POST',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      data: {
-        "uid": that.data.uid,
-        "content": that.data.content,
-      },
-      success(res) {
-        console.log(res.data)
-        wx.showToast({
-          title: '提交成功',
-          icon: 'success',
-          duration: 2000
-        })
-        that.setData({
-          content: ''
-        })
-      }
-    })
+    if(that.data.content != ''){
+      wx.request({
+        url: 'https://wx.bitaxes.com/api/feedback', 
+        method: 'POST',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        data: {
+          "uid": that.data.uid,
+          "content": that.data.content,
+        },
+        success(res) {
+          console.log(res.data)
+          wx.showToast({
+            title: '提交成功',
+            icon: 'success',
+            duration: 2000
+          })
+          that.setData({
+            content: ''
+          })
+        }
+      })
+    }else{
+      wx.showToast({
+        title: '请输入反馈内容',
+        icon: 'error',
+        duration: 2000
+      })
+    }
+
 
   },
   onShareAppMessage(){
