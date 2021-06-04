@@ -11,7 +11,7 @@
     width: 651rpx;
     background-color: #ffffff;
     margin: auto;
-    margin-top: 28rpx;
+    margin-top: -31rpx;
     font-family: Garamond;
 }
 
@@ -104,7 +104,7 @@ cover-image {
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     position: absolute;
-    bottom: 0;
+    bottom: -21rpx;
     left: 50%;
     transform: translateX(-50%);
 }

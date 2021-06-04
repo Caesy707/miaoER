@@ -1,5 +1,5 @@
 <view class="outline">
-  <textarea class="contain" value="{{content}}" bindinput="input" placeholder="请描述您希望我们改进的问题，我们将不断优化。"></textarea>
+  <textarea class="contain" placeholder-class="holdcontain" value="{{content}}" bindinput="input" placeholder="请描述您希望我们改进的问题，我们将不断优化。"></textarea>
+  <image src="https://z3.ax1x.com/2021/05/27/2C1ExP.png "></image>
 </view>
 <navigator class="submit" hover-class="hover_submit" bindtap="submit"></navigator>
-<!-- <view class="submit" bindtap="submit"></view> -->

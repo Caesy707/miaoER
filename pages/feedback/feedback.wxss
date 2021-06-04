@@ -1,12 +1,23 @@
 .contain{
   width: 648rpx;
   min-height: 494rpx;
+  background: #ffffff;
+  border-radius: 15rpx;
+  padding: 40rpx;
+position: absolute;
+  box-sizing:border-box;
+  font-size: 35rpx;
+}
+.holdcontain{
+  width: 648rpx;
+  min-height: 494rpx;
   font-size: 25rpx;
   background: #ffffff;
   border-radius: 15rpx;
   padding: 40rpx;
-
+position: absolute;
   box-sizing:border-box;
+  font-size: 25rpx;
 }
 .submit{
   width: 250rpx;
@@ -31,8 +42,12 @@
   margin-top: 70rpx;
   padding: 21rpx;
   box-sizing:border-box;
-  background-image: url(https://z3.ax1x.com/2021/05/27/2C1ExP.png );
-  background-size: 100% 100%;
-  background-position-y: -5rpx;
-  background-repeat: no-repeat;
+  position: relative;
+}
+.outline image{
+  position: absolute;
+  top: 5rpx;
+  width: 671rpx;
+  height: 524rpx;
+  left: 11rpx;
 }

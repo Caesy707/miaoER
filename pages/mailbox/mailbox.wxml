@@ -1,5 +1,4 @@
 <view class="have_message">
-  <!-- <view class="outline"></view> -->
  <view wx:if="{{!items[0].hasMes}}" class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
   <view class="content" bindtap="navTo" data-index="{{index}}">
     <image class="inform_img" mode="widthFix" src="https://z3.ax1x.com/2021/05/28/2kpuXn.png"></image>
@@ -7,12 +6,15 @@
     <view class="inform" >{{item.data.content}}</view>
     <view class="time">{{item.updated_at}}</view>
     <view class="circle" wx:if="{{item.un_read_count}}" > {{item.un_read_count}}</view>
-  <!-- {{item.content}} -->
   </view>
   <view class="del" catchtap="del" data-index="{{index}}" data-nid="{{item.id}}" url=''>删除</view>
  </view>
-<!-- 
-<view class="outline" wx:for="{{notices}}" data-index="{{index}}" >
+<navigator wx:if="{{!items[0].hasMes}}" class="markread" hover-class="hovermark" bindtap="deleteAll"></navigator>
+</view>
+<!-- 没有消息的情况 -->
+<view wx:if="{{items[0].hasMes}}" class="no_message"></view>
+
+<!-- <view class="outline" wx:for="{{notices}}" data-index="{{index}}" >
   <view class="contain" bindtap="navTo" data-index="{{index}}" >
     <image class="inform_img" mode="widthFix" src="https://z3.ax1x.com/2021/05/28/2kpuXn.png"></image>
     <view class="inform_title">{{item.data.title}}</view>
@@ -20,12 +22,8 @@
       <view class="time">{{item.updated_at}}</view>
       <view class="circle" wx:if="{{!item.read_at}}"></view>
   </view>
-  
 <view class="iconfont icon-guanbi" bindtap="delete"></view>
 </view> -->
-<navigator wx:if="{{!items[0].hasMes}}" class="markread" hover-class="hovermark" bindtap="deleteAll"></navigator>
-</view>
-<!-- 没有消息的情况 -->
-<view wx:if="{{items[0].hasMes}}" class="no_message"></view>
+
 
 

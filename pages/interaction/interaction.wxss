@@ -44,7 +44,7 @@ border-radius: 50%;
 }
 .time{
   position: absolute;
-  top: 32rpx;
+  top: 21rpx;
   right: 43rpx;
   font-size: 20.83rpx;
   color:#a8a8a8;
@@ -65,6 +65,7 @@ border-radius: 50%;
 }
 .icon-guanbi{
   position: absolute;
-  right: -4rpx;
-  top: 7rpx;
+  right: -25rpx;
+  top: -11rpx;
+  color: #939393;
 }

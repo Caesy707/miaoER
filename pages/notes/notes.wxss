@@ -1,5 +1,5 @@
 .outline{
-  width: 685rpx;
+  width: 648rpx;
   min-height: 748rpx;
   margin: auto;
   margin-top: 70rpx;
@@ -14,17 +14,25 @@
 .outline image{
   position: absolute;
   top: -10rpx;
-  width: 667rpx;
-  height: 705rpx;
+  width: 648rpx;
+  height: 698rpx;
 }
 .contain{
+  width: 648rpx;
+  min-height: 683rpx;
+  font-size: 35rpx;
+  background: #ffffff;
+  border-radius: 15rpx;
+  padding: 40rpx;
+  box-sizing:border-box;
+}
+.holdcontain{
   width: 648rpx;
   min-height: 683rpx;
   font-size: 25rpx;
   background: #ffffff;
   border-radius: 15rpx;
   padding: 40rpx;
-
   box-sizing:border-box;
 }
 .submit{

@@ -30,7 +30,6 @@ color:#949494;
 .time{
   position: absolute;
   left: 526rpx;
-  top: 20rpx;
   font-size: 25rpx;
   color:#949494;
   width: 91rpx;

@@ -10,7 +10,7 @@
   width: 651rpx;
   background-color: #ffffff;
   margin: auto;
-  margin-top: 28rpx;
+  margin-top: -31rpx;
   font-family: Garamond;
 }
 

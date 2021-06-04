@@ -10,7 +10,7 @@ page {
     width: 417rpx;
     position: absolute;
     left: 50%;
-    bottom: -45rpx;
+    bottom: -53rpx;
     transform: translate(-50%);
 }
 .title-big {
