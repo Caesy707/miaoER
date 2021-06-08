@@ -1,6 +1,7 @@
 page {
     height: 100%;
     background-color: white;
+    position: fixed;
 }
 .title{
     position: relative;
@@ -27,7 +28,9 @@ page {
 }
 
 .con {
+    width: 100%;
     height: 100%;
+    position: relative;
     background-image: url("https://z3.ax1x.com/2021/05/05/gKyIWd.png"), url(https://z3.ax1x.com/2021/05/05/gKy4Fe.png), url("https://z3.ax1x.com/2021/05/05/gKy5JH.png"), url("https://z3.ax1x.com/2021/05/05/gKyTSA.png"), url("https://z3.ax1x.com/2021/05/05/gKyfoD.png"), url("https://z3.ax1x.com/2021/05/05/gKy7QI.png"), url("https://z3.ax1x.com/2021/05/05/gKyHyt.png"), url("https://z3.ax1x.com/2021/05/05/gKybOP.png");
     background-position: 86% 62%, 6% 27%, 16% 56%, 80% 39%, 12% 1%, 86% 7%, 93% 90%, 8% 80%;
     background-repeat: no-repeat;
@@ -95,17 +98,19 @@ page {
     top: 564rpx;
     left: 46rpx;
 }
-
+.catpad image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 796rpx;
+    left: 453rpx;
+}
 .catpad {
     width: 119rpx;
     height: 149rpx;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/05/23/gXKgXt.png);
-    position: fixed;
-    z-index: 1;
-    top: 796rpx;
-    left: 453rpx;
+    position: relative;
+    z-index: 20;
+
 }
 
 .firbid {
@@ -115,6 +120,7 @@ page {
     width: 297rpx;
     height: 100rpx;
     background-image: url("https://z3.ax1x.com/2021/05/28/2kiRG8.png");
+    /* background-image: url("../../image/index/challenge.png"); */
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     margin: 36rpx auto;   
@@ -123,6 +129,7 @@ page {
     width: 297rpx;
     height: 100rpx;
     background-image: url("https://z3.ax1x.com/2021/05/28/2ki2Pf.png");
+    /* background-image: url("../../image/index/challengehover.png"); */
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     background-position: 10rpx -10rpx;
@@ -135,6 +142,8 @@ page {
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     margin: 36rpx auto;
+    position: relative;
+    z-index: 3;
 }
 .hoverpersonal{
     width: 297rpx;
@@ -144,6 +153,8 @@ page {
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     margin: 36rpx auto;
+    position: relative;
+    z-index: 2;
 }
 .help{
     width: 297rpx;
@@ -153,15 +164,6 @@ page {
     background-repeat: no-repeat; 
     margin: 36rpx auto;
 }
-/* .help{
-    width: 287rpx;
-    height: 80rpx;
-    background-image: url("https://z3.ax1x.com/2021/05/30/2ZYDPI.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat; 
-    background-position: 2rpx 1rpx;
-    margin: 36rpx auto;
-} */
 .hoverhelp{
     width: 287rpx;
     height: 80rpx;
@@ -171,5 +173,3 @@ page {
     margin: 36rpx auto;
     background-position: 2rpx 1rpx;
 }
-/* https://z3.ax1x.com/2021/05/29/2ECgT1.png
-https://z3.ax1x.com/2021/05/30/2ZYDPI.png */

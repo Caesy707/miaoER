@@ -12,7 +12,16 @@
 <navigator wx:if="{{!items[0].hasMes}}" class="markread" hover-class="hovermark" bindtap="deleteAll"></navigator>
 </view>
 <!-- 没有消息的情况 -->
-<view wx:if="{{items[0].hasMes}}" class="no_message"></view>
+<view wx:if="{{items[0].hasMes}}" class="no_message">
+  <view class="explain" bindtap="getExplain">
+    <view>了解信箱</view>
+    <view class="iconfont icon-dayuhao-copy" style=" transform: rotate({{transform}}deg);"></view>
+  </view>
+  <view class="explainContext" wx:if="{{isExplain}}">
+    <view>在这里，你查看其他用户对你发表</view>
+    <view>过的读书笔记的点赞~</view>
+  </view>
+</view>
 
 <!-- <view class="outline" wx:for="{{notices}}" data-index="{{index}}" >
   <view class="contain" bindtap="navTo" data-index="{{index}}" >

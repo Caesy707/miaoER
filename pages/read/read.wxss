@@ -30,7 +30,7 @@ scroll-view {
 .answer_box {
     width: 651rpx;
     background-color: #ffffff;
-    margin: 28rpx auto 304rpx auto;
+    margin: 28rpx auto 147rpx auto;
     font-family: Garamond;
     font-size: 41.67rpx;
     padding: 45rpx 36rpx;
@@ -216,7 +216,7 @@ cover-image {
     margin-right: 30rpx;
 }
 .time{
-    text-decoration: underline;
+    text-decoration: none;
     color: #ea9c01;
 }
 .star{

@@ -45,7 +45,7 @@
         <view class="choice">
         <view class="A">
           <image
-            src="{{AnsSeleted[index][0]?'https://z3.ax1x.com/2021/05/18/ghfZ40.png':'https://z3.ax1x.com/2021/05/18/ghfmCV.png'}}"
+          src="{{AnsSeleted[index][0]?'../../image/tinified/A.png':'../../image/tinified/Ahover.png'}}"
             mode="widthFix"
             bindtap="changeColor"
             data-ans="0"
@@ -59,7 +59,7 @@
       <view class="choice">
         <view class="A">
           <image
-            src="{{AnsSeleted[index][1]?'https://z3.ax1x.com/2021/05/18/ghfVNq.png':'https://z3.ax1x.com/2021/05/18/ghfEEn.png'}}"
+          src="{{AnsSeleted[index][1]?'../../image/tinified/B.png':'../../image/tinified/Bhover.png'}}"
             mode="widthFix"
             bindtap="changeColor"
             data-ans="1"
@@ -73,7 +73,7 @@
       <view class="choice">
         <view class="A">
           <image
-            src="{{AnsSeleted[index][2]?'https://z3.ax1x.com/2021/05/18/ghfkHs.png':'https://z3.ax1x.com/2021/05/18/ghfn3T.png'}}"
+          src="{{AnsSeleted[index][2]?'../../image/tinified/C.png':'../../image/tinified/Chover.png'}}"
             mode="widthFix"
             bindtap="changeColor"
             data-ans="2"
@@ -88,7 +88,7 @@
       <view class="choice">
         <view class="A">
           <image
-            src="{{AnsSeleted[index][3]?'https://z3.ax1x.com/2021/05/18/ghfugU.png':'https://z3.ax1x.com/2021/05/18/ghfKvF.png'}}"
+          src="{{AnsSeleted[index][3]?'../../image/tinified/D.png':'../../image/tinified/Dhover.png'}}"
             mode="widthFix"
             bindtap="changeColor"
             data-ans="3"
@@ -399,9 +399,9 @@
         </navigator>
       </view>
       <view>
-        <image wx:if="{{star_count[0]}}" class="star" src="https://z3.ax1x.com/2021/05/25/2SfJCn.png" mode="widthFix"></image>
-        <image wx:if="{{star_count[1]}}"class="star" src="https://z3.ax1x.com/2021/05/25/2Sftg0.png" mode="widthFix"></image>
-        <image wx:if="{{star_count[2]}}"class="star" src="https://z3.ax1x.com/2021/05/25/2SfNvV.png" mode="widthFix"></image>
+        <image wx:if="{{star_count[0]}}" class="star" src="../../image/tinified/一星.png"mode="widthFix"></image>
+        <image wx:if="{{star_count[1]}}"class="star" src="../../image/tinified/二星.png"mode="widthFix"></image>
+        <image wx:if="{{star_count[2]}}"class="star"  src="../../image/tinified/三星.png"mode="widthFix"></image>
       </view>
     </view>
   </view>
@@ -421,7 +421,7 @@
         </navigator>
       </view>
       <view>
-        <image class="star" src="https://z3.ax1x.com/2021/05/31/2Z0W6I.png" mode="widthFix"></image>
+        <image class="star" src="../../image/tinified/星级.png"  mode="widthFix"></image>
       </view>
       <view>
         <navigator

@@ -18,7 +18,8 @@ Page({
       'un_read_count': 0,
       'isTouchMove': false,
       'hasMes': false
-    }]
+    }],
+ isExplain:false
   },
 
   /**
@@ -110,20 +111,7 @@ Page({
   onUnload: function () {
 
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
+ 
 
   /**
    * 用户点击右上角分享
@@ -266,5 +254,20 @@ Page({
       }
 
     })
+  },
+  getExplain:function(){
+    if(this.data.isExplain){
+      this.setData({
+        isExplain:false,
+        transform:"0"
+      })
+    }
+    else{
+      this.setData({
+        isExplain:true,
+        transform:"180"
+      })
+    }
+
   }
 })

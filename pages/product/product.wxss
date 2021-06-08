@@ -1,8 +1,23 @@
-.outline{
+/* .outline{
   background-image: url(https://z3.ax1x.com/2021/05/31/2ZgWes.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 686rpx;
   height: 1280rpx;
   margin: auto;
+} */
+page{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+.outline {
+  width: 100%;
+  height: 100%;
+}
+.outline image{
+  width: 686rpx;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
 }

@@ -38,6 +38,7 @@
 
 .card-text1 {
     position: absolute;
+    z-index: 3;
     font-size: 25rpx;
     top: 126rpx;
     left: 200rpx;
@@ -50,7 +51,7 @@
     left: 400rpx;
     color: #ffa557;
     text-decoration: underline;
-    z-index: 2;
+    z-index: 3;
 }
 
 .fillin {
@@ -60,7 +61,7 @@
     left: 320rpx;
     color: #ffa557;
     text-decoration: underline;
-    z-index: 1;
+    z-index: 3;
 }
 
 .card-img {
@@ -109,23 +110,6 @@
     font-size: 36rpx;
     font-style: normal;
     color: var(--gray);
-}
-
-.mask {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 3;
-    outline: 0;
-    text-align: center;
-    -ms-transform: scale(1.185);
-    transform: scale(1.185);
-    backface-visibility: hidden;
-    perspective: 2000rpx;
-    background: rgba(0, 0, 0, 0.6);
-    transition: all 0.3s ease-in-out 0s;
 }
 
 .modal {
@@ -177,22 +161,24 @@
 .firstcatpad {
     position: absolute;
     width: 84rpx;
-    top: 134rpx;
-    left: 400rpx;
+    top: 67rpx;
+    left: 434rpx;
     z-index: 1;
 }
 
 .firsttalk {
     position: absolute;
     width: 366rpx;
-    top: 260rpx;
+    top: 199rpx;
     left: 100rpx;
 }
 
 .first {
-    top: 221rpx;
+    padding: 0 18rpx;
+    box-sizing: border-box;
+    top: 151rpx;
     line-height: 40rpx;
-    left: 243rpx;
+    left: 228rpx;
     border-radius: 10rpx;
     position: absolute;
     height: 40rpx;

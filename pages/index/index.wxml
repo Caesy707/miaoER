@@ -1,18 +1,22 @@
 <view class="con">
   <view class="title">
     <image class="catgif" src="https://z3.ax1x.com/2021/05/31/2Z050f.gif" mode="widthFix"></image>
-    <image
+    <!-- <image
       class="title-big"
       src="https://z3.ax1x.com/2021/05/22/gLutqU.png"
+      mode="widthFix"
+    /> -->
+    <image
+      class="title-big"
+      src="../../image/index/喵E读.png"
       mode="widthFix"
     />
   </view>
   <view class="button">
 <navigator class="challenge" hover-class="hoverchallenge" bindtap="getUserProfile"  data-index="1"></navigator>
-<navigator class="personal" hover-class="hoverpersonal"  bindtap="getUserProfile"  data-index="2"></navigator>
+<navigator class="personal" hover-class="hoverpersonal"  bindtap="getUserProfile"  data-index="2" style="z-index:{{zIndex}}"></navigator>
 <navigator class="help" hover-class="hoverhelp"  bindtap="getUserProfile"  data-index="3" ></navigator>
   </view>
-
 </view>
 
 <view
@@ -23,11 +27,13 @@ wx:if="{{isShow}}"
   <view class="inset"></view>
   <view class="dialogue"></view>
 </view>
-<view class="mask forbid" wx:if="{{isShowtoo}}" >
+
+<view class="mask forbid" wx:if="{{isShowtoo}}">
   <view class="unmask">
-    <navigator class="personal" hover-class="hoverpersonal"  bindtap="{{hasUserInfo? 'navigateTo':'getUserProfile'}}"  data-index="2"></navigator>
   </view>
   <view class="dialogue_1"></view>
-  <view class="catpad"></view>
+  <view class="catpad">
+    <image src="https://z3.ax1x.com/2021/05/23/gXKgXt.png"></image>
+  </view>
 </view>
 

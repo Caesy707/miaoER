@@ -7,7 +7,7 @@
   <cover-view scroll-top="0">
     <cover-image
       class=""
-      src="https://z3.ax1x.com/2021/05/26/29pvM6.png"
+     src="../../image/tinified/答案.png"
       bindtap="changePattern"
     >
     </cover-image>
@@ -23,13 +23,13 @@
     >
 
     </cover-image>
-    <cover-image class="" bindtap="writeNote" src="https://z3.ax1x.com/2021/05/26/29pXxx.png">
+    <cover-image class="" bindtap="writeNote" src="../../image/tinified/note.png">
 
     </cover-image>
 
     <cover-image
  wx:if="{{isForward}}"
-      src="https://z3.ax1x.com/2021/05/20/gTp6AJ.png"
+      src="../../image/tinified/up.png"
       bindtap="changeposition"
     >
     </cover-image>
@@ -38,7 +38,7 @@
   <view>
     <image
       class="read"
-      src="https://z3.ax1x.com/2021/05/18/gh6Rvd.png"
+      src="../../image/tinified/readyread.png"
       mode="widthFix"
       id="header"
     />
@@ -51,7 +51,7 @@
     <view>
       <image
         class="read"
-        src="https://z3.ax1x.com/2021/05/26/29SUXT.png"
+        src="../../image/tinified/searchAns.png"
         mode="widthFix"
         bindtap="getinform"
         id="aim"

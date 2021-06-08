@@ -19,7 +19,8 @@ Page({
         isShow: false,
         isShowtoo: false,
         uid: 0,
-        hasGrade: false
+        hasGrade: false,
+        zIndex:0
         // infoFlag = false
         // hasUserInfo: false      //数据库是否有用户信息
     },
@@ -136,6 +137,7 @@ Page({
                                             if (reqRes.data.data.IsNewUser) {
                                                 that.setData({
                                                     isShow: true,
+                                                    zIndex:0
                                                 })
                                             }
                                             that.setData({
@@ -180,7 +182,8 @@ Page({
                     this.setData({
                         userInfo: res.userInfo,
                         hasUserInfo: true,
-                        isShowtoo: false
+                        isShowtoo: false,
+                        zIndex:0
                     })
                     wx.setStorage({
                         data: res.userInfo,
@@ -299,7 +302,8 @@ Page({
     firstmask() {
         this.setData({
             isShow: false,
-            isShowtoo: true
+            isShowtoo: true,
+            zIndex:3
         })
     },
     //第二次点击

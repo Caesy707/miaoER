@@ -3,5 +3,5 @@
         "wxparse": "plugin://wxparse/wxparse"
     },
     "navigationBarTitleText": "极简模式",
-    "navigationBarBackgroundColor": "#e8e8e8"
+    "navigationBarBackgroundColor": "#f8f8f8"
 }

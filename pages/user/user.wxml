@@ -1,4 +1,5 @@
 <view class="user-card">
+  <!-- 登录态 -->
   <view class="card-contain" wx:if="{{registered}}">
     <image
       class="card-oneself"
@@ -95,7 +96,7 @@
 </view>
 <!-- 步骤三 -->
 
-<view class="mask" wx:if="{{isMask}}">
+<view class="mask" wx:if="{{isMask}}" >
   <image
     class="firstcatpad"
     src="https://z3.ax1x.com/2021/05/24/gxSzBd.png"
