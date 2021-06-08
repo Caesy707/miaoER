@@ -19,6 +19,10 @@ position: absolute;
   box-sizing:border-box;
   font-size: 25rpx;
 }
+
+.place-holder{
+  font-size: 24rpx;
+}
 .submit{
   width: 250rpx;
   height: 76rpx;

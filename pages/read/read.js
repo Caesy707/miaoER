@@ -81,7 +81,7 @@ Page({
 
                         }else{
                         var epi = res.data.data
-                        var content = '<div style="min-height:200rpx;font-size:41.67rpx;padding:36rpx;word-break: break-word;line-height:50rpx;">' +epi.content + '</div>';
+                        var content = '<div style="min-height:200rpx;font-size:36rpx;padding:36rpx;word-break: break-word;line-height:50rpx;">' +epi.content + '</div>';
                         epi.content = content
                         that.setData({
                             episode: epi,

@@ -51,8 +51,8 @@ Page({
                             })
                         }
                         var epi = res.data.data
-                        var translate = '<div style="min-height:200rpx;font-size:41.67rpx;padding:36rpx;word-break: break-word;line-height:50rpx;">' +epi.translate + '</div>';
-                        var content = '<div style="min-height:200rpx;font-size:41.67rpx;padding:36rpx;word-break: break-word;line-height:50rpx;">' +epi.content + '</div>';
+                        var translate = '<div style="min-height:200rpx;font-size:36rpx;padding:36rpx;word-break: break-word;line-height:50rpx;">' +epi.translate + '</div>';
+                        var content = '<div style="min-height:200rpx;font-size:36rpx;padding:36rpx;word-break: break-word;line-height:50rpx;">' +epi.content + '</div>';
                         epi.translate = translate
                         epi.content = content
                         
@@ -234,5 +234,12 @@ else{
           url: '../read/read?eid=' + this.data.eid,
         })
         
-    }
+    },
+    cutTextLong: function (text, num) { //text为传入文本，num为需要留下的文本长度
+        if (text.length > num) {
+          return text.slice(0, num ? num : 11) + '···'
+        } else {
+          return text
+        }
+      },
 })

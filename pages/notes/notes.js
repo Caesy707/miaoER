@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    uid:0,
-    aid:0,
+    uid: 0,
+    aid: 0,
     content: ''
   },
 
@@ -21,7 +21,7 @@ Page({
       eid: options.eid
     })
   },
-  input: function(e){
+  input: function (e) {
     // console.log(e)
     this.setData({
       content: e.detail.value
@@ -75,28 +75,36 @@ Page({
   onShareAppMessage: function () {
 
   },
-  submit:function(){
+  submit: function () {
     var that = this;
     console.log(that.data.content)
-    wx.request({
+    if (that.data.content == '') {
+      wx.showToast({
+        title: '请输入笔记内容',
+        icon: 'error',
+        duration: 2000
+      })
+    } else {
+      wx.request({
 
-      url: 'https://wx.bitaxes.com/api/episode/note', 
-      method: 'POST',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      data:{
-        "aid": that.data.aid,
-        "pid": 0,
-        "uid": that.data.uid,
-        "content": that.data.content,
-      },
-      success(res) {
-        console.log(res.data)
-        wx.redirectTo({
-          url: '../translate/translate?eid=' + that.data.eid
-        })
-      }
-    })
+        url: 'https://wx.bitaxes.com/api/episode/note',
+        method: 'POST',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        data: {
+          "aid": that.data.aid,
+          "pid": 0,
+          "uid": that.data.uid,
+          "content": that.data.content,
+        },
+        success(res) {
+          console.log(res.data)
+          wx.redirectTo({
+            url: '../translate/translate?eid=' + that.data.eid
+          })
+        }
+      })
+    }
   }
 })

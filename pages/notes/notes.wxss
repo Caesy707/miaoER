@@ -35,6 +35,9 @@
   padding: 40rpx;
   box-sizing:border-box;
 }
+.place-holder{
+  font-size: 24rpx;
+}
 .submit{
   width: 250rpx;
   height: 76rpx;

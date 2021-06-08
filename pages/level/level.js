@@ -222,6 +222,8 @@ Page({
     //     this.showEpisode(this.data.episode.length)
     // },
     showEpisode: function (length) {
+        let startTime = new Date();
+        console.log(startTime.toTimeString());
         var that = this
         var levelInfoList = that.data.styleCss;
         var lastLevelTop = levelInfoList[levelInfoList.length - 1].top
@@ -243,5 +245,7 @@ Page({
             styleCss: that.data.styleCss, //数组追加
             mapHeight: that.data.styleCss[that.data.styleCss.length - 1].top,
         })
+        let endTime = new Date();
+        console.log(endTime.toTimeString(), endTime.getTime() - startTime.getTime());
     }
 })

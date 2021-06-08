@@ -23,7 +23,7 @@ scroll-view {
 }
 
 .read_contain {
-    font-size: 41.67rpx;
+    font-size: 36rpx;
     text-indent: 2em;
 }
 
@@ -32,7 +32,7 @@ scroll-view {
     background-color: #ffffff;
     margin: 28rpx auto 147rpx auto;
     font-family: Garamond;
-    font-size: 41.67rpx;
+    font-size: 36rpx;
     padding: 45rpx 36rpx;
     box-sizing: border-box;
     border-radius: 10rpx;

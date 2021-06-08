@@ -108,10 +108,14 @@ Page({
     },
     // 获取个人信息
     getinform: function() {
+        var that = this
         wx.getStorage({
             key: 'user',
             success: (res) => {
                 console.log(res)
+                // res.data.nickName = "今晚晚晚晚晚晚必定早睡"
+                res.data.nickName = that.cutTextLong(res.data.nickName, 6)
+                
                 this.setData({
                     user: res.data,
                     AvatarUrl: res.data.avatarUrl,
@@ -218,5 +222,12 @@ Page({
             withShareTicket: true,
             menus: ['shareAppMessage', 'shareTimeline']
           })
-    }
+    },
+    cutTextLong: function (text, num) { //text为传入文本，num为需要留下的文本长度
+        if (text.length > num) {
+          return text.slice(0, num ? num : 11) + '···'
+        } else {
+          return text
+        }
+      },
 })

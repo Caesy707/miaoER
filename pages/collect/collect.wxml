@@ -1,7 +1,7 @@
 <view wx:if="{{show}}" wx:for="{{star}}">
   <mycollect info='{{item}}' ></mycollect>
 </view>
-<view class="noCollect">
+<view wx:if="{{!show}}" class="noCollect">
   <image src="../../image/index/select.png" mode="widthFix"></image>
 </view>
 <!-- <mycollect></mycollect> -->

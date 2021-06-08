@@ -27,7 +27,7 @@ page{
 }
 
 .read_contain {
-    font-size: 41.67rpx;
+    font-size: 36rpx;
     line-height: 60rpx;
     text-indent: 2em;
 
@@ -38,7 +38,7 @@ page{
     height: 500rpx;
     background-color: #ffffff;
     font-family: Garamond;
-    font-size: 41.67rpx;
+    font-size: 36rpx;
 }
 
 .answer_title {
