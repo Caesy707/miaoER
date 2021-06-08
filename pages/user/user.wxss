@@ -32,10 +32,10 @@
 }
 
 .card-text {
-    
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: absolute;
-    font-size: 50rpx;
-    top: 40rpx;
+    font-size: 45rpx;
+    top: 46rpx;
     left: 200rpx;
 
 
