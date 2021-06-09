@@ -48,7 +48,7 @@
       </view> -->
       <wxparse data="{{episode.content}}"></wxparse>
       <view wx:if="{{isSearchall}}" class="searchAll" bindtap="watchAll">
-        <view>查看全文</view>
+        <view class="textall">查看全文</view>
         <view class="iconfont icon-dayuhao-copy"></view>
       </view>
       <view wx:if="{{!isSearchall}}" class="fold" bindtap="watchFold">
@@ -71,7 +71,7 @@
         作者的意图和他的名字一样神秘；他可能只是在为自己的记录做笔记。但令史密斯印象深刻的是，她并没有真正掌握作者描述的任何技能。"她说："你根本不可能通过阅读来了解这种手工作业。 -->
         <wxparse data="{{ episode.translate}}"></wxparse>
         <view wx:if="{{isTransSearchall}}" class="searchAll" bindtap="watchAllTrans">
-        <view>查看全文</view>
+        <view class="textall">查看全文</view>
         <view class="iconfont icon-dayuhao-copy"></view>
       </view>
       <view wx:if="{{!isTransSearchall}}" class="fold" bindtap="watchFoldTrans">
@@ -82,7 +82,8 @@
     </view>
     <navigator class="againchallenged" bindtap="againChallenged" hover-class="hoveragain">
     </navigator>
-    <view class="comment" wx:if="{{episode.notes.length}}">
+    <!-- 有评论 -->
+    <!-- <view class="comment" wx:if="{{episode.notes.length}}">
       <view class="comment_title">
         精选笔记
       </view>
@@ -93,22 +94,25 @@
           mode="widthFix"
         />        
       <view class="oneself">
-          <!-- 救命根本睡不够 -->
           {{item.user[0].nickname}}
         </view>
         <view class="oneself_text">
-          <!-- 路过的蚂蚁都会喊一声：“好文章”！路过的蚂蚁都会喊一声：“好文章”！ -->
           {{item.content}}
         </view>
-        <!-- <view style="color:{{isColor}}" class="iconfont icon-dianzan" bindtap="clickStar" data-index="{{index}}"data-cid = "{{item.id}}"> -->
         <view style="{{item.has_like?'color:#eaa30a':'color:#343b4e'}}" class="iconfont icon-dianzan" bindtap="clickStar" data-index="{{index}}"data-cid = "{{item.id}}">
           {{item.like_count}}
         </view>
       </view>
+    </view> -->
+    <!-- 没有评论 -->
+    <view class="comment">
+      <view class="comment_title">
+        精选笔记
+      </view>
+      <view class="no-comment">
+        该关卡暂时没有人发表读书笔记~~
+      </view>
     </view>
   </view>
 </scroll-view>
-<!-- 
-https://z3.ax1x.com/2021/05/30/2ZnZiF.png
-https://z3.ax1x.com/2021/05/30/2ZnEIU.png -->
 

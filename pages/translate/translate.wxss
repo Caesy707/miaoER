@@ -149,18 +149,29 @@ margin-bottom: 34rpx;
 }
 .searchAll{
     position: absolute;
-    top: 850rpx;
-    display: flex;
+    top: 654rpx;
+    height: 254rpx;
+    /* display: flex; */
     width: 100%;
-    background: #fff;
-    align-content: center;
-    justify-content: center;    
+    background-image: linear-gradient(rgba(255,255,255,0),rgba(255,255,255)62% );
+    /* align-items: center;
+    justify-content: center;  */
 }
 .searchAll view{
+    display: inline-block;
     font-size: 42rpx;
     text-indent: 0;
+    position: absolute;
+    bottom: 30rpx
 }
-
+.textall{
+    left: 43%;
+    transform: translateX(-50%);
+}
+.icon-dayuhao-copy{
+    left: 63%;
+    transform: translateX(-50%);
+}
 .fold{
     position: absolute;
     bottom: 0;
@@ -174,4 +185,11 @@ margin-bottom: 34rpx;
 }
 .fold .icon-dayuhao-copy{
     transform: rotate(180deg)
+}
+.no-comment{
+    width: 100%;
+    font-size: 20.83rpx;
+    color: #707070;
+    min-height: 100rpx;
+    text-align: center;
 }
