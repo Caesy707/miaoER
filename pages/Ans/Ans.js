@@ -5,19 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // AnsIcon: [
+    //   ['https://z3.ax1x.com/2021/05/18/ghfZ40.png',
+    //     'https://z3.ax1x.com/2021/05/18/ghfVNq.png',
+    //     'https://z3.ax1x.com/2021/05/18/ghfkHs.png',
+    //     'https://z3.ax1x.com/2021/05/18/ghfugU.png'],
+    //   ['https://z3.ax1x.com/2021/05/29/2A3JM9.png',
+    //     'https://z3.ax1x.com/2021/05/29/2A3YrR.png',
+    //     'https://z3.ax1x.com/2021/05/29/2A38xJ.png',
+    //     'https://z3.ax1x.com/2021/05/29/2A3324.png'],
+    //   ['https://z3.ax1x.com/2021/05/29/2A3BGD.png',
+    //     'https://z3.ax1x.com/2021/05/29/2A3dIK.png',
+    //    'https://z3.ax1x.com/2021/05/29/2A3aa6.png',
+    //     'https://z3.ax1x.com/2021/05/29/2A30PO.png']
+    // ],
     AnsIcon: [
-      ['https://z3.ax1x.com/2021/05/18/ghfZ40.png',
-        'https://z3.ax1x.com/2021/05/18/ghfVNq.png',
-        'https://z3.ax1x.com/2021/05/18/ghfkHs.png',
-        'https://z3.ax1x.com/2021/05/18/ghfugU.png'],
-      ['https://z3.ax1x.com/2021/05/29/2A3JM9.png',
-        'https://z3.ax1x.com/2021/05/29/2A3YrR.png',
-        'https://z3.ax1x.com/2021/05/29/2A38xJ.png',
-        'https://z3.ax1x.com/2021/05/29/2A3324.png'],
-      ['https://z3.ax1x.com/2021/05/29/2A3BGD.png',
-        'https://z3.ax1x.com/2021/05/29/2A3dIK.png',
-       'https://z3.ax1x.com/2021/05/29/2A3aa6.png',
-        'https://z3.ax1x.com/2021/05/29/2A30PO.png']
+      ['../../image/tinified/A.png',
+        '../../image/tinified/B.png',
+        '../../image/tinified/C.png',
+        '../../image/tinified/D.png'],
+      ['../../image/choice/TAnsA.png',
+        '../../image/choice/TAnsB.png',
+        '../../image/choice/TAnsC.png',
+        '../../image/choice/TAnsD.png'],
+      ['../../image/choice/FAnsA.png',
+        '../../image/choice/FAnsB.png',
+       '../../image/choice/FAnsC.png',
+        '../../image/choice/FAnsD.png']
     ],
     Ans: [],
     collect: false,
