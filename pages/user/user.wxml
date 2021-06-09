@@ -7,7 +7,7 @@
       mode="widthFix"
     />
     <view class="mailbox">
-      <image src="https://z3.ax1x.com/2021/05/30/2ZP97d.png" mode="widthFix" bindtap="navigatorMail"></image>
+      <image src="http://wximg.bitaxes.com/miaoEread/user/2ZP97d.png" mode="widthFix" bindtap="navigatorMail"></image>
     </view>
     <view class="card-text">
       {{nickName}}
@@ -31,14 +31,14 @@
       填写
     </view>
 <view>
-  <image class="catgif" src="https://z3.ax1x.com/2021/05/31/2Z0I78.gif"></image>
+  <image class="catgif" src="http://wximg.bitaxes.com/miaoEread/user.gif"></image>
 </view>
   </view>
   <!-- 未登录态 -->
   <view class="card-contain" wx:if="{{unregistered}}">
     <image
       class="card-oneself"
-      src="https://z3.ax1x.com/2021/05/22/gLtn4f.png"
+      src="http://wximg.bitaxes.com/miaoEread/user/gLtn4f.png"
       mode="widthFix"
     />
     <view class="card-text">
@@ -48,7 +48,7 @@
 
   <image
     class="card-img"
-    src="https://z3.ax1x.com/2021/05/31/2ZB9NF.png"
+    src="http://wximg.bitaxes.com/miaoEread/user/2ZB9NF.png"
     mode="widthFix"
   />
 </view>
@@ -99,12 +99,12 @@
 <view class="mask" wx:if="{{isMask}}" >
   <image
     class="firstcatpad"
-    src="https://z3.ax1x.com/2021/05/24/gxSzBd.png"
+    src="http://wximg.bitaxes.com/miaoEread/user/gxSzBd.png"
     mode="widthFix"
   />
   <image
     class="firsttalk"
-    src="https://z3.ax1x.com/2021/05/24/gxSxnH.png"
+    src="http://wximg.bitaxes.com/miaoEread/user/gxSxnH.png"
     mode="widthFix"
   />
   <view class="first">
@@ -131,7 +131,7 @@
 </view>
 <!-- 步骤四 -->
 <view class="mask"  wx:if="{{isMask2}}" bindtap="clickMask2">
-  <image class="catlogo" src="https://z3.ax1x.com/2021/05/31/2eFd2t.png"></image>
-  <image class="cattalk" src="https://z3.ax1x.com/2021/05/31/2ek7Of.png" mode="widthFix"></image>
+  <image class="catlogo" src="http://wximg.bitaxes.com/miaoEread/user/2eFd2t.png"></image>
+  <image class="cattalk" src="http://wximg.bitaxes.com/miaoEread/user/2ek7Of.png" mode="widthFix"></image>
 </view>
 

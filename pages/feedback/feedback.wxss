@@ -29,7 +29,7 @@ position: absolute;
   margin: auto;
   margin-top: 40rpx;
   background-size: cover;
-  background-image: url(https://z3.ax1x.com/2021/05/27/2C1ZKf.png);
+  background-image: url(http://wximg.bitaxes.com/miaoEread/feedback/2C1ZKf.png);
 }
 .hover_submit{
   width: 250rpx;
@@ -37,7 +37,7 @@ position: absolute;
   margin: auto;
   margin-top: 40rpx;
   background-size: cover;
-  background-image: url(https://z3.ax1x.com/2021/05/31/2Z5McV.png);
+  background-image: url(http://wximg.bitaxes.com/miaoEread/feedback/2Z5McV.png);
 }
 .outline{
   width: 685rpx;

@@ -51,7 +51,7 @@ color:#949494;
 .markread{
   width: 297rpx;
   height: 100rpx;
-  background-image: url(https://z3.ax1x.com/2021/05/31/2Z0kef.png  ) ;
+  background-image: url(http://wximg.bitaxes.com/miaoEread/mailbox/2Z0kef.png  ) ;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: fixed;
@@ -62,7 +62,7 @@ color:#949494;
 .hovermark{
   width: 277rpx;
   height: 90rpx;
-  background-image: url(https://z3.ax1x.com/2021/05/31/2Z0Aw8.png ) ;
+  background-image: url(http://wximg.bitaxes.com/miaoEread/mailbox/2Z0Aw8.png ) ;
   background-repeat: no-repeat;
   background-size: contain;
   position: fixed;
@@ -137,7 +137,7 @@ color:#949494;
    background-size: 215rpx 379rpx;
    background-repeat: no-repeat;
    background-position: 50% 28%;
-   background-image: url(https://z3.ax1x.com/2021/06/01/2K9WEF.png);
+   background-image: url(http://wximg.bitaxes.com/miaoEread/mailbox/2K9WEF.png);
  }
  .explain{
    font-size: 20.83rpx;

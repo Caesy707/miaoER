@@ -77,9 +77,7 @@ Page({
                                 uid: parseInt(options.uid),
                                 eid: options.eid,
                                 aid: res.data.data.id,
-                                height:"auto",
                                 transHeight: "auto",
-                                isSearchall: false,
                                 isTransSearchall: false
                             })
                         }

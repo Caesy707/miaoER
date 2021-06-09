@@ -86,7 +86,7 @@ cover-image {
     height: 112rpx;
     font-size: 36rpx;
     padding: 28rpx 0 0 88rpx;
-    background-image: url(https://z3.ax1x.com/2021/05/26/2pbXBn.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/translate/2pbXBn.png);
     background-size: 41.67rpx 41.67rpx;
     background-repeat: no-repeat;
     background-position: 43rpx 37rpx;
@@ -132,7 +132,7 @@ margin-bottom: 34rpx;
 .againchallenged{
     width: 297rpx;
     height: 100rpx;
-    background-image: url(https://z3.ax1x.com/2021/05/30/2ZnZiF.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/translate/2ZnZiF.png);
     background-size: contain;
     background-repeat: no-repeat;
     margin: auto;
@@ -141,7 +141,7 @@ margin-bottom: 34rpx;
 .hoveragain{
     width: 260rpx;
     height: 100rpx;
-    background-image: url(https://z3.ax1x.com/2021/05/30/2ZnEIU.png );
+    background-image: url(http://wximg.bitaxes.com/miaoEread/translate/2ZnEIU.png );
     background-size:contain;
     background-repeat: no-repeat;
     margin: auto;

@@ -4,7 +4,7 @@
     background-repeat: repeat-y;
     background-size: 750rpx 1840rpx;
     background-position: 0rpx 0rpx;
-    background-image: url(https://z3.ax1x.com/2021/05/23/gXAsE9.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/road.png);
 }
 
 .sign {
@@ -12,7 +12,7 @@
     width: 607rpx;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url(https://z3.ax1x.com/2021/05/23/gXADHJ.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/lubiao.png);
 }
 
 .inbox-1 {

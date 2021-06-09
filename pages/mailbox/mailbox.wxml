@@ -1,7 +1,7 @@
 <view class="have_message">
  <view wx:if="{{!items[0].hasMes}}" class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
   <view class="content" bindtap="navTo" data-index="{{index}}">
-    <image class="inform_img" mode="widthFix" src="https://z3.ax1x.com/2021/05/28/2kpuXn.png"></image>
+    <image class="inform_img" mode="widthFix" src="http://wximg.bitaxes.com/miaoEread/2kpuXn.png"></image>
     <view class="inform_title">{{item.data.title}}</view>
     <view class="inform" >{{item.data.content}}</view>
     <view class="time">{{item.updated_at}}</view>

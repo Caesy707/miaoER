@@ -1,5 +1,5 @@
 <cover-view class="" scroll-top="0">
-  <cover-image src="https://z3.ax1x.com/2021/05/22/gLvGOP.png" bindtap="changePages"
+  <cover-image src="http://wximg.bitaxes.com/miaoEread/gLvGOP.png" bindtap="changePages"
 >
   </cover-image>
 </cover-view>

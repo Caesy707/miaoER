@@ -1,6 +1,6 @@
 <view class="con">
   <view class="title">
-    <image class="catgif" src="https://z3.ax1x.com/2021/05/31/2Z050f.gif" mode="widthFix"></image>
+    <image class="catgif" src="http://wximg.bitaxes.com/miaoEread/index.gif" mode="widthFix"></image>
     <!-- <image
       class="title-big"
       src="https://z3.ax1x.com/2021/05/22/gLutqU.png"
@@ -33,7 +33,7 @@ wx:if="{{isShow}}"
   </view>
   <view class="dialogue_1"></view>
   <view class="catpad">
-    <image src="https://z3.ax1x.com/2021/05/23/gXKgXt.png"></image>
+    <image src="http://wximg.bitaxes.com/miaoEread/gXKgXt.png"></image>
   </view>
 </view>
 

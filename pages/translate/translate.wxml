@@ -18,7 +18,7 @@
     > -->
     <cover-image
       class=""
-      src="{{collect?'https://z3.ax1x.com/2021/06/03/23W4ns.png':'https://enread-1255840275.cos.ap-shanghai.myqcloud.com/29pOR1.png'}}"
+      src="{{collect?'http://wximg.bitaxes.com/miaoEread/23W4ns.png':'https://enread-1255840275.cos.ap-shanghai.myqcloud.com/29pOR1.png'}}"
       bindtap="changeCollect"
     >
 
@@ -83,7 +83,7 @@
     <navigator class="againchallenged" bindtap="againChallenged" hover-class="hoveragain">
     </navigator>
     <!-- 有评论 -->
-    <!-- <view class="comment" wx:if="{{episode.notes.length}}">
+    <view class="comment" wx:if="{{episode.notes.length}}">
       <view class="comment_title">
         精选笔记
       </view>
@@ -103,9 +103,9 @@
           {{item.like_count}}
         </view>
       </view>
-    </view> -->
+    </view>
     <!-- 没有评论 -->
-    <view class="comment">
+    <view class="comment" wx:elif="{{!episode.notes.length}}">
       <view class="comment_title">
         精选笔记
       </view>

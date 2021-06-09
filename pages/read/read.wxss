@@ -72,7 +72,7 @@ scroll-view {
 .submit{
     width: 297rpx;
     height: 100rpx;
-    background-image: url("https://z3.ax1x.com/2021/05/31/2ZwmKx.png");
+    background-image: url("http://wximg.bitaxes.com/miaoEread/read/read/2ZwmKx.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
 
@@ -80,7 +80,7 @@ scroll-view {
 .hoversubmit{
     width: 287rpx;
     height: 80rpx;
-    background-image: url("https://z3.ax1x.com/2021/05/31/2Zwnr6.png");
+    background-image: url("http://wximg.bitaxes.com/miaoEread/read/read/2Zwnr6.png");
     background-size: 100% 100%;
     background-repeat: no-repeat; 
     background-position: 2rpx 1rpx;
@@ -110,7 +110,7 @@ cover-image {
     height: 627rpx;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/06/01/2uvHRP.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/read/read/2uvHRP.png);
 }
 
 .next {
@@ -121,7 +121,7 @@ cover-image {
     left: 49rpx;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/05/25/2S49Te.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/read/read/2S49Te.png);
     pointer-events: auto;
 }
 
@@ -133,7 +133,7 @@ cover-image {
     left: 56rpx;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/05/25/2S5DUg.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/read/read/2S5DUg.png);
  
 }
 
@@ -145,7 +145,7 @@ cover-image {
     right: 58rpx;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/05/25/2S4pwD.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/read/read/2S4pwD.png);
     pointer-events: auto;
 }
 
@@ -157,7 +157,7 @@ cover-image {
     right: 36rpx;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/05/25/2S5BVS.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/read/read/2S5BVS.png);
 }
 .fail{
     max-width: 550rpx;
@@ -167,7 +167,7 @@ cover-image {
     height: 627rpx;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/06/01/2uv7Gt.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/read/read/2uv7Gt.png);
     pointer-events: auto;
 }
 .challenge{
@@ -178,7 +178,7 @@ cover-image {
     left: 49rpx;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/05/28/2kBqDU.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/read/read/2kBqDU.png);
     pointer-events: auto;
 }
 .hoverChallenge{
@@ -189,7 +189,7 @@ cover-image {
     left: 56rpx;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/06/01/2uzwN9.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/read/read/2uzwN9.png);
 }
 .translation{
     width: 220rpx;
@@ -199,7 +199,7 @@ cover-image {
     right: 58rpx;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/05/28/2kBbuT.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/read/read/2kBbuT.png);
 }
 .hoverTran{
     width: 180rpx;
@@ -209,7 +209,7 @@ cover-image {
     right: 76rpx;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://z3.ax1x.com/2021/06/01/2uzdAJ.png);
+    background-image: url(http://wximg.bitaxes.com/miaoEread/read/read/2uzdAJ.png);
 }
 .outlineTime{
     font-size: 25rpx;
