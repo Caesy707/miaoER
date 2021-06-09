@@ -48,7 +48,7 @@ scroll-view {
     font-family: Garamond;
     font-size: 36rpx;
     text-indent: 2em;
-
+    position: relative;
 }
 
 cover-view {

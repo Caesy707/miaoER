@@ -20,8 +20,10 @@ Page({
         aid:0,
         isForward:false,
         height:904,
+        transHeight: 904,
         isSearchall:true,
-        isFold:false
+        isTransSearchall:true,
+        // isFold:false
         // isColor:"",
         // isPrise:false
     },
@@ -32,6 +34,8 @@ Page({
     onLoad: function(options) {
         console.log(options)
         var that = this
+        console.log(options.isFold)
+        
         wx.getStorage({
             key: 'uid',
             success: (res) => {
@@ -58,13 +62,28 @@ Page({
                         var content = '<div style="min-height:200rpx;font-size:36rpx;padding:36rpx;word-break: break-word;line-height:50rpx;">' +epi.content + '</div>';
                         epi.translate = translate
                         epi.content = content
+                        if(options.isFold == '1'){
+                            that.setData({
+                                episode: epi,
+                                uid: parseInt(options.uid),
+                                eid: options.eid,
+                                aid: res.data.data.id,
+                                isSearchall: true,
+                                isTransSearchall: true
+                            })
+                        }else{
+                            that.setData({
+                                episode: epi,
+                                uid: parseInt(options.uid),
+                                eid: options.eid,
+                                aid: res.data.data.id,
+                                height:"auto",
+                                transHeight: "auto",
+                                isSearchall: false,
+                                isTransSearchall: false
+                            })
+                        }
                         
-                        that.setData({
-                            episode: epi,
-                            uid: parseInt(options.uid),
-                            eid: options.eid,
-                            aid: res.data.data.id
-                        })
                         // wx.setStorage({
                         //     key: "Episode",
                         //     data: res.data.data
@@ -236,7 +255,6 @@ else{
         wx.redirectTo({
           url: '../read/read?eid=' + this.data.eid,
         })
-        
     },
     cutTextLong: function (text, num) { //text为传入文本，num为需要留下的文本长度
         if (text.length > num) {
@@ -248,15 +266,25 @@ else{
       watchAll:function(){
           this.setData({
               height:"auto",
-              isSearchall:false,
-              isFold:true
+              isSearchall:false
           })
       },
       watchFold:function(){
           this.setData({
               height:904,
-              isSearchall:true,
-              isFold:false
+              isSearchall:true
           })
-      }
+      },
+      watchAllTrans:function(){
+        this.setData({
+            transHeight:"auto",
+            isTransSearchall:false
+        })
+    },
+    watchFoldTrans:function(){
+        this.setData({
+            transHeight:904,
+            isTransSearchall:true
+        })
+    }
 })

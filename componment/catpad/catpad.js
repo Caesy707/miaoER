@@ -43,7 +43,7 @@ Component({
                     navUrl = '../translate/translate?eid='
                 }
                 wx.navigateTo({
-                    url: navUrl + e.currentTarget.dataset.infoid,
+                    url: navUrl + e.currentTarget.dataset.infoid + '&isFold=1',
                     events: {},
                     success: function (res) {
                         console.log(e.currentTarget.dataset.hasrecord)
@@ -64,7 +64,7 @@ Component({
                             navUrl = '../translate/translate?eid='
                         }
                         wx.navigateTo({
-                            url: navUrl + e.currentTarget.dataset.infoid,
+                            url: navUrl + e.currentTarget.dataset.infoid + '&isFold=1',
                             events: {},
                             success: function (res) {
                                 console.log(e.currentTarget.dataset.hasrecord)

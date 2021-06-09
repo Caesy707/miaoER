@@ -362,7 +362,7 @@ else{
         var that = this;
 
         wx.navigateTo({
-            url: '../translate/translate?eid=' + that.data.episode.eid,
+            url: '../translate/translate?eid=' + that.data.episode.eid + '&isFold=0',
             success(res) {
 
             }

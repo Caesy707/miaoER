@@ -118,7 +118,7 @@
         {
           "name": "pages/translate/translate",
           "pathName": "pages/translate/translate",
-          "query": "eid=15&uid=3",
+          "query": "eid=15&uid=3&isFold=0",
           "scene": null
         },
         {
