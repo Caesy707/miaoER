@@ -3,18 +3,21 @@
   scroll-into-view="{{ToView}}"
   scroll-with-animation="true"
   bindscroll="upforward"
+  style="pointer-events:{{pointerEvent}}"
 >
   <cover-view scroll-top="0">
     <cover-image
       class=""
       src="../../image/tinified/jian.png"
       bindtap="changePattern"
+      style="pointer-events:{{pointerEvent}}"
     >
     </cover-image>
     <cover-image
    wx:if="{{isForward}}"
       src="../../image/tinified/up.png"
       bindtap="changeposition"
+      style="pointer-events:{{pointerEvent}}"
     >
     </cover-image>
   </cover-view>
@@ -193,13 +196,14 @@
         >
           提交答案
         </button> -->
-<navigator class="submit" hover-class="hoversubmit" bindtap="submitAns"></navigator>
+<navigator class="submit" hover-class="hoversubmit"  catchtap="submitAns"></navigator>
       </view>
 
     </view>
   </view>
   <!-- 挑战成功 -->
-  <view class="mask" wx:if="{{isMask}}" >
+
+  <view class="mask"   wx:if="{{isMask}}">
     <view class="succeed">
       <view>
         <view class="outlineTime">

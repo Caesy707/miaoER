@@ -19,6 +19,9 @@ Page({
         eid:0,
         aid:0,
         isForward:false,
+        height:904,
+        isSearchall:true,
+        isFold:false
         // isColor:"",
         // isPrise:false
     },
@@ -242,4 +245,18 @@ else{
           return text
         }
       },
+      watchAll:function(){
+          this.setData({
+              height:"auto",
+              isSearchall:false,
+              isFold:true
+          })
+      },
+      watchFold:function(){
+          this.setData({
+              height:904,
+              isSearchall:true,
+              isFold:false
+          })
+      }
 })

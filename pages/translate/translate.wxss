@@ -15,7 +15,7 @@ scroll-view {
     margin-top: 28rpx;
     font-family: Garamond;
     text-indent: 2em;
-
+    position: relative;
 }
 
 .read_title {
@@ -55,6 +55,7 @@ cover-view {
     position: fixed;
     top: 500rpx;
     right: 0;
+    z-index: 1;
 }
 
 cover-image {
@@ -145,4 +146,30 @@ margin-bottom: 34rpx;
     background-repeat: no-repeat;
     margin: auto;
     margin-bottom: 40rpx;
+}
+.searchAll{
+    position: absolute;
+    top: 850rpx;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+}
+.searchAll view{
+    font-size: 42rpx;
+    text-indent: 0;
+}
+
+.fold{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+}
+.fold view{
+    font-size: 42rpx;
+    text-indent: 0;
+}
+.fold .icon-dayuhao-copy{
+    transform: rotate(180deg)
 }

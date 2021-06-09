@@ -160,6 +160,43 @@
         {
           "name": "pages/user/user",
           "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/translate/translate",
+          "pathName": "pages/translate/translate",
+          "query": "id=15",
+          "scene": null
+        },
+        {
+          "name": "pages/translate/translate",
+          "pathName": "pages/translate/translate",
+          "query": "id=3",
+          "scene": null
+        },
+        {
+          "name": "pages/translate/translate",
+          "pathName": "pages/translate/translate",
+          "query": "uid=3",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "uid=1",
+          "scene": null
+        },
+        {
+          "name": "pages/translate/translate",
+          "pathName": "pages/translate/translate",
+          "query": "uid=1",
+          "scene": null
+        },
+        {
+          "name": "pages/translate/translate",
+          "pathName": "pages/translate/translate",
+          "query": "eid=1",
           "scene": null
         }
       ]

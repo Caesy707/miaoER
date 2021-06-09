@@ -28,7 +28,8 @@ Page({
         episode: [], // 文章和题目数据
         uid:0,
         star_count:[0,0,0],
-        jianHidden:false
+        jianHidden:false,
+        pointerEvent:"auto"
     },
 
     /**
@@ -215,7 +216,8 @@ else{
         var min=parseInt(usetime/60)
         var sptime=min.toString()+"分"+second.toString()+"秒"
         this.setData({
-            spendtime:sptime 
+            spendtime:sptime,
+            pointerEvent: "none"
         })
         console.log(sptime)
         that.data.Answer.forEach(function (value, index, array) {

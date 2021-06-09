@@ -1,3 +1,4 @@
+
 .read {
     width: 430rpx;
     display: block;
@@ -6,6 +7,7 @@
 
 scroll-view {
     height: 100vh;
+    /* pointer-events: none; */
 }
 
 .read_box {
@@ -89,12 +91,14 @@ cover-view {
     position: fixed;
     top: 500rpx;
     right: 0;
+    z-index: 0;
 }
 
 cover-image {
     width: 85rpx;
     height: 85rpx;
     margin-bottom: 29rpx;
+    /* pointer-events: none; */
 }
 
 .succeed {
@@ -117,6 +121,7 @@ cover-image {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(https://z3.ax1x.com/2021/05/25/2S49Te.png);
+    pointer-events: auto;
 }
 
 .next1 {
@@ -140,6 +145,7 @@ cover-image {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(https://z3.ax1x.com/2021/05/25/2S4pwD.png);
+    pointer-events: auto;
 }
 
 .searchAns1 {
@@ -161,6 +167,7 @@ cover-image {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(https://z3.ax1x.com/2021/06/01/2uv7Gt.png);
+    pointer-events: auto;
 }
 .challenge{
     width: 220rpx;
@@ -171,6 +178,7 @@ cover-image {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(https://z3.ax1x.com/2021/05/28/2kBqDU.png);
+    pointer-events: auto;
 }
 .hoverChallenge{
     width: 220rpx;
@@ -225,3 +233,4 @@ cover-image {
     top: -137rpx;
     left: 6rpx;
 }
+

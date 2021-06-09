@@ -115,7 +115,7 @@
     font-family: "cuIcon";
     font-size: 36rpx;
     font-style: normal;
-    color: var(--gray);
+    color:#6e6e6e
 }
 
 .modal {

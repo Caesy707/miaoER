@@ -42,11 +42,19 @@
       mode="widthFix"
       id="header"
     />
-    <view class="read_box">
+    <view class="read_box" style="height:{{height}}rpx;overflow:hidden">
       <!-- <view class="read_title">
         {{ episode.title }}
       </view> -->
       <wxparse data="{{episode.content}}"></wxparse>
+      <view wx:if="{{isSearchall}}" class="searchAll" bindtap="watchAll">
+        <view>查看全文</view>
+        <view class="iconfont icon-dayuhao-copy"></view>
+      </view>
+      <view wx:if="{{isFold}}" class="fold" bindtap="watchFold">
+        <view>收起</view>
+        <view class="iconfont icon-dayuhao-copy"></view>
+      </view>
     </view>
     <view>
       <image
@@ -75,9 +83,7 @@
           class="oneself_img"
           src="{{item.user[0].avatar_url}}"
           mode="widthFix"
-        />          <!-- src="https://z3.ax1x.com/2021/05/26/2pbj7q.png" -->
-
-
+        />        
       <view class="oneself">
           <!-- 救命根本睡不够 -->
           {{item.user[0].nickname}}
@@ -90,13 +96,9 @@
         <view style="{{item.has_like?'color:#eaa30a':'color:#343b4e'}}" class="iconfont icon-dianzan" bindtap="clickStar" data-index="{{index}}"data-cid = "{{item.id}}">
           {{item.like_count}}
         </view>
-
-
       </view>
     </view>
-
   </view>
-
 </scroll-view>
 <!-- 
 https://z3.ax1x.com/2021/05/30/2ZnZiF.png

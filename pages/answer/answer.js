@@ -26,7 +26,8 @@ Page({
         spendtime: "0分0秒",
         uid: 0,
         isshowAns: false,
-        star_count: [0, 0, 0]
+        star_count: [0, 0, 0],
+        pointerEvent:"auto"
     },
 
     /**
@@ -193,7 +194,8 @@ Page({
         var min = parseInt(usetime / 60)
         var sptime = min.toString() + "分" + second.toString() + "秒"
         this.setData({
-            spendtime: sptime
+            spendtime: sptime,
+            pointerEvent:"none"
         })
         console.log(sptime)
         var that = this
