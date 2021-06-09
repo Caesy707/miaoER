@@ -150,9 +150,11 @@ margin-bottom: 34rpx;
 .searchAll{
     position: absolute;
     top: 850rpx;
-    left: 50%;
     display: flex;
-    transform: translateX(-50%);
+    width: 100%;
+    background: #fff;
+    align-content: center;
+    justify-content: center;    
 }
 .searchAll view{
     font-size: 42rpx;
