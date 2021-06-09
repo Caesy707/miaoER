@@ -1,3 +1,4 @@
+
 <scroll-view
   scroll-y="true"
   scroll-into-view="{{ToView}}"
@@ -5,23 +6,20 @@
   bindscroll="upforward"
   style="pointer-events:{{pointerEvent}}"
 >
-  <cover-view scroll-top="0">
+<cover-view scroll-top="0">
     <cover-image
       class=""
       src="../../image/tinified/jian.png"
       bindtap="changePattern"
-      style="pointer-events:{{pointerEvent}}"
     >
     </cover-image>
     <cover-image
    wx:if="{{isForward}}"
       src="../../image/tinified/up.png"
       bindtap="changeposition"
-      style="pointer-events:{{pointerEvent}}"
     >
     </cover-image>
   </cover-view>
-
   <view>
     <image
       class="read"
@@ -32,10 +30,9 @@
     <view class="read_box">
       <!-- <view class="read_title">
         {{ episode.title }}
-       
       </view> -->
       <!-- <view class="read_contain">
-    
+
         For the past five years, Paula Smith, a historian of science, has devoted herself to re-creating long-forgotten techniques. While doing research for her new book, she came across a 16th-century French manuscriptconsisting of nearly 1,000 sets of instructions, covering subjects from tool making to finding the best sand.
         The author's intention remains as mysterious as his name; he may have been simply taking notes for his own records. But Smith was struck mainly by the fact that she didn't truly grasp any of the skills the author described. "You simply can't get an understanding of that handwork by reading about it," she says.
         Though Smith did get her hands on the best sand, doing things the old-fashioned way isn't just about playing around with French mud. Reconstructing the work of the craftsmen（工匠）who lived centuries ago can reveal how they viewed the world, what objects filled their homes, and what went on in the workshops that produced them. It can even help solve present-day problems: In 2015, scientists discovered that a 10th-century English medicine for eve problems could kill a drug-resistant virus.

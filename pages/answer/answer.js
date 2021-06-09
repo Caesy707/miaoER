@@ -163,25 +163,31 @@ Page({
 
     },
     changePages: function () {
-        var that = this;
-        wx.redirectTo({
-            url: '../read/read',
-        })
-        wx.setStorage({
-            key: "AnsSeleted",
-            data: this.data.AnsSeleted
-        })
-        let pages = getCurrentPages();
-        let beforePage = pages[pages.length - 2];
-        wx.navigateBack({
-            success: function () {
-                wx.setStorage({
-                    key: "Answer",
-                    data: that.data.Answer
-                })
-                beforePage.SyncAnswerByStorage(); // 执行前一个页面的onLoad方法
-            }
-        });
+        if(this.data.isMask==true||this.data.failMask==true){
+            return 0
+   }
+   else if(this.data.isMask==false||this.data.failMask==false){
+    var that = this;
+    wx.redirectTo({
+        url: '../read/read',
+    })
+    wx.setStorage({
+        key: "AnsSeleted",
+        data: this.data.AnsSeleted
+    })
+    let pages = getCurrentPages();
+    let beforePage = pages[pages.length - 2];
+    wx.navigateBack({
+        success: function () {
+            wx.setStorage({
+                key: "Answer",
+                data: that.data.Answer
+            })
+            beforePage.SyncAnswerByStorage(); // 执行前一个页面的onLoad方法
+        }
+    });
+   }
+        
     },
     submitAns: function () {
         var app = getApp();

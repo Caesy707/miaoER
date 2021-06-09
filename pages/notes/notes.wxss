@@ -42,7 +42,7 @@
   width: 250rpx;
   height: 76rpx;
   margin: auto;
-  margin-top: 40rpx;
+  margin-top: 20rpx;
   background-size: cover;
   background-image: url(https://z3.ax1x.com/2021/05/28/2FzvMn.png);
 }
@@ -50,7 +50,7 @@
   width: 250rpx;
   height: 76rpx;
   margin: auto;
-  margin-top: 40rpx;
+  margin-top: 15rpx;
   background-size: cover;
   background-image: url(https://z3.ax1x.com/2021/05/28/2kSkRJ.png);
 }

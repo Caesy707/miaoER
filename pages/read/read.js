@@ -161,17 +161,22 @@ else{
     },
     //读和写的切换
     changePattern: function (e) {
-        wx.setStorage({
-            key: "AnsSeleted",
-            data: this.data.AnsSeleted
-        })
-        wx.setStorage({
-            key: "Answer",
-            data: this.data.Answer
-        })
-        wx.navigateTo({
-            url: '../answer/answer?eid='+ this.data.eid,
-        })
+        if(this.data.isMask==true||this.data.failMask==true){
+            return 0
+   }
+   else if(this.data.isMask==false||this.data.failMask==false){
+    wx.setStorage({
+        key: "AnsSeleted",
+        data: this.data.AnsSeleted
+    })
+    wx.setStorage({
+        key: "Answer",
+        data: this.data.Answer
+    })
+    wx.navigateTo({
+        url: '../answer/answer?eid='+ this.data.eid,
+    })
+   }
     },
     SyncAnswerByStorage: function () {
         var that = this
@@ -199,9 +204,14 @@ else{
         console.log(e)
     },
     changeposition: function () {
-        this.setData({
-            ToView: "header"
-        })
+        if(this.data.isMask==true||this.data.failMask==true){
+                 return 0
+        }
+        else if(this.data.isMask==false||this.data.failMask==false){
+            this.setData({
+                ToView: "header"
+            })
+        }
     },
 
     submitAns: function () {

@@ -61,7 +61,8 @@ scroll-view {
 }
 
 .choice {
-    margin-bottom: 30rpx;
+    margin-bottom: 22rpx;
+    margin-top: 33rpx;
 }
 .box_submit{
     width: 297rpx;
@@ -231,6 +232,7 @@ cover-image {
     width: 506rpx;
     position: absolute;
     top: -137rpx;
-    left: 6rpx;
+    left: 50%;
+    transform: translateX(-50%);
 }
 

@@ -57,7 +57,8 @@
 }
 
 .choice {
-  margin-bottom: 30rpx;
+  margin-bottom: 22rpx;
+  margin-top: 33rpx;
 }
 
 .outline {

@@ -198,6 +198,12 @@
           "pathName": "pages/translate/translate",
           "query": "eid=1",
           "scene": null
+        },
+        {
+          "name": "pages/level/level",
+          "pathName": "pages/level/level",
+          "query": "eid=1",
+          "scene": null
         }
       ]
     }

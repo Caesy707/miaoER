@@ -16,7 +16,7 @@ Page({
         styleCss: [
             {
                 top: 176,
-                left: 230,
+                left: 250,
                 transform: 0
             },
             {
@@ -25,8 +25,8 @@ Page({
             },
             {
                 top: 510,
-                left: 144,
-                transform:9
+                left: 160,
+                // transform:40
             },
             {
                 top: 602,
@@ -66,7 +66,7 @@ Page({
         mapHeight: 0,
         newlist: [{
                 top: 176,
-                left: 230,
+                left: 250,
                 transform: 0
             },
             {
@@ -75,7 +75,8 @@ Page({
             },
             {
                 top: 510,
-                left: 106
+                left: 150,
+                transform: 0
             },
             {
                 top: 602,
@@ -132,8 +133,8 @@ Page({
             },
             {
                 top: 510,
-                left: 144,
-                transform:9
+                left: 150,
+                transform: 0
             },
             {
                 top: 602,
