@@ -226,9 +226,9 @@
         <!-- <image wx:if="{{star_count[0]}}" class="star" src="https://z3.ax1x.com/2021/05/25/2SfJCn.png" mode="widthFix"></image>
         <image wx:if="{{star_count[1]}}"class="star" src="https://z3.ax1x.com/2021/05/25/2Sftg0.png" mode="widthFix"></image>
         <image wx:if="{{star_count[2]}}"class="star" src="https://z3.ax1x.com/2021/05/25/2SfNvV.png" mode="widthFix"></image> -->
-        <image wx:if="{{star_count[0]}}" class="star" src="../../image/tinified/一星.png" mode="widthFix"></image>
-        <image wx:if="{{star_count[1]}}"class="star" src="../../image/tinified/二星.png" mode="widthFix"></image>
-        <image wx:if="{{star_count[2]}}"class="star" src="../../image/tinified/三星.png" mode="widthFix"></image>
+        <image wx:if="{{star_count[0]}}" class="star" src="../../image/tinified/onestar.png" mode="widthFix"></image>
+        <image wx:if="{{star_count[1]}}"class="star" src="../../image/tinified/twostar.png" mode="widthFix"></image>
+        <image wx:if="{{star_count[2]}}"class="star" src="../../image/tinified/threestar.png" mode="widthFix"></image>
       </view>
     </view>
   </view>
@@ -249,7 +249,7 @@
         </navigator>
       </view>
       <view>
-        <image class="star" src="../../image/tinified/星级.png" mode="widthFix"></image>
+        <image class="star" src="../../image/tinified/star.png" mode="widthFix"></image>
       </view>
       <view>
         <navigator

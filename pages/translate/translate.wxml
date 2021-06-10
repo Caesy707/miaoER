@@ -7,7 +7,7 @@
   <cover-view scroll-top="0">
     <cover-image
       class=""
-     src="../../image/tinified/答案.png"
+     src="../../image/tinified/answer-icon.png"
       bindtap="changePattern"
     >
     </cover-image>
