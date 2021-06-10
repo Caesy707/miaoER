@@ -1,3 +1,8 @@
+page{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
 .outline{
   width: 648rpx;
   min-height: 748rpx;
@@ -7,9 +12,12 @@
 }
 .outline image{
   position: absolute;
-  top: -10rpx;
-  width: 648rpx;
-  height: 698rpx;
+  top: -34rpx;
+  width: 690rpx;
+  height: 749rpx;
+  z-index: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .contain{
   width: 648rpx;
@@ -19,6 +27,7 @@
   border-radius: 15rpx;
   padding: 40rpx;
   box-sizing:border-box;
+  z-index: 1;
 }
 .holdcontain{
   width: 648rpx;
@@ -33,18 +42,22 @@
   font-size: 24rpx;
 }
 .submit{
-  width: 250rpx;
-  height: 76rpx;
-  margin: auto;
-  margin-top: 20rpx;
-  background-size: cover;
+  width: 275rpx;
+  height: 107rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   background-image: url(http://wximg.bitaxes.com/miaoEread/note/2FzvMn.png);
 }
 .hover_submit{
-  width: 250rpx;
-  height: 76rpx;
-  margin: auto;
-  margin-top: 15rpx;
-  background-size: cover;
+  width: 265rpx;
+  height: 80rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   background-image: url(http://wximg.bitaxes.com/miaoEread/note/2kSkRJ.png);
 }

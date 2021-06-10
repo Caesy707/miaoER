@@ -143,7 +143,7 @@ color:#949494;
    font-size: 20.83rpx;
    color: #ffaa6d;
    position: absolute;
-   top: 626rpx;
+   top: 52%;
    left: 50%;
    letter-spacing:5rpx;
   transform:translateX(-50%);
@@ -157,7 +157,7 @@ display:flex;
 font-size: 20.83rpx;
 color: #707070;
 position: absolute;
-top: 684rpx;
+top: 56%;
 left: 50%;
 transform:translateX(-50%);
 }

@@ -168,8 +168,9 @@
     position: absolute;
     width: 84rpx;
     top: 67rpx;
-    left: 434rpx;
+    left: 466rpx;
     z-index: 1;
+    transform: rotate(204deg);
 }
 
 .firsttalk {
@@ -228,8 +229,8 @@
 }
 
 .catlogo {
-    width: 192rpx;
-    height: 182rpx;
+    width: 185rpx;
+    height: 282rpx;
     position: absolute;
     top: 443rpx;
     left: 120rpx;

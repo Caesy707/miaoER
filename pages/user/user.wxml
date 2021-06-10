@@ -96,10 +96,11 @@
 </view>
 <!-- 步骤三 -->
 
+<!-- src="http://wximg.bitaxes.com/miaoEread/user/gxSzBd.png" -->
 <view class="mask" wx:if="{{isMask}}" >
   <image
     class="firstcatpad"
-    src="http://wximg.bitaxes.com/miaoEread/user/gxSzBd.png"
+    src="http://wximg.bitaxes.com/miaoEread/arm.png"
     mode="widthFix"
   />
   <image
@@ -130,8 +131,9 @@
   </view>
 </view>
 <!-- 步骤四 -->
-<view class="mask"  wx:if="{{isMask2}}" bindtap="clickMask2">
-  <image class="catlogo" src="http://wximg.bitaxes.com/miaoEread/user/2eFd2t.png"></image>
+
+<view class="mask"   bindtap="clickMask2" wx:if="{{isMask2}}">
+  <image class="catlogo" src="http://wximg.bitaxes.com/miaoEread/first.png"></image>
   <image class="cattalk" src="http://wximg.bitaxes.com/miaoEread/user/2ek7Of.png" mode="widthFix"></image>
 </view>
 

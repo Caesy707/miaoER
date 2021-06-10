@@ -191,7 +191,8 @@ margin-bottom: 34rpx;
 }
 .no-comment{
     width: 100%;
-    font-size: 20.83rpx;
+    font-size: 25rpx;
+    letter-spacing: 5rpx;
     color: #707070;
     min-height: 100rpx;
     text-align: center;

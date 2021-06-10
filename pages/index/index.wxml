@@ -14,7 +14,7 @@
   </view>
   <view class="button">
 <navigator class="challenge" hover-class="hoverchallenge" bindtap="getUserProfile"  data-index="1"></navigator>
-<navigator class="personal" hover-class="hoverpersonal"  bindtap="getUserProfile"  data-index="2" style="z-index:{{zIndex}}"></navigator>
+<navigator class="personal" hover-class="hoverpersonal"  bindtap="getUserProfile"  data-index="2"></navigator>
 <navigator class="help" hover-class="hoverhelp"  bindtap="getUserProfile"  data-index="3" ></navigator>
   </view>
 </view>
@@ -28,12 +28,13 @@ wx:if="{{isShow}}"
   <view class="dialogue"></view>
 </view>
 
-<view class="mask forbid" wx:if="{{isShowtoo}}">
+<view class="mask forbid" wx:if="{{isShowtoo}}" >
   <view class="unmask">
+    <navigator class="personal_1" hover-class="hoverpersonal_1"  bindtap="getUserProfile"  data-index="2"></navigator>
   </view>
   <view class="dialogue_1"></view>
   <view class="catpad">
-    <image src="http://wximg.bitaxes.com/miaoEread/gXKgXt.png"></image>
+    <image src="http://wximg.bitaxes.com/miaoEread/arm.png"></image>
   </view>
 </view>
 

@@ -270,7 +270,8 @@ else{
       watchFold:function(){
           this.setData({
               height:904,
-              isSearchall:true
+              isSearchall:true,
+              ToView: "header"
           })
       },
       watchAllTrans:function(){
@@ -282,7 +283,8 @@ else{
     watchFoldTrans:function(){
         this.setData({
             transHeight:904,
-            isTransSearchall:true
+            isTransSearchall:true,
+            ToView: "aim"
         })
     }
 })
